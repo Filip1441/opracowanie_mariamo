@@ -236,9 +236,9 @@ def _(mo):
 
 @app.cell
 def _():
-    width = 10
-    height = 15
-    width * height
+    _width = 10
+    _height = 15
+    _width * _height
     return
 
 
@@ -359,11 +359,11 @@ def _(mo):
 @app.cell
 def _():
     # Komentarz można zacząć w dowolnym miejscu
-    pierwszy_czynnik_0_dlugiej_nazwie = 3  # i trwa on do końca linii
-    drugi_czynnik_o_jeszcze_dluzszej_nazwie = 2
+    _pierwszy_czynnik_0_dlugiej_nazwie = 3  # i trwa on do końca linii
+    _drugi_czynnik_o_jeszcze_dluzszej_nazwie = 2
     # Linie można dzielić
-    iloczyn_o_bardzo_dlugiej_nazwie = pierwszy_czynnik_0_dlugiej_nazwie * \
-    drugi_czynnik_o_jeszcze_dluzszej_nazwie
+    _iloczyn_o_bardzo_dlugiej_nazwie = _pierwszy_czynnik_0_dlugiej_nazwie * \
+    _drugi_czynnik_o_jeszcze_dluzszej_nazwie
     return
 
 
@@ -410,9 +410,9 @@ def _(mo):
 @app.cell
 def _():
     #kod poprawny
-    x_1 = 1
+    _x_1 = 1
     _a = 7
-    STALA = 4
+    _STALA = 4
     return
 
 
@@ -540,12 +540,12 @@ def _(mo):
 @app.cell
 def _():
     #kod poprawny
-    temperature = 22
+    _temperature = 22
     print('Hello')
-    if temperature >= 18:
+    if _temperature >= 18:
       print('Nice weather')
-      x = 3
-    b = 7
+      _x = 3
+    _b = 7
     print('How are you?')
     return
 
@@ -615,12 +615,12 @@ def _(mo):
 @app.cell
 def _():
     #kod zawiera błąd
-    temperature = 22
+    _temperature = 22
     print('Hello')
-    if temperature >= 18:
+    if _temperature >= 18:
         print('Nice weather')
-        x = 3
-        b = 7                      #błędna linia
+        _x = 3
+        _b = 7                      #błędna linia
     print('How are you?')
     return
 
@@ -688,9 +688,9 @@ def _(mo):
 
 @app.cell
 def _():
-    x=1.1
-    if x:
-        print(x)
+    _x=1.1
+    if _x:
+        print(_x)
     return
 
 
@@ -727,10 +727,10 @@ def _(mo):
 
 @app.cell
 def _():
-    x=True
-    y=False
-    if x:
-        print(x)
+    _x=True
+    _y=False
+    if _x:
+        print(_x)
     return
 
 
@@ -774,9 +774,9 @@ def _(mo):
 
 @app.cell
 def _():
-    x=3j
-    y=1+1j
-    print(x+y)
+    _x=3j
+    _y=1+1j
+    print(_x+_y)
     return
 
 
@@ -875,9 +875,9 @@ def _(mo):
 @app.cell
 def _():
     import math
-    x=math.pi
-    print(x)
-    print(math.sin(x))
+    _x=math.pi
+    print(_x)
+    print(math.sin(_x))
     return
 
 
@@ -926,9 +926,9 @@ def _(mo):
 
 @app.cell
 def _():
-    x=1  #True
-    y=1  #True
-    if x and y:
+    _x=1  #True
+    _y=1  #True
+    if _x and _y:
         print('and')
     return
 

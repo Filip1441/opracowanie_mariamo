@@ -144,10 +144,10 @@ def _():
     def druk():
       for i in range (0,5):
         print(i)
-    t1=Thread(target=druk)
-    t2=Thread(target=druk)
-    t1.start()
-    t2.start()
+    _t1=Thread(target=druk)
+    _t2=Thread(target=druk)
+    _t1.start()
+    _t2.start()
     
     return
 
@@ -258,12 +258,12 @@ def _():
       for i in range (0,5):
         print(i)
         time.sleep(1)
-    t1=Thread(target=druk)
-    t2=Thread(target=druk)
-    t1.start()
-    t2.start()
-    t1.join()
-    t2.join()
+    _t1=Thread(target=druk)
+    _t2=Thread(target=druk)
+    _t1.start()
+    _t2.start()
+    _t1.join()
+    _t2.join()
     return
 
 @app.cell
@@ -388,14 +388,14 @@ def _():
         for i in range(n):
             print(i)
     
-    t1 = Thread(target=druk, args=(3,))
-    t2 = Thread(target=druk, args=(5,))
+    _t1 = Thread(target=druk, args=(3,))
+    _t2 = Thread(target=druk, args=(5,))
     
-    t1.start()
-    t2.start()
+    _t1.start()
+    _t2.start()
     
-    t1.join()
-    t2.join()
+    _t1.join()
+    _t2.join()
     return
 
 @app.cell
@@ -549,26 +549,26 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 def _():
     import threading
     
-    saldo = 100
+    _saldo = 100
     
     def wyplata(name):
-        global saldo
+        global _saldo
         for _ in range(5):
-           if saldo > 0:
-            saldo1 = saldo-1
+           if _saldo > 0:
+            _saldo1 = _saldo-1
            time.sleep(1)
-           saldo = saldo1
-           print(name, saldo)
-    t1 = threading.Thread(target=wyplata, args=("w1",))
-    t2 = threading.Thread(target=wyplata, args=("w2",))
+           _saldo = _saldo1
+           print(name, _saldo)
+    _t1 = threading.Thread(target=wyplata, args=("w1",))
+    _t2 = threading.Thread(target=wyplata, args=("w2",))
     
-    t1.start()
-    t2.start()
+    _t1.start()
+    _t2.start()
     
-    t1.join()
-    t2.join()
+    _t1.join()
+    _t2.join()
     
-    print("Saldo końcowe:", saldo)
+    print("Saldo końcowe:", _saldo)
     return
 
 @app.cell
@@ -736,27 +736,27 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 def _():
     import threading
     
-    saldo = 100
-    lock = threading.Lock()
+    _saldo = 100
+    _lock = threading.Lock()
     def wyplata(name):
-        global saldo
+        global _saldo
         for _ in range(10):
-           with lock:
-            if saldo > 0:
-             saldo1 = saldo-1
+           with _lock:
+            if _saldo > 0:
+             _saldo1 = _saldo-1
             time.sleep(1)
-            saldo = saldo1
-            print(name, saldo)
-    t1 = threading.Thread(target=wyplata, args=("w1",))
-    t2 = threading.Thread(target=wyplata, args=("w2",))
+            _saldo = _saldo1
+            print(name, _saldo)
+    _t1 = threading.Thread(target=wyplata, args=("w1",))
+    _t2 = threading.Thread(target=wyplata, args=("w2",))
     
-    t1.start()
-    t2.start()
+    _t1.start()
+    _t2.start()
     
-    t1.join()
-    t2.join()
+    _t1.join()
+    _t2.join()
     
-    print("Saldo końcowe:", saldo)
+    print("Saldo końcowe:", _saldo)
     return
 
 @app.cell
@@ -917,12 +917,12 @@ def _():
             print(self._name," ",i)
             time.sleep(1)
     
-    t1=MyThread(2,"w1")
-    t2=MyThread(3,"w2")
-    t1.start()
-    t2.start()
-    t1.join()
-    t2.join()
+    _t1=MyThread(2,"w1")
+    _t2=MyThread(3,"w2")
+    _t1.start()
+    _t2.start()
+    _t1.join()
+    _t2.join()
     return
 
 @app.cell
@@ -1125,15 +1125,15 @@ def _():
     
     
     # Ścieżka do pliku na dysku Google Drive
-    katalog = '/content/drive/MyDrive/pliki'
+    _katalog = '/content/drive/MyDrive/pliki'
     
     
     
     # Wypisanie zawartości katalogu
-    for folder, podfoldery, pliki in os.walk(katalog):
+    for folder, podfoldery, pliki in os.walk(_katalog):
         for plik in pliki:
-            pelna_sciezka = os.path.join(folder, plik)
-            print(pelna_sciezka)
+            _pelna_sciezka = os.path.join(folder, plik)
+            print(_pelna_sciezka)
     #path2 = '/content/drive/MyDrive/l2.png'
     return
 
@@ -1210,10 +1210,10 @@ def _():
     import numpy as np
     from google.colab.patches import cv2_imshow  #potrzebne w google colab
     # Ścieżka do pliku na dysku Google Drive
-    path = '/content/drive/MyDrive/pliki/l1.png'
-    img=cv2.imread(filename=path)
-    #cv2_imshow(img)
-    print(img)
+    _path = '/content/drive/MyDrive/pliki/l1.png'
+    _img=cv2.imread(filename=_path)
+    #cv2_imshow(_img)
+    print(_img)
     return
 
 @app.cell
@@ -1317,10 +1317,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     import numpy as np
-    a=np.array([1,2,3])
-    print(a.min(),a.max())
-    print(any(a==1))
-    print(all(a==1))
+    _a=np.array([1,2,3])
+    print(_a.min(),_a.max())
+    print(any(_a==1))
+    print(all(_a==1))
     return
 
 @app.cell
@@ -1414,9 +1414,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     # Ścieżka do pliku na dysku Google Drive
-    path = '/content/drive/MyDrive/pliki/irys.jpg'
-    img=cv2.imread(filename=path)
-    cv2_imshow(img)
+    _path = '/content/drive/MyDrive/pliki/irys.jpg'
+    _img=cv2.imread(filename=_path)
+    cv2_imshow(_img)
     return
 
 @app.cell
@@ -1456,9 +1456,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 def _():
     
     # imread nie sygnalizuje braku pliku
-    path = '/content/drive/MyDrive/l3.png'
-    img=cv2.imread(filename=path)
-    cv2_imshow(img)
+    _path = '/content/drive/MyDrive/l3.png'
+    _img=cv2.imread(filename=_path)
+    cv2_imshow(_img)
     return
 
 @app.cell
@@ -1525,10 +1525,10 @@ def _():
     # brak pliku musimy sprawdzić sami
     import os
     
-    path = '/content/drive/MyDrive/l3.png'
-    if os.path.isfile(path):
-     img=cv2.imread(filename=path)
-     cv2_imshow(img)
+    _path = '/content/drive/MyDrive/l3.png'
+    if os._path.isfile(_path):
+     _img=cv2.imread(filename=_path)
+     cv2_imshow(_img)
     else:
       print("blad")
     return
@@ -1680,16 +1680,16 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 def _():
     # pliku video
     import time
-    path2 = '/content/drive/MyDrive/pliki/Shrimp.avi'
-    cap = cv2.VideoCapture(path2)
-    frame_width = int(cap.get(3))
-    frame_height = int(cap.get(4))
+    _path2 = '/content/drive/MyDrive/pliki/Shrimp.avi'
+    _cap = cv2.VideoCapture(_path2)
+    _frame_width = int(_cap.get(3))
+    _frame_height = int(_cap.get(4))
     for _ in range(3):
        # Capture frame−by−frame
-     ret , frame = cap.read( )
+     ret , frame = _cap.read( )
      print(ret)
-     img = cv2.cvtColor(frame, 1)
-     cv2_imshow(img)
+     _img = cv2.cvtColor(frame, 1)
+     cv2_imshow(_img)
      time.sleep(5)
     return
 
@@ -1795,13 +1795,13 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     #Odczytywanie dodatkowych parametrów
-    path2 = '/content/drive/MyDrive/pliki/Shrimp.avi'
-    cap = cv2.VideoCapture(path2)
-    w=cap.get(cv2.CAP_PROP_FRAME_WIDTH)
-    h=cap.get (cv2.CAP_PROP_FRAME_HEIGHT)
-    fps=cap.get (cv2.CAP_PROP_FPS)
-    fc=cap.get (cv2.CAP_PROP_FRAME_COUNT)
-    print('w=',w,' h=',h, ' fps=',int(fps),' fc=',int(fc))
+    _path2 = '/content/drive/MyDrive/pliki/Shrimp.avi'
+    _cap = cv2.VideoCapture(_path2)
+    _w=_cap.get(cv2.CAP_PROP_FRAME_WIDTH)
+    _h=_cap.get (cv2.CAP_PROP_FRAME_HEIGHT)
+    _fps=_cap.get (cv2.CAP_PROP_FPS)
+    _fc=_cap.get (cv2.CAP_PROP_FRAME_COUNT)
+    print('_w=',_w,' _h=',_h, ' _fps=',int(_fps),' _fc=',int(_fc))
     return
 
 @app.cell
@@ -1902,12 +1902,12 @@ def _():
     import numpy as np
     import matplotlib.pyplot as plt
     #p1 = '/content/drive/MyDrive/pliki/rys.png'
-    p2 = '/content/drive/MyDrive/pliki/irys.jpg'
-    image = cv2.imread(p2)
-    # Loading the image
-    half = cv2.resize(image, (0, 0), fx = 0.5, fy = 0.5)
-    cv2_imshow(image)
-    cv2_imshow(half)
+    _p2 = '/content/drive/MyDrive/pliki/irys.jpg'
+    _image = cv2.imread(_p2)
+    # Loading the _image
+    _half = cv2.resize(_image, (0, 0), fx = 0.5, fy = 0.5)
+    cv2_imshow(_image)
+    cv2_imshow(_half)
     return
 
 @app.cell
@@ -1971,11 +1971,11 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    img200 = cv2.resize(image, (200, 200))
-    cv2_imshow(img200)
-    img500 = cv2.resize(image, (500, 500),
-                  interpolation = cv2.INTER_NEAREST)
-    cv2_imshow(img500)
+    _img200 = cv2.resize(image, (200, 200))
+    cv2_imshow(_img200)
+    _img500 = cv2.resize(image, (500, 500),
+                  _interpolation = cv2.INTER_NEAREST)
+    cv2_imshow(_img500)
     return
 
 @app.cell
@@ -2045,13 +2045,13 @@ def _():
     # zmiana wymiarów bardziej inteligentna, konieczny import imutils
     
     import imutils
-    p1 = '/content/drive/MyDrive/pliki/irys.jpg'
+    _p1 = '/content/drive/MyDrive/pliki/irys.jpg'
     
     #chcemy zmienić jeden wymiar, a pozostałe powinny się dostosować
-    img = cv2.imread(p1, 1)
-    res=imutils.resize(image=img, width=100)
-    cv2_imshow(img)
-    cv2_imshow(res)
+    _img = cv2.imread(_p1, 1)
+    _res=imutils.resize(image=_img, width=100)
+    cv2_imshow(_img)
+    cv2_imshow(_res)
     
     
     return
@@ -2104,8 +2104,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    array=np.random.randint(low=0,high=256,size=(300,300,3))
-    cv2_imshow(array)
+    _array=np.random.randint(low=0,high=256,size=(300,300,3))
+    cv2_imshow(_array)
     return
 
 @app.cell
@@ -2158,10 +2158,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    array=np.full((300,300,3),fill_value=200)
-    cv2_imshow(array)
-    p1 = '/content/drive/MyDrive/pliki/test.jpg'
-    cv2.imwrite(p1, array)
+    _array=np.full((300,300,3),fill_value=200)
+    cv2_imshow(_array)
+    _p1 = '/content/drive/MyDrive/pliki/test.jpg'
+    cv2.imwrite(_p1, _array)
     
     return
 
@@ -2190,8 +2190,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    p2='/content/drive/MyDrive/pliki/test.jpg'
-    cv2.imread(p2,-1)
+    _p2='/content/drive/MyDrive/pliki/test.jpg'
+    cv2.imread(_p2,-1)
     return
 
 @app.cell
@@ -2313,13 +2313,13 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    p1 = '/content/drive/MyDrive/pliki/rys2.png'
+    _p1 = '/content/drive/MyDrive/pliki/rys2.png'
     
-    img = cv2.imread(p1, 1)
-    cv2_imshow(img)
-    cv2.line(img, pt1=(0,0),pt2=(100,100), color=(0,0,255),thickness=3)
-    cv2.rectangle(img, pt1=(100,100),pt2=(200,200), color=(255,0,0),thickness=2)
-    cv2_imshow(img)
+    _img = cv2.imread(_p1, 1)
+    cv2_imshow(_img)
+    cv2.line(_img, pt1=(0,0),pt2=(100,100), color=(0,0,255),thickness=3)
+    cv2.rectangle(_img, pt1=(100,100),pt2=(200,200), color=(255,0,0),thickness=2)
+    cv2_imshow(_img)
     return
 
 @app.cell
@@ -2457,15 +2457,15 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 def _():
     import cv2
     import numpy as np
-    img=cv2.imread(p1,1)
-    p2 = '/content/drive/MyDrive/pliki/irys.jpg'
-    img1=cv2.imread(p2,1)
-    img = cv2.resize(img, (200, 200))    # zmiana rozmiaru
-    img1 = cv2.resize(img1, (200, 200))
-    img3 = cv2.addWeighted(img, 1.0, img1, 1.0, 0)  #dodawanie obrazów
-    #img3=cv2.subtract(img,img1)
-    combined = cv2.hconcat([img,img1,img3])    #łączenie obrazów
-    cv2_imshow(combined)
+    _img=cv2.imread(p1,1)
+    _p2 = '/content/drive/MyDrive/pliki/irys.jpg'
+    _img1=cv2.imread(_p2,1)
+    _img = cv2.resize(_img, (200, 200))    # zmiana rozmiaru
+    _img1 = cv2.resize(_img1, (200, 200))
+    _img3 = cv2.addWeighted(_img, 1.0, _img1, 1.0, 0)  #dodawanie obrazów
+    #_img3=cv2.subtract(_img,_img1)
+    _combined = cv2.hconcat([_img,_img1,_img3])    #łączenie obrazów
+    cv2_imshow(_combined)
     return
 
 @app.cell
@@ -2592,16 +2592,16 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    img=cv2.imread(p2,1)
-    (rows, cols) = img.shape[:2]  #pobieramy wymiary obrazu
+    _img=cv2.imread(p2,1)
+    (rows, cols) = _img.shape[:2]  #pobieramy wymiary obrazu
     print(rows,cols)
     #help(cv2.getRotationMatrix2D)
     # tworzymy macierz rotacji, środek obrotu, kąt obrotu, skalowanie
-    M = cv2.getRotationMatrix2D((cols / 2, rows / 2), 45, 1)
+    _M = cv2.getRotationMatrix2D((cols / 2, rows / 2), 45, 1)
     #dokonujemy przekształcenia
-    res = cv2.warpAffine(img, M, (cols, rows))
-    combined = cv2.hconcat([img,res])
-    cv2_imshow(combined)
+    _res = cv2.warpAffine(_img, _M, (cols, rows))
+    _combined = cv2.hconcat([_img,_res])
+    cv2_imshow(_combined)
     return
 
 @app.cell
@@ -2687,10 +2687,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    M = np.float32([ [ 0,1,50],[1,0,50]])
-    res = cv2.warpAffine(img, M, (cols, rows))
-    combined = cv2.hconcat([img,res])
-    cv2_imshow(combined)
+    _M = np.float32([ [ 0,1,50],[1,0,50]])
+    _res = cv2.warpAffine(img, _M, (cols, rows))
+    _combined = cv2.hconcat([img,_res])
+    cv2_imshow(_combined)
     return
 
 @app.cell
@@ -2773,12 +2773,12 @@ def _():
     import cv2
     import numpy as np
     import matplotlib.pyplot as plt
-    p1 = '/content/drive/MyDrive/pliki/irys.jpg'
-    p2 = '/content/drive/MyDrive/rys2.png'
-    image = cv2.imread(p1, 1)
-    img=image[100:200,100:200]
-    #cv2_imshow(image)
-    cv2_imshow(img)
+    _p1 = '/content/drive/MyDrive/pliki/irys.jpg'
+    _p2 = '/content/drive/MyDrive/rys2.png'
+    _image = cv2.imread(_p1, 1)
+    _img=_image[100:200,100:200]
+    #cv2_imshow(_image)
+    cv2_imshow(_img)
     return
 
 @app.cell
@@ -2857,12 +2857,12 @@ def _():
     import cv2
     import numpy as np
     import matplotlib.pyplot as plt
-    p1 = '/content/drive/MyDrive/pliki/irys.jpg'
-    p2 = '/content/drive/MyDrive/rys2.png'
-    image = cv2.imread(p1, 1)
-    img=image[-250:,-250:]      #uwaga na położenie :
-    #cv2_imshow(image)
-    cv2_imshow(img)
+    _p1 = '/content/drive/MyDrive/pliki/irys.jpg'
+    _p2 = '/content/drive/MyDrive/rys2.png'
+    _image = cv2.imread(_p1, 1)
+    _img=_image[-250:,-250:]      #uwaga na położenie :
+    #cv2_imshow(_image)
+    cv2_imshow(_img)
     return
 
 @app.cell
@@ -2940,12 +2940,12 @@ def _():
     import cv2
     import numpy as np
     import matplotlib.pyplot as plt
-    p1 = '/content/drive/MyDrive/pliki/irys.jpg'
-    p2 = '/content/drive/MyDrive/rys2.png'
-    image = cv2.imread(p1, 1)
-    img=image[100:200,100:200]
-    #cv2_imshow(image)
-    cv2_imshow(img)
+    _p1 = '/content/drive/MyDrive/pliki/irys.jpg'
+    _p2 = '/content/drive/MyDrive/rys2.png'
+    _image = cv2.imread(_p1, 1)
+    _img=_image[100:200,100:200]
+    #cv2_imshow(_image)
+    cv2_imshow(_img)
     return
 
 @app.cell
@@ -3023,12 +3023,12 @@ def _():
     import cv2
     import numpy as np
     import matplotlib.pyplot as plt
-    p1 = '/content/drive/MyDrive/pliki/irys.jpg'
-    p2 = '/content/drive/MyDrive/rys2.png'
-    image = cv2.imread(p1, 1)
-    img=image[100:200,100:200]
-    #cv2_imshow(image)
-    cv2_imshow(img)
+    _p1 = '/content/drive/MyDrive/pliki/irys.jpg'
+    _p2 = '/content/drive/MyDrive/rys2.png'
+    _image = cv2.imread(_p1, 1)
+    _img=_image[100:200,100:200]
+    #cv2_imshow(_image)
+    cv2_imshow(_img)
     return
 
 @app.cell
@@ -3157,16 +3157,16 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     # określamy środek
-    xs=x//2   # dzielenie całkowite
-    ys=y//2
-    dl=50  #długość to 100
+    _xs=x//2   # dzielenie całkowite
+    _ys=y//2
+    _dl=50  #długość to 100
     # współrzędne prawego górnego i lewego dolengo rogu
-    xp=xs-dl
-    yp=ys-dl
-    xl=xs+dl
-    yl=ys+dl
-    img=image[xp:xl,yp:yl]
-    cv2_imshow(img)
+    _xp=_xs-_dl
+    _yp=_ys-_dl
+    _xl=_xs+_dl
+    _yl=_ys+_dl
+    _img=image[_xp:_xl,_yp:_yl]
+    cv2_imshow(_img)
     
     return
 
@@ -3297,15 +3297,15 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     # określamy środek
-    image = cv2.imread(p1, 1)
-    xs=x//2   # dzielenie całkowite
-    ys=y//2
-    dl=50  #długość to 100
+    _image = cv2.imread(p1, 1)
+    _xs=x//2   # dzielenie całkowite
+    _ys=y//2
+    _dl=50  #długość to 100
     # współrzędne prawego górnego i lewego dolengo rogu
-    xp=xs-dl
-    yp=ys-dl
-    oko=image[xp:xs,yp:ys]
-    cv2_imshow(oko)
+    _xp=_xs-_dl
+    _yp=_ys-_dl
+    _oko=_image[_xp:_xs,_yp:_ys]
+    cv2_imshow(_oko)
     return
 
 @app.cell
@@ -3444,10 +3444,10 @@ def _():
     #A teraz możemy powielić fragment w kilku miejscach
     image[xp-40:xs-40,yp-40:ys-40]=oko
     image[xp+40:xs+40,yp+40:ys+40]=oko
-    p=60
-    image[xp+40+p:xs+40+p,yp+40+p:ys+40+p]=oko
-    p=-160
-    image[xp+40+p:xs+40+p,yp+40+p:ys+40+p]=oko
+    _p=60
+    image[xp+40+_p:xs+40+_p,yp+40+_p:ys+40+_p]=oko
+    _p=-160
+    image[xp+40+_p:xs+40+_p,yp+40+_p:ys+40+_p]=oko
     cv2_imshow(image)
     return
 
@@ -3517,11 +3517,11 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     ## Tworzenie ramek na około obrazka
-    p1 = '/content/drive/MyDrive/pliki/irys.jpg'
-    image=cv2.imread(p1,1)
-    ramka=cv2.copyMakeBorder(image,20,20,20,20,borderType=cv2.BORDER_REPLICATE)
-    cv2_imshow(image)
-    cv2_imshow(ramka)
+    _p1 = '/content/drive/MyDrive/pliki/irys.jpg'
+    _image=cv2.imread(_p1,1)
+    _ramka=cv2.copyMakeBorder(_image,20,20,20,20,borderType=cv2.BORDER_REPLICATE)
+    cv2_imshow(_image)
+    cv2_imshow(_ramka)
     return
 
 @app.cell
@@ -3584,10 +3584,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     ## Tworzenie ramek na około obrazka
-    p1 = '/content/drive/MyDrive/pliki/irys.jpg'
-    image=cv2.imread(p1,1)
-    ramka=cv2.copyMakeBorder(image,20,20,20,20,borderType=cv2.BORDER_WRAP)
-    cv2_imshow(ramka)
+    _p1 = '/content/drive/MyDrive/pliki/irys.jpg'
+    _image=cv2.imread(_p1,1)
+    _ramka=cv2.copyMakeBorder(_image,20,20,20,20,borderType=cv2.BORDER_WRAP)
+    cv2_imshow(_ramka)
     return
 
 @app.cell
@@ -3650,10 +3650,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     ## Tworzenie ramek na około obrazka
-    p1 = '/content/drive/MyDrive/pliki/irys.jpg'
-    image=cv2.imread(p1,1)
-    ramka=cv2.copyMakeBorder(image,20,20,20,20,borderType=cv2.BORDER_ISOLATED)
-    cv2_imshow(ramka)
+    _p1 = '/content/drive/MyDrive/pliki/irys.jpg'
+    _image=cv2.imread(_p1,1)
+    _ramka=cv2.copyMakeBorder(_image,20,20,20,20,borderType=cv2.BORDER_ISOLATED)
+    cv2_imshow(_ramka)
     return
 
 @app.cell
@@ -3723,10 +3723,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     # filtr medianowy
-    img=cv2.imread(p1,1)
-    img1 = cv2.medianBlur(img,25)
-    combined = cv2.hconcat([img,img1])
-    cv2_imshow(combined)
+    _img=cv2.imread(p1,1)
+    _img1 = cv2.medianBlur(_img,25)
+    _combined = cv2.hconcat([_img,_img1])
+    cv2_imshow(_combined)
     return
 
 @app.cell
@@ -3819,14 +3819,14 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 def _():
     # filtr uredniający
     
-    kernel = np.array([[0.1, 0.1, 0.1],
+    _kernel = np.array([[0.1, 0.1, 0.1],
                        [0.1, 0.2, 0.1],
                        [0.1, 0.1, 0.1]])
     
     #filter the source image
-    img1 = cv2.filter2D(img,-1,kernel)
-    combined = cv2.hconcat([img,img1])
-    cv2_imshow(combined)
+    _img1 = cv2.filter2D(img,-1,_kernel)
+    _combined = cv2.hconcat([img,_img1])
+    cv2_imshow(_combined)
     return
 
 @app.cell
@@ -3915,12 +3915,12 @@ def _():
     # filtr Gaussa
     import cv2
     import numpy as np
-    path = '/content/drive/MyDrive/pliki/irys.jpg'
-    img=cv2.imread(filename=path)
-    cv2_imshow(img)
-    img1=cv2.GaussianBlur(img,[7,7],0.7)
-    edge=cv2.Canny(img1,100,270)
-    cv2_imshow(edge)
+    _path = '/content/drive/MyDrive/pliki/irys.jpg'
+    _img=cv2.imread(filename=_path)
+    cv2_imshow(_img)
+    _img1=cv2.GaussianBlur(_img,[7,7],0.7)
+    _edge=cv2.Canny(_img1,100,270)
+    cv2_imshow(_edge)
     return
 
 @app.cell
@@ -4020,14 +4020,14 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     # wyostrzanie
-    kernel = np.array([[-1, -1, -1],
+    _kernel = np.array([[-1, -1, -1],
                        [-1, 9, -1],
                        [-1, -1, -1]])
     
     #filter the source image
-    img1 = cv2.filter2D(img,-1,kernel)
-    combined = cv2.hconcat([img,img1])
-    cv2_imshow(combined)
+    _img1 = cv2.filter2D(img,-1,_kernel)
+    _combined = cv2.hconcat([img,_img1])
+    cv2_imshow(_combined)
     return
 
 @app.cell
@@ -4102,8 +4102,8 @@ def _():
     _, th0 = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)
     #img=cv2.imread(path,0)
     #_, th0 = cv2.threshold(img, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)  działa tylko dla obrazów w stpniach szarości
-    combined = cv2.hconcat([img,th0])
-    cv2_imshow(combined)
+    _combined = cv2.hconcat([img,th0])
+    cv2_imshow(_combined)
     return
 
 @app.cell
@@ -4201,12 +4201,12 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 def _():
     import cv2
     import numpy as np
-    path2 = '/content/drive/MyDrive/pliki/blb.png'
-    img = cv2.imread(path2, 1)
-    cv2_imshow(img)
+    _path2 = '/content/drive/MyDrive/pliki/blb.png'
+    _img = cv2.imread(_path2, 1)
+    cv2_imshow(_img)
     # axis=2 - sprawdzane są wszystkie kanały
-    img[np.where((img == [0,0,0]).all(axis = 2))] = [0,255,0]    #zmieniamy czarny na zielony
-    cv2_imshow(img)
+    _img[np.where((_img == [0,0,0]).all(axis = 2))] = [0,255,0]    #zmieniamy czarny na zielony
+    cv2_imshow(_img)
     return
 
 @app.cell
@@ -4326,13 +4326,13 @@ def _():
     import cv2
     import numpy as np
     import matplotlib.pyplot as plt
-    path2 = '/content/drive/MyDrive/pliki/blb.png'
-    img = cv2.imread(path2, 1)
-    cv2_imshow(img)
-    hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
-    h,s,v = cv2.split(hsv)
-    combined = cv2.hconcat([h,s,v])
-    cv2_imshow(combined)
+    _path2 = '/content/drive/MyDrive/pliki/blb.png'
+    _img = cv2.imread(_path2, 1)
+    cv2_imshow(_img)
+    _hsv = cv2.cvtColor(_img, cv2.COLOR_BGR2HSV)
+    h,s,v = cv2.split(_hsv)
+    _combined = cv2.hconcat([h,s,v])
+    cv2_imshow(_combined)
     
     # odcień - h
     # nasycenie - s
@@ -4417,14 +4417,14 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    path2 = '/content/drive/MyDrive/pliki/blb.png'
-    img = cv2.imread(path2, 1)
+    _path2 = '/content/drive/MyDrive/pliki/blb.png'
+    _img = cv2.imread(_path2, 1)
     
-    lower_black = np.array([0,0,0])
-    upper_black = np.array([10,10,10])
-    mask0 = cv2.inRange(hsv, lower_black, upper_black)
+    _lower_black = np.array([0,0,0])
+    _upper_black = np.array([10,10,10])
+    _mask0 = cv2.inRange(hsv, _lower_black, _upper_black)
     
-    cv2_imshow(mask0)
+    cv2_imshow(_mask0)
     return
 
 @app.cell
@@ -4547,20 +4547,20 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 def _():
     import cv2
     import numpy as np
-    path2 = '/content/drive/MyDrive/pliki/testl.png'
-    img = cv2.imread(path2)
-    gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)   #zamiana na odcienie szarości
+    _path2 = '/content/drive/MyDrive/pliki/testl.png'
+    _img = cv2.imread(_path2)
+    _gray = cv2.cvtColor(_img,cv2.COLOR_BGR2GRAY)   #zamiana na odcienie szarości
     #Create default Fast Line Detector (FSD)
-    fld = cv2.ximgproc.createFastLineDetector()   #generowanie matody wykrywania linii
+    _fld = cv2.ximgproc.createFastLineDetector()   #generowanie matody wykrywania linii
     
-    #Detect lines in the image
-    lines = fld.detect(gray)
-    print(lines)
-    #Draw detected lines in the image
-    dlimg = fld.drawSegments(gray,lines)
+    #Detect _lines in the image
+    _lines = _fld.detect(_gray)
+    print(_lines)
+    #Draw detected _lines in the image
+    _dlimg = _fld.drawSegments(_gray,_lines)
     
-    combined = cv2.hconcat([img,dlimg])
-    cv2_imshow(combined)
+    _combined = cv2.hconcat([_img,_dlimg])
+    cv2_imshow(_combined)
     
     return
 
@@ -4637,11 +4637,11 @@ def _():
     # Ścieżka do pliku na dysku Google Drive
     import cv2
     import numpy as np
-    path2 = '/content/drive/MyDrive/pliki/blb2.png'
-    img = cv2.imread(path2, 0)
-    cv2_imshow(img)
-    edge=cv2.Canny(img,180,270)
-    cv2_imshow(edge)
+    _path2 = '/content/drive/MyDrive/pliki/blb2.png'
+    _img = cv2.imread(_path2, 0)
+    cv2_imshow(_img)
+    _edge=cv2.Canny(_img,180,270)
+    cv2_imshow(_edge)
     return
 
 @app.cell
@@ -4813,7 +4813,7 @@ def _():
     #img = cv2.imread('nazwa_obrazu.jpg')
     
     # Konwersja obrazu do odcieni szarości
-    gray = img.copy()
+    _gray = img.copy()
     
     
     # Znalezienie konturów na obrazie
@@ -4822,12 +4822,12 @@ def _():
     # Iteracja po wszystkich konturach
     for contour in contours:
         # Obliczenie przybliżonego kształtu konturu
-        approx = cv2.approxPolyDP(contour, 0.01*cv2.arcLength(contour, True), True)
-     #   cv2.drawContours(img, [approx], 0, (0, 255, 0), 2)
+        _approx = cv2.approxPolyDP(contour, 0.01*cv2.arcLength(contour, True), True)
+     #   cv2.drawContours(img, [_approx], 0, (0, 255, 0), 2)
         # Sprawdzenie, czy kontur ma 4 boki (czyli czy jest kwadratem)
-        if len(approx) == 4:
+        if len(_approx) == 4:
             # Narysowanie prostokąta wokół konturu
-            cv2.drawContours(img, [approx], 0, (0, 255, 0), 2)
+            cv2.drawContours(img, [_approx], 0, (0, 255, 0), 2)
             print("Na obrazie znaleziono prostokąt.")
             cv2_imshow(img)
             break
@@ -4918,13 +4918,13 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     # Wyznaczenie konturów
-    contours = cv2.findContours(image=edge.copy(),
-                                mode=cv2.RETR_TREE,
-                                method=cv2.CHAIN_APPROX_SIMPLE)
-    contours = imutils.grab_contours(contours)
+    _contours = cv2.findContours(image=edge.copy(),
+                                _mode=cv2.RETR_TREE,
+                                _method=cv2.CHAIN_APPROX_SIMPLE)
+    _contours = imutils.grab_contours(_contours)
     
-    contours = sorted(contours, key=cv2.contourArea, reverse=True)[:10]
-    print(contours)
+    _contours = sorted(_contours, key=cv2.contourArea, reverse=True)[:10]
+    print(_contours)
     return
 
 @app.cell
@@ -4991,9 +4991,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     #rysujemy kontur
-    cnt1 = cv2.drawContours(image=img.copy(), contours=[contours[0]], contourIdx=0,
-                            color=(0, 255, 0), thickness=3)
-    cv2_imshow(cnt1)
+    _cnt1 = cv2.drawContours(image=img.copy(), contours=[contours[0]], contourIdx=0,
+                            _color=(0, 255, 0), thickness=3)
+    cv2_imshow(_cnt1)
     return
 
 @app.cell
@@ -5423,13 +5423,13 @@ def _():
     def identify_shape(image_path):
         try:
             # ładujemy obraz
-            img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
-            if img is None:
-                return "Error: Could not load image."
+            _img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
+            if _img is None:
+                return "Error: Could not load _image."
     
             # usuwamy szum
-            img = cv2.GaussianBlur(img, (5, 5), 0)
-            _, thresh = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY_INV)
+            _img = cv2.GaussianBlur(_img, (5, 5), 0)
+            _, thresh = cv2.threshold(_img, 127, 255, cv2.THRESH_BINARY_INV)
     
     
             # Find contours
@@ -5441,29 +5441,29 @@ def _():
     
             for contour in contours:
                 # Approximate the contour to a polygon
-                epsilon = 0.04 * cv2.arcLength(contour, True)
-                approx = cv2.approxPolyDP(contour, epsilon, True)
+                _epsilon = 0.04 * cv2.arcLength(contour, True)
+                _approx = cv2.approxPolyDP(contour, _epsilon, True)
     
                 # klasysfikacja na podstawie liczby wierzchołków
-                vertices = len(approx)
+                _vertices = len(_approx)
     
-                if vertices == 3:
+                if _vertices == 3:
                     return "Triangle"
-                elif vertices == 4:
+                elif _vertices == 4:
                     # Further check for square/rectangle
-                    x, y, w, h = cv2.boundingRect(approx)
-                    aspect_ratio = float(w) / h
-                    if 0.95 <= aspect_ratio <= 1.05:
+                    x, y, w, h = cv2.boundingRect(_approx)
+                    _aspect_ratio = float(w) / h
+                    if 0.95 <= _aspect_ratio <= 1.05:
                         return "Square"
                     else:
                         return "Rectangle"
-                elif vertices == 5:
+                elif _vertices == 5:
                     return "Pentagon"
-                elif vertices == 6:
+                elif _vertices == 6:
                     return "Hexagon"
-                elif vertices == 8:  # Octagon
+                elif _vertices == 8:  # Octagon
                   return "Octagon"
-                elif vertices > 10 :
+                elif _vertices > 10 :
                     return "Circle"  # Approximate circle
                 else:
                     return "Unknown Polygon"
@@ -5475,11 +5475,11 @@ def _():
     
     # Ścieżka do pliku na dysku Google Drive
     
-    path2 = '/content/drive/MyDrive/sq.jpg'
-    image=cv2.imread(path2)
-    plt.imshow(image)
-    shape = identify_shape(path2)
-    print(f"The identified shape is: {shape}")
+    _path2 = '/content/drive/MyDrive/sq.jpg'
+    _image=cv2.imread(_path2)
+    plt.imshow(_image)
+    _shape = identify_shape(_path2)
+    print(f"The identified _shape is: {_shape}")
     return
 
 @app.cell
@@ -5662,13 +5662,13 @@ def _():
     import matplotlib.pyplot as plt
     
     # Generowanie przykładowych danych
-    x = np.linspace(0, 1, 300)
-    y = np.linspace(0, 1, 300)
-    X, Y = np.meshgrid(x, y)
-    heatmap_data = np.sin(10*X) * np.cos(10*Y)  # Przykładowe dane sinusoidalne
+    _x = np.linspace(0, 1, 300)
+    _y = np.linspace(0, 1, 300)
+    X, Y = np.meshgrid(_x, _y)
+    _heatmap_data = np.sin(10*X) * np.cos(10*Y)  # Przykładowe dane sinusoidalne
     
     # Tworzenie mapy cieplnej
-    plt.imshow(heatmap_data, cmap='cividis', interpolation='nearest')
+    plt.imshow(_heatmap_data, cmap='cividis', interpolation='nearest')
     
     # Dodanie paska kolorów
     plt.colorbar(label='Intensywność')

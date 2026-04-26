@@ -53,9 +53,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    a="100"
-    b="200"
-    print(a+b)
+    _a="100"
+    _b="200"
+    print(_a+_b)
     return
 
 @app.cell
@@ -107,9 +107,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    a="abcd"
-    print("długość ",len(a))
-    print("drugi znak ",a[3])
+    _a="abcd"
+    print("długość ",len(_a))
+    print("drugi znak ",_a[3])
     return
 
 @app.cell
@@ -147,9 +147,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 def _():
     # pobieranie fragmentu
     
-    a="abcd"
-    b=a[1:3]
-    print(b)
+    _a="abcd"
+    _b=_a[1:3]
+    print(_b)
     return
 
 @app.cell
@@ -183,9 +183,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    a="abcdefgh"
-    b=a[0:-2]
-    print(b)
+    _a="abcdefgh"
+    _b=_a[0:-2]
+    print(_b)
     return
 
 @app.cell
@@ -235,10 +235,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    a="100"
-    b="200"
-    print(a+b)
-    print(int(a)+int(b))
+    _a="100"
+    _b="200"
+    print(_a+_b)
+    print(int(_a)+int(_b))
     return
 
 @app.cell
@@ -283,10 +283,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    a="100"
-    b=100
-    print(type(a))
-    print(type(b))
+    _a="100"
+    _b=100
+    print(type(_a))
+    print(type(_b))
     return
 
 @app.cell
@@ -325,8 +325,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    a=100
-    if isinstance(a,int): print("int")
+    _a=100
+    if isinstance(_a,int): print("int")
     else: print("not int")
     return
 
@@ -367,8 +367,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    lista = [7, 2, 5, 4]
-    print(lista)
+    _lista = [7, 2, 5, 4]
+    print(_lista)
     return
 
 @app.cell
@@ -439,12 +439,12 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    lista_1 = [1, 'a', 2, 'b']
-    print(lista_1)
-    print(lista_1[0])
-    print(lista_1[-1])  # Python umożliwia liczenie elementów od końca
-    print(lista_1[1:3])
-    print(len(lista_1))
+    _lista_1 = [1, 'a', 2, 'b']
+    print(_lista_1)
+    print(_lista_1[0])
+    print(_lista_1[-1])  # Python umożliwia liczenie elementów od końca
+    print(_lista_1[1:3])
+    print(len(_lista_1))
     return
 
 @app.cell
@@ -488,9 +488,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    lista_1 = [1, 'a', 2, 'b']
-    lista_1.append(3)
-    print(lista_1)
+    _lista_1 = [1, 'a', 2, 'b']
+    _lista_1.append(3)
+    print(_lista_1)
     return
 
 @app.cell
@@ -547,10 +547,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    lista_1 = [1, 'a', 2, 'b']
-    lista = [3, 'x', 2, 'b']
-    lista_1.extend(lista)
-    print(lista_1)
+    _lista_1 = [1, 'a', 2, 'b']
+    _lista = [3, 'x', 2, 'b']
+    _lista_1.extend(_lista)
+    print(_lista_1)
     return
 
 @app.cell
@@ -599,10 +599,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    lista_1 = [1, 'a', 2, 'b']
-    lista = [3, 'x', 2, 'b']
-    lista_1 += lista
-    print(lista_1)
+    _lista_1 = [1, 'a', 2, 'b']
+    _lista = [3, 'x', 2, 'b']
+    _lista_1 += _lista
+    print(_lista_1)
     return
 
 @app.cell
@@ -643,9 +643,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    lista = ['x', 'u', 'b']
-    lista.sort()
-    print(lista)
+    _lista = ['x', 'u', 'b']
+    _lista.sort()
+    print(_lista)
     return
 
 @app.cell
@@ -688,9 +688,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    lista = ['z', 'x', 'u', 'b']
-    lista.reverse()
-    print(lista)
+    _lista = ['z', 'x', 'u', 'b']
+    _lista.reverse()
+    print(_lista)
     return
 
 @app.cell
@@ -729,9 +729,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    lista = ['z', 'x', 'u', 'b']
-    lista.pop(2)
-    print(lista)
+    _lista = ['z', 'x', 'u', 'b']
+    _lista.pop(2)
+    print(_lista)
     return
 
 @app.cell
@@ -739,7 +739,7 @@ def _(mo):
     mo.md(r"""### Przypisanie wartości
 
 Jeśli a i b są listami, to instrukcja a = b powoduje przypisanie referencji, zmiany listy a będą powodowały zmiany listy b i odwrotnie. Jeśli chcemy kopiować listy, to uzywamy a = b[:]
-Instrukcja == porównuje zawartość, instrukcja is sprawdza referencję.""")
+_Instrukcja == porównuje zawartość, instrukcja is sprawdza referencję.""")
     return
 
 @app.cell
@@ -790,10 +790,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    a = [1, 2, 3, 4, 5]
-    b = a  #  przypisanie referencji
-    print(a == b)  # porównanie wartości
-    print(a is b)  # porównanie referencji
+    _a = [1, 2, 3, 4, 5]
+    _b = _a  #  przypisanie referencji
+    print(_a == _b)  # porównanie wartości
+    print(_a is _b)  # porównanie referencji
     return
 
 @app.cell
@@ -830,9 +830,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    b = a[:]  #kopiowanie tablic, powstanie nowa tablica
-    print(a == b)
-    print(a is b)
+    _b = a[:]  #kopiowanie tablic, powstanie nowa tablica
+    print(a == _b)
+    print(a is _b)
     return
 
 @app.cell
@@ -944,8 +944,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    ip_address = ('10.20.30.40', 8080)
-    print(ip_address)
+    _ip_address = ('10.20.30.40', 8080)
+    print(_ip_address)
     return
 
 @app.cell
@@ -975,8 +975,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    ip_address = ('10.20.30.40', 8080)
-    print(ip_address[0])
+    _ip_address = ('10.20.30.40', 8080)
+    print(_ip_address[0])
     return
 
 @app.cell
@@ -1009,8 +1009,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     #próba zmiany, błąd
-    ip_address = ('10.20.30.40', 8080)
-    ip_address[0] = '10.20.30.250'
+    _ip_address = ('10.20.30.40', 8080)
+    _ip_address[0] = '10.20.30.250'
     return
 
 @app.cell
@@ -1050,9 +1050,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     # a to jest poprawne
-    ip_address1 = ('10.20.30.40', 8080)
-    ip_address1 = ('10.20.30.50', 8082)
-    print(ip_address1)
+    _ip_address1 = ('10.20.30.40', 8080)
+    _ip_address1 = ('10.20.30.50', 8082)
+    print(_ip_address1)
     return
 
 @app.cell
@@ -1104,9 +1104,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    duze_miasta = {'Warszawa', 'Kraków', 'Gdańsk'}
-    miasta_mazowsza = {'Radom', 'Płock', 'Warszawa'}
-    stolice_europy = {'Paryż', 'Berlin', 'Warszawa'}
+    _duze_miasta = {'Warszawa', 'Kraków', 'Gdańsk'}
+    _miasta_mazowsza = {'Radom', 'Płock', 'Warszawa'}
+    _stolice_europy = {'Paryż', 'Berlin', 'Warszawa'}
     return
 
 @app.cell
@@ -1173,11 +1173,11 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    duze_miasta = {'Warszawa', 'Kraków', 'Gdańsk'}
-    miasta_mazowsza = {'Radom', 'Płock', 'Warszawa'}
-    stolice_europy = {'Paryż', 'Berlin', 'Warszawa'}
-    duze_miasta_mazowsza = duze_miasta.intersection(miasta_mazowsza)
-    print(duze_miasta_mazowsza)
+    _duze_miasta = {'Warszawa', 'Kraków', 'Gdańsk'}
+    _miasta_mazowsza = {'Radom', 'Płock', 'Warszawa'}
+    _stolice_europy = {'Paryż', 'Berlin', 'Warszawa'}
+    _duze_miasta_mazowsza = _duze_miasta.intersection(_miasta_mazowsza)
+    print(_duze_miasta_mazowsza)
     return
 
 @app.cell
@@ -1243,11 +1243,11 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    duze_miasta = {'Warszawa', 'Kraków', 'Gdańsk'}
-    miasta_mazowsza = {'Radom', 'Płock', 'Warszawa'}
-    stolice_europy = {'Paryż', 'Berlin', 'Warszawa'}
-    male_miasta_mazowsza = miasta_mazowsza.difference(duze_miasta)
-    print(male_miasta_mazowsza)
+    _duze_miasta = {'Warszawa', 'Kraków', 'Gdańsk'}
+    _miasta_mazowsza = {'Radom', 'Płock', 'Warszawa'}
+    _stolice_europy = {'Paryż', 'Berlin', 'Warszawa'}
+    _male_miasta_mazowsza = _miasta_mazowsza.difference(_duze_miasta)
+    print(_male_miasta_mazowsza)
     return
 
 @app.cell
@@ -1329,12 +1329,12 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    duze_miasta = {'Warszawa', 'Kraków', 'Gdańsk'}
-    miasta_mazowsza = {'Radom', 'Płock', 'Warszawa'}
-    stolice_europy = {'Paryż', 'Berlin', 'Warszawa'}
-    male_miasta_mazowsza = miasta_mazowsza.difference(duze_miasta)
-    print(duze_miasta_mazowsza.issubset(stolice_europy))
-    print(male_miasta_mazowsza.isdisjoint(stolice_europy))
+    _duze_miasta = {'Warszawa', 'Kraków', 'Gdańsk'}
+    _miasta_mazowsza = {'Radom', 'Płock', 'Warszawa'}
+    _stolice_europy = {'Paryż', 'Berlin', 'Warszawa'}
+    _male_miasta_mazowsza = _miasta_mazowsza.difference(_duze_miasta)
+    print(duze_miasta_mazowsza.issubset(_stolice_europy))
+    print(_male_miasta_mazowsza.isdisjoint(_stolice_europy))
     return
 
 @app.cell
@@ -1370,8 +1370,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    stolice_europy = {'Paryż', 'Berlin', 'Warszawa'}
-    print('Berlin' in stolice_europy)
+    _stolice_europy = {'Paryż', 'Berlin', 'Warszawa'}
+    print('Berlin' in _stolice_europy)
     return
 
 @app.cell
@@ -1419,9 +1419,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    stolice_europy = {'Paryż', 'Berlin', 'Warszawa'}
-    print('Radom' not in stolice_europy)  # Zalecane
-    print(not 'Radom' in stolice_europy)  # Niezalecane, ale też działa
+    _stolice_europy = {'Paryż', 'Berlin', 'Warszawa'}
+    print('Radom' not in _stolice_europy)  # Zalecane
+    print(not 'Radom' in _stolice_europy)  # Niezalecane, ale też działa
     return
 
 @app.cell
@@ -1458,8 +1458,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    miasta_mazowsza = {'Radom', 'Płock', 'Warszawa'}
-    print(len(miasta_mazowsza))
+    _miasta_mazowsza = {'Radom', 'Płock', 'Warszawa'}
+    print(len(_miasta_mazowsza))
     return
 
 @app.cell
@@ -1528,12 +1528,12 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    ludnosc = {'Warszawa': 1777972,
+    _ludnosc = {'Warszawa': 1777972,
                'Radom': 213715,
                'Płock': 327027}
-    print(ludnosc.keys())
-    print(ludnosc.values())
-    print(ludnosc['Warszawa'])
+    print(_ludnosc.keys())
+    print(_ludnosc.values())
+    print(_ludnosc['Warszawa'])
     return
 
 @app.cell
@@ -1592,10 +1592,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    a="dane"
-    print(type(a),"  ",id(a))
-    a+="  test"
-    print(type(a),"  ",id(a))
+    _a="dane"
+    print(type(_a),"  ",id(_a))
+    _a+="  test"
+    print(type(_a),"  ",id(_a))
     return
 
 @app.cell
@@ -1643,8 +1643,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     # Jaki będzie wynik działania kodu:
-    aTuple = (1, 'Jhon', 1+3j)
-    print(type(aTuple[2:3]))
+    _aTuple = (1, 'Jhon', 1+3j)
+    print(type(_aTuple[2:3]))
     return
 
 @app.cell
@@ -1782,8 +1782,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    aTuple = (1, 'Jhon', 1+3j)
-    print(type(aTuple[2:3]))
+    _aTuple = (1, 'Jhon', 1+3j)
+    print(type(_aTuple[2:3]))
     return
 
 @app.cell
@@ -1831,10 +1831,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    a = [1, 2, 3, 4, 5]
-    b = a 
-    print(a == b)
-    print(a is b)
+    _a = [1, 2, 3, 4, 5]
+    _b = _a 
+    print(_a == _b)
+    print(_a is _b)
     return
 
 @app.cell
@@ -1905,11 +1905,11 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    a = 3
+    _a = 3
     b, c = 5, 7
-    print(a, b, c)
+    print(_a, b, c)
     b, c = c, b
-    print(a, b, c)
+    print(_a, b, c)
     return
 
 @app.cell
@@ -1960,8 +1960,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    x = int(input('Please enter an integer'))
-    if x < 0:
+    _x = int(input('Please enter an integer'))
+    if _x < 0:
       print('Negative')
     else:
       print('Positive or zero')
@@ -2023,10 +2023,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    x = int(input('Please enter an integer'))
-    if x < 0:
+    _x = int(input('Please enter an integer'))
+    if _x < 0:
       print('Negative')
-    elif x == 0:
+    elif _x == 0:
       print('Zero')
     else:
       print('Positive')
@@ -2069,8 +2069,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    x = int(input('Please enter an integer'))
-    print( 'Negative' if x < 0 else 'Positive or zero' )
+    _x = int(input('Please enter an integer'))
+    print( 'Negative' if _x < 0 else 'Positive or zero' )
     return
 
 @app.cell
@@ -2121,8 +2121,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    wiek = 27
-    if wiek < 30 or wiek % 10 == 0:
+    _wiek = 27
+    if _wiek < 30 or _wiek % 10 == 0:
       print('Możesz zorganizować huczne urodziny')
     else:
       print('Wystarczy ciasto dla najbliższych, masz kredyt hipoteczny')
@@ -2241,9 +2241,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    lista = range(1,10,3)
-    print(lista)
-    for i in lista:
+    _lista = range(1,10,3)
+    print(_lista)
+    for i in _lista:
       print(i)
     return
 
@@ -2325,8 +2325,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    najwieksze_kraje = ['Rosja', 'Kanada', 'USA']
-    for idx, item in enumerate(najwieksze_kraje):
+    _najwieksze_kraje = ['Rosja', 'Kanada', 'USA']
+    for idx, item in enumerate(_najwieksze_kraje):
       print(idx, item)
     return
 
@@ -2445,7 +2445,7 @@ def _():
       if num % 2 == 0:
         print('Found an even number -', num)
         continue
-      x = 10 / (num % 2)
+      _x = 10 / (num % 2)
     return
 
 @app.cell
@@ -2535,11 +2535,11 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    x=10
-    if x>100:
+    _x=10
+    if _x>100:
         pass
     else:
-        print(x)
+        print(_x)
     return
 
 @app.cell
@@ -2579,8 +2579,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    kwadraty = [x**2 for x in range(10)]  # tworzenie listy kwadratów liczb od 1 do 9
-    print(kwadraty)
+    _kwadraty = [x**2 for x in range(10)]  # tworzenie listy kwadratów liczb od 1 do 9
+    print(_kwadraty)
     return
 
 @app.cell
@@ -2636,8 +2636,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    kwadraty_dict = {x: x**2 for x in range(10)}
-    for liczba, kwadrat in kwadraty_dict.items():
+    _kwadraty_dict = {x: x**2 for x in range(10)}
+    for liczba, kwadrat in _kwadraty_dict.items():
       print(liczba, kwadrat)
     return
 
@@ -2700,8 +2700,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    kwadraty_parzyste_dict = {x: x**2 for x in range(10) if x%2 == 0}
-    for liczba, kwadrat in kwadraty_parzyste_dict.items():
+    _kwadraty_parzyste_dict = {x: x**2 for x in range(10) if x%2 == 0}
+    for liczba, kwadrat in _kwadraty_parzyste_dict.items():
       print(liczba, kwadrat)
     return
 
@@ -2775,9 +2775,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    tabliczka_mnozenia = [{'czynnik_1': x, 'czynnik_2': y, 'iloczyn': x * y}
+    _tabliczka_mnozenia = [{'czynnik_1': x, 'czynnik_2': y, 'iloczyn': x * y}
                           for x in range(1, 5) for y in range(1, x+1)]
-    for item in tabliczka_mnozenia:
+    for item in _tabliczka_mnozenia:
       print(item)
     return
 
@@ -2837,8 +2837,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    lista_krotek = [('a', 'b', 'c'), ('x', 'y', 'z'), ('1', '2', '3')]
-    for item in lista_krotek:
+    _lista_krotek = [('a', 'b', 'c'), ('x', 'y', 'z'), ('1', '2', '3')]
+    for item in _lista_krotek:
       print(item)
     return
 
@@ -2917,10 +2917,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    i = 0
-    while i**2 < 30:
-      i = i+1
-      print(i)
+    _i = 0
+    while _i**2 < 30:
+      _i = _i+1
+      print(_i)
     return
 
 @app.cell
@@ -2961,10 +2961,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    i = 2
-    while 1 < i**2 < 30:
-      i = i+1
-      print(i)
+    _i = 2
+    while 1 < _i**2 < 30:
+      _i = _i+1
+      print(_i)
     return
 
 @app.cell
@@ -3006,10 +3006,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    x=1
-    if x>0:
-        y=1
-    print(y)
+    _x=1
+    if _x>0:
+        _y=1
+    print(_y)
     return
 
 @app.cell
@@ -3098,7 +3098,7 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    x=2
+    _x=2
     return
 
 @app.cell

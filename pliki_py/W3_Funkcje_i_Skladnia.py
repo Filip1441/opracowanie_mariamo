@@ -129,9 +129,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    data = {input("Nazwisko: "): int(input("Wiek: ")) for i in range(int(input("Ile par wprowadzić? ")))}
-    limitAge = int(input("Podaj graniczny wiek: "))
-    print({name: age for name, age in data.items() if age > limitAge})
+    _data = {input("Nazwisko: "): int(input("Wiek: ")) for i in range(int(input("Ile par wprowadzić? ")))}
+    _limitAge = int(input("Podaj graniczny wiek: "))
+    print({name: age for name, age in _data.items() if age > _limitAge})
     return
 
 @app.cell
@@ -205,8 +205,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    dzien=input("Podaj dzień tygodnia: ")
-    match dzien:
+    _dzien=input("Podaj dzień tygodnia: ")
+    match _dzien:
             case "poniedziałek":
                print("Początek tygodnia")
             case "wtorek":
@@ -269,8 +269,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     for i in range(3):
-      k=int(input('podaj k'))
-      if k<0: break
+      _k=int(input('podaj _k'))
+      if _k<0: break
     else: print('koniec')
     return
 
@@ -322,10 +322,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     #tworzymy listę składającą się z liczb od 0 do 9   kod w stylu C, ale nie pythona
-    kw=[]
+    _kw=[]
     for i in range(10):
-        kw.append(i)
-    print(kw)
+        _kw.append(i)
+    print(_kw)
     return
 
 @app.cell
@@ -431,12 +431,12 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    a=True
-    if a==True:
-        b=1
+    _a=True
+    if _a==True:
+        _b=1
     else:
-        b=2
-    print(b)
+        _b=2
+    print(_b)
     return
 
 @app.cell
@@ -469,8 +469,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     #zapis bardziej pythonowy
-    a=True
-    print(b := 1 if a else 2)
+    _a=True
+    print(b := 1 if _a else 2)
     return
 
 @app.cell
@@ -533,10 +533,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     # zapis w stylu C
-    lista=[1,2,3,4,5]
-    n=3
-    for i in range(len(lista)):
-        if i > n: print(lista[i])
+    _lista=[1,2,3,4,5]
+    _n=3
+    for i in range(len(_lista)):
+        if i > _n: print(_lista[i])
     return
 
 @app.cell
@@ -585,9 +585,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    lista=[1,2,3,4,5]
-    n=3
-    for x in lista: print(x if x>n else "")
+    _lista=[1,2,3,4,5]
+    _n=3
+    for x in _lista: print(x if x>_n else "")
     return
 
 @app.cell
@@ -627,8 +627,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    source='print("test eval xxxx")'
-    result=eval(source)
+    _source='print("test eval xxxx")'
+    _result=eval(_source)
     return
 
 @app.cell
@@ -668,10 +668,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     #wprowadzanie parametrów
-    var_x=55
-    source='print("test eval",var_x)'
-    print(source)
-    result=eval(source)
+    _var_x=55
+    _source='print("test eval",_var_x)'
+    print(_source)
+    _result=eval(_source)
     return
 
 @app.cell
@@ -712,10 +712,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     import math
-    x=2
-    source='math.sqrt(x)'
-    result=eval(source)
-    print(result)
+    _x=2
+    _source='math.sqrt(_x)'
+    _result=eval(_source)
+    print(_result)
     return
 
 @app.cell
@@ -760,11 +760,11 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     #wprowadzanie parametrów
-    x=20
-    y=1000
-    source='x/y'
-    result=eval(source)
-    print(result)
+    _x=20
+    _y=1000
+    _source='_x/_y'
+    _result=eval(_source)
+    print(_result)
     return
 
 @app.cell
@@ -812,11 +812,11 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     # wprowadzenie instrukcji z klawiatury
-    x=20
-    y=30
-    source=input("wprowadź instrukcję: ")
-    result=eval(source)
-    print(result)
+    _x=20
+    _y=30
+    _source=input("wprowadź instrukcję: ")
+    _result=eval(_source)
+    print(_result)
     return
 
 @app.cell
@@ -865,11 +865,11 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    var_x=20
-    source='var_x=30'          #próba zmiany wartości
-    result=exec(source)        #nic nie zwraca
-    print(result)
-    print(var_x)
+    _var_x=20
+    _source='_var_x=30'          #próba zmiany wartości
+    _result=exec(_source)        #nic nie zwraca
+    print(_result)
+    print(_var_x)
     return
 
 @app.cell
@@ -910,10 +910,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    var_x=20
-    source=input("podaj kod")          #próba zmiany wartości
-    result=exec(source)                #nic nie zwraca
-    print(var_x)
+    _var_x=20
+    _source=input("podaj kod")          #próba zmiany wartości
+    _result=exec(_source)                #nic nie zwraca
+    print(_var_x)
     return
 
 @app.cell
@@ -922,8 +922,8 @@ def _(mo):
 
 Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie każdego znaku, słowa i polecenia z komórki z kodem poniżej:
 
-#### 👉 **Linia 1**: `var_x=20`
-- Nazwa **`var_x`**: To jest nazwa (identyfikator). Może to być nazwa zmiennej (pojemnika na dane), funkcji (gotowego przepisu na wykonanie zadania) lub metody.
+#### 👉 **Linia 1**: `_var_x=20`
+- Nazwa **`_var_x`**: To jest nazwa (identyfikator). Może to być nazwa zmiennej (pojemnika na dane), funkcji (gotowego przepisu na wykonanie zadania) lub metody.
 - Znak **`=`**: Znak równości to w programowaniu 'operator przypisania'. Działa jak wkładanie rzeczy do podpisanego pudełka: bierze wartość po prawej stronie i zapisuje ją pod nazwą po lewej stronie. To NIE JEST równanie matematyczne.
 - Liczba **`20`**: To jest wartość liczbowa. Komputer potrafi wykonywać na niej operacje matematyczne. Jeśli nie ma kropki, to liczba całkowita. Jeśli ma kropkę, to ułamek dziesiętny.
 
@@ -931,8 +931,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 - Nazwa **`source`**: To jest nazwa (identyfikator). Może to być nazwa zmiennej (pojemnika na dane), funkcji (gotowego przepisu na wykonanie zadania) lub metody.
 - Znak **`=`**: Znak równości to w programowaniu 'operator przypisania'. Działa jak wkładanie rzeczy do podpisanego pudełka: bierze wartość po prawej stronie i zapisuje ją pod nazwą po lewej stronie. To NIE JEST równanie matematyczne.
 - Tekst (String) **`'''
-print("poprzednia wartość ",var_x)
-var_x=10
+print("poprzednia wartość ",_var_x)
+_var_x=10
 
 '''`**: To jest ciąg znaków (tekst). Zawsze znajduje się w cudzysłowach lub apostrofach. Komputer traktuje to dosłownie jako napis, a nie jako polecenie do wykonania.
 
@@ -958,12 +958,12 @@ var_x=10
 - Nazwa **`csource`**: To jest nazwa (identyfikator). Może to być nazwa zmiennej (pojemnika na dane), funkcji (gotowego przepisu na wykonanie zadania) lub metody.
 - Znak **`)`**: Prawy nawias okrągły. Kończy argumenty funkcji lub grupowanie.
 
-#### 👉 **Linia 9**: `print("nowa wartość ",var_x)`
+#### 👉 **Linia 9**: `print("nowa wartość ",_var_x)`
 - Słowo kluczowe **`print`**: Wbudowana funkcja 'print' (drukuj). Jej głównym zadaniem jest wyświetlenie tekstu lub wyliczonej wartości zmiennych na ekranie komputera, żeby człowiek mógł to zobaczyć i przeczytać.
 - Znak **`(`**: Lewy nawias okrągły. Rozpoczyna listę argumentów (parametrów i informacji) podawanych do funkcji, albo po prostu grupuje działania matematyczne (jak w matematyce).
 - Tekst (String) **`"nowa wartość "`**: To jest ciąg znaków (tekst). Zawsze znajduje się w cudzysłowach lub apostrofach. Komputer traktuje to dosłownie jako napis, a nie jako polecenie do wykonania.
 - Znak **`,`**: Przecinek. Służy do oddzielania od siebie wielu elementów (np. elementów na liście lub argumentów przekazywanych do funkcji).
-- Nazwa **`var_x`**: To jest nazwa (identyfikator). Może to być nazwa zmiennej (pojemnika na dane), funkcji (gotowego przepisu na wykonanie zadania) lub metody.
+- Nazwa **`_var_x`**: To jest nazwa (identyfikator). Może to być nazwa zmiennej (pojemnika na dane), funkcji (gotowego przepisu na wykonanie zadania) lub metody.
 - Znak **`)`**: Prawy nawias okrągły. Kończy argumenty funkcji lub grupowanie.
 
 #### 👉 **Linia 10**: `print(result)`
@@ -975,16 +975,16 @@ var_x=10
     return
 @app.cell
 def _():
-    var_x=20
-    source='''
-    print("poprzednia wartość ",var_x)
-    var_x=10
+    _var_x=20
+    _source='''
+    print("poprzednia wartość ",_var_x)
+    _var_x=10
     
     '''
-    csource=compile(source,'','exec')
-    result=exec(csource)
-    print("nowa wartość ",var_x)
-    print(result)
+    _csource=compile(_source,'','exec')
+    _result=exec(_csource)
+    print("nowa wartość ",_var_x)
+    print(_result)
     return
 
 @app.cell

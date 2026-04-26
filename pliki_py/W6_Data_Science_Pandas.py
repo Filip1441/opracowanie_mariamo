@@ -98,9 +98,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     # Wyświetlenie wartości zmiennej
-    imie = "Jan"
-    wiek = 25
-    print(f"Imię: {imie}, Wiek: {wiek}")
+    _imie = "Jan"
+    _wiek = 25
+    print(f"Imię: {_imie}, Wiek: {_wiek}")
     return
 
 @app.cell
@@ -181,10 +181,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     from google.colab import files
-    uploaded = files.upload()
+    _uploaded = files.upload()
     
     # Załaduj obraz za pomocą OpenCV (po przesłaniu)
-    image_path = list(uploaded.keys())[0]
+    _image_path = list(_uploaded.keys())[0]
     return
 
 @app.cell
@@ -277,15 +277,15 @@ def _():
     from google.colab import drive
     ## montowanie dysku w google collab, klasycznie nie stosowane
     drive.mount('/content/drive')
-    file = '/content/drive/MyDrive/pliki/elves.txt'
+    _file = '/content/drive/MyDrive/pliki/elves.txt'
     # Otwarcie pliku do odczytu
-    # plik zawiera dane w języku elfów
-    with open(file, 'r') as plik:
+    # plik zawiera _dane w języku elfów
+    with open(_file, 'r') as plik:
         # Odczytanie danych z pliku i przypisanie ich do zmiennej
-        dane = plik.read()
+        _dane = plik.read()
     
     # Wyświetlenie wczytanych danych
-    print(dane)
+    print(_dane)
     return
 
 @app.cell
@@ -332,11 +332,11 @@ def _():
     
     import os
     
-    #katalog = '.'  # Aktualny katalog
-    katalog = '/content/drive/MyDrive/pliki/'
-    zawartosc = os.listdir(katalog)
+    #_katalog = '.'  # Aktualny _katalog
+    _katalog = '/content/drive/MyDrive/pliki/'
+    _zawartosc = os.listdir(_katalog)
     
-    print(zawartosc)
+    print(_zawartosc)
     return
 
 @app.cell
@@ -389,10 +389,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    file = '/content/drive/MyDrive/pliki/plik.txt'
+    _file = '/content/drive/MyDrive/pliki/plik.txt'
     # Otwarcie pliku do odczytu
     # plik zawiera dane w języku elfów
-    with open(file, 'w') as plik:
+    with open(_file, 'w') as plik:
         # Odczytanie danych z pliku i przypisanie ich do zmiennej
         plik.write("tekst  12.8")
     plik.close()
@@ -495,18 +495,18 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    file = '/content/drive/MyDrive/pliki/plik.txt'
+    _file = '/content/drive/MyDrive/pliki/plik.txt'
     # Otwarcie pliku do odczytu
     # plik zawiera dane w języku elfów
-    with open(file, 'r') as plik:
+    with open(_file, 'r') as plik:
         # Odczytanie danych z pliku i przypisanie ich do zmiennej
-        line=plik.read()
-        print(line)
-    tekst, ints = line.split()
+        _line=plik.read()
+        print(_line)
+    tekst, ints = _line.split()
     print(tekst,"  ",ints)
     print(type(ints))
-    intf=float(ints)
-    print(type(intf))
+    _intf=float(ints)
+    print(type(_intf))
     return
 
 @app.cell
@@ -606,8 +606,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    x=21
-    print("x=%o x=%x" %(x,x))
+    _x=21
+    print("_x=%o _x=%_x" %(_x,_x))
     return
 
 @app.cell
@@ -642,9 +642,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    amount = 12.345
-    x = 42
-    print("liczba {:5.2f} {:2}".format(amount, x))
+    _amount = 12.345
+    _x = 42
+    print("liczba {:5.2f} {:2}".format(_amount, _x))
     return
 
 @app.cell
@@ -672,8 +672,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    amount=10.2
-    print(f"liczba {amount}")
+    _amount=10.2
+    print(f"liczba {_amount}")
     return
 
 @app.cell
@@ -787,18 +787,18 @@ def _():
     import pickle
     
     # Lista obiektów Pythona
-    data = [1, 2, 3, "apple", "banana", {"name": "John", "age": 30}]
+    _data = [1, 2, 3, "apple", "banana", {"name": "John", "age": 30}]
     
-    # Zapisanie listy do pliku "data.pickle"
-    with open("/content/drive/MyDrive/pliki/data.pickle", "wb") as f:
-        pickle.dump(data, f)
+    # Zapisanie listy do pliku "_data.pickle"
+    with open("/content/drive/MyDrive/pliki/_data.pickle", "wb") as f:
+        pickle.dump(_data, f)
     
-    # Odczytanie listy z pliku "data.pickle"
-    with open("/content/drive/MyDrive/pliki/data.pickle", "rb") as f:
-        loaded_data = pickle.load(f)
+    # Odczytanie listy z pliku "_data.pickle"
+    with open("/content/drive/MyDrive/pliki/_data.pickle", "rb") as f:
+        _loaded_data = pickle.load(f)
     
     # Wyświetlenie odczytanej listy
-    print(loaded_data)
+    print(_loaded_data)
     return
 
 @app.cell
@@ -908,9 +908,9 @@ def _():
     import pandas as pd
     
     # Tworzenie serii
-    s = pd.Series([10, 20, 30, 40, 50], name='numbers')
-    #print(s[1])
-    print(s)
+    _s = pd.Series([10, 20, 30, 40, 50], name='numbers')
+    #print(_s[1])
+    print(_s)
     return
 
 @app.cell
@@ -975,9 +975,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     import pandas as pd
-    vals_sr = pd.Series(["Val_1", "Val_2", "Val_3", "Val_4", "Val_5"], index=["A", "B", "C", "D", "E"])
-    #print(vals_sr)
-    print(vals_sr["A"])
+    _vals_sr = pd.Series(["Val_1", "Val_2", "Val_3", "Val_4", "Val_5"], index=["A", "B", "C", "D", "E"])
+    #print(_vals_sr)
+    print(_vals_sr["A"])
     return
 
 @app.cell
@@ -1036,8 +1036,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     dict = {'a':10, 'b':20, 'c':30, 'd':40, 'e':50}
-    s = pd.Series(dict)
-    print(s)
+    _s = pd.Series(dict)
+    print(_s)
     return
 
 @app.cell
@@ -1142,11 +1142,11 @@ def _():
             self.model = model
             self.rok = rok
     
-    auto = Auto("Toyota", "Corolla", 2020)
-    dict=vars(auto)
+    _auto = Auto("Toyota", "Corolla", 2020)
+    dict=vars(_auto)
     print(dict)
-    s = pd.Series(dict)
-    print(s)
+    _s = pd.Series(dict)
+    print(_s)
     return
 
 @app.cell
@@ -1227,13 +1227,13 @@ def _():
     import pandas as pd
     
     # Tworzenie serii
-    s = pd.Series([1, 2, 3, 4, 5], name='numbers')
-    print(s)
+    _s = pd.Series([1, 2, 3, 4, 5], name='numbers')
+    print(_s)
     # Konwertowanie serii na ramkę danych
-    df = s.to_frame()
+    _df = _s.to_frame()
     
-    print(df)
-    print(df['numbers'])
+    print(_df)
+    print(_df['numbers'])
     return
 
 @app.cell
@@ -1402,19 +1402,19 @@ def _():
     # czytanie danych przy użyciu Pandas
     from google.colab import drive
     drive.mount('/content/drive')       #montowanie dysku
-    file = '/content/drive/MyDrive/pliki/anal.xlsx'
+    _file = '/content/drive/MyDrive/pliki/anal.xlsx'
     import pandas as pd
     
-    df = pd.read_excel(file)   # otwarcie i czytanie całęgo pliku
+    _df = pd.read_excel(_file)   # otwarcie i czytanie całęgo pliku
     
-    kolumna = df.iloc[2:8, [1,2]]  # pobieranie zawartości kolumny drugiej i trzeciej w zakresie od 2 do 8
-    print(kolumna)
+    _kolumna = _df.iloc[2:8, [1,2]]  # pobieranie zawartości kolumny drugiej i trzeciej w zakresie od 2 do 8
+    print(_kolumna)
     # drukowanie bez nagłówków i numerów
-    print(df.iloc[2:8, [1, 2]].to_string(index=False, header=False))
+    print(_df.iloc[2:8, [1, 2]].to_string(index=False, header=False))
     #zapisanie kolumny drugiej od 2 do 8 do tablicy
-    tablica = df.iloc[2:8,1].values
-    print(tablica)
-    print(type(tablica))     #to nie jest DataFrame
+    _tablica = _df.iloc[2:8,1].values
+    print(_tablica)
+    print(type(_tablica))     #to nie jest DataFrame
     return
 
 @app.cell
@@ -1561,8 +1561,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    a=df.columns
-    for k in a: print(k)                                  # Nazwy kolumn
+    _a=df.columns
+    for k in _a: print(k)                                  # Nazwy kolumn
     return
 
 @app.cell
@@ -1800,16 +1800,16 @@ def _():
     import matplotlib.pyplot as plt
     
     # Tworzenie przykładowego DataFrame
-    data = {
+    _data = {
         'Rok': [  2020,   2021,   2022],
         'Sprzedaż': [150, 1200, 250]
     }
-    df = pd.DataFrame(data)
-    print(df)
+    _df = pd.DataFrame(_data)
+    print(_df)
     # tu dodajemy kolejne dane
-    data2= {'Rok': 2023,'Sprzedaż':2000}
-    df = pd.concat([df,pd.DataFrame([data2])], ignore_index=True)
-    print(df)
+    _data2= {'Rok': 2023,'Sprzedaż':2000}
+    _df = pd.concat([_df,pd.DataFrame([_data2])], ignore_index=True)
+    print(_df)
     return
 
 @app.cell
@@ -1880,9 +1880,9 @@ def _():
     import numpy as np
     
     # Tworzymy pusty DataFrame z 3 kolumnami i 5 wierszami
-    df = pd.DataFrame(np.nan, index=range(5), columns=['A', 'B', 'C'])
+    _df = pd.DataFrame(np.nan, index=range(5), columns=['A', 'B', 'C'])
     
-    print(df)
+    print(_df)
     return
 
 @app.cell
@@ -2007,10 +2007,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 def _():
     # Usuwanie wiersza
     
-    df1 = df.drop([1, 3])
+    _df1 = df.drop([1, 3])
     
     print("\nPo usunięciu wierszy o indeksach 1 i 3")
-    print(df1)
+    print(_df1)
     return
 
 @app.cell
@@ -2059,11 +2059,11 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     # Usuwanie wierszy, w których wartość w kolumnie 'A' jest nan
-    print(df)
-    df = df[df['A'].isna()]
+    print(_df)
+    _df = _df[_df['A'].isna()]
     
     print("\nPo usunięciu wierszy, w których wartość w kolumnie 'A' jest większa niż 2:")
-    print(df)
+    print(_df)
     return
 
 @app.cell
@@ -2132,10 +2132,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     # czytamy informację zawierającą oceny filmów przez poszczególnych użytkowników
-    filmr = '/content/drive/MyDrive/pliki/u.data'
-    cols = ['user_id', 'movie_id', 'rating']
-    rt = pd.read_csv(filmr, sep='\t', names=cols, usecols=range(3), encoding="ISO-8859-1")
-    rt.head(5)
+    _filmr = '/content/drive/MyDrive/pliki/u.data'
+    _cols = ['user_id', 'movie_id', 'rating']
+    _rt = pd.read_csv(_filmr, sep='\t', names=_cols, usecols=range(3), encoding="ISO-8859-1")
+    _rt.head(5)
     return
 
 @app.cell
@@ -2198,10 +2198,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    namef = '/content/drive/MyDrive/pliki/u.item'
-    m_cols = ['movie_id', 'title']
-    movies = pd.read_csv(namef, sep='|', names=m_cols, usecols=range(2), encoding="ISO-8859-1")
-    movies.head(5)
+    _namef = '/content/drive/MyDrive/pliki/u.item'
+    _m_cols = ['movie_id', 'title']
+    _movies = pd.read_csv(_namef, sep='|', names=_m_cols, usecols=range(2), encoding="ISO-8859-1")
+    _movies.head(5)
     return
 
 @app.cell
@@ -2244,8 +2244,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    rt = pd.merge(movies, rt)
-    rt.head(8)
+    _rt = pd.merge(movies, _rt)
+    _rt.head(8)
     return
 
 @app.cell
@@ -2305,9 +2305,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    movieRatings = rt.pivot_table(index=['user_id'],columns=['title'],values='rating')
-    a=movieRatings.columns
-    for k in a: print(k)                                  # Nazwy kolumn
+    _movieRatings = rt.pivot_table(index=['user_id'],columns=['title'],values='rating')
+    _a=_movieRatings.columns
+    for k in _a: print(k)                                  # Nazwy kolumn
     return
 
 @app.cell
@@ -2364,8 +2364,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     # Pobieramy kolumnę ocen dla Y.F.
-    YF = movieRatings['Young Frankenstein (1974)']
-    YF.head(10)
+    _YF = movieRatings['Young Frankenstein (1974)']
+    _YF.head(10)
     return
 
 @app.cell
@@ -2416,12 +2416,12 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    sm = movieRatings.corrwith(YF)
-    sm = sm.dropna()
+    _sm = movieRatings.corrwith(YF)
+    _sm = _sm.dropna()
     
     
-    print(type(sm))
-    print(sm)
+    print(type(_sm))
+    print(_sm)
     return
 
 @app.cell
@@ -2473,8 +2473,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    s = pd.Series([10, 2, 3], index=['a', 'b', 'c'], name='my_series')
-    s.sort_values(ascending=True)
+    _s = pd.Series([10, 2, 3], index=['a', 'b', 'c'], name='my_series')
+    _s.sort_values(ascending=True)
     return
 
 @app.cell
@@ -2504,8 +2504,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    df = pd.DataFrame(s)
-    print(df.columns)
+    _df = pd.DataFrame(s)
+    print(_df.columns)
     return
 
 @app.cell
@@ -2656,10 +2656,10 @@ def _():
     import numpy as np
     import pandas as pd
     
-    ndarray = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+    _ndarray = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
     
-    df = pd.DataFrame(ndarray, columns=['col1', 'col2', 'col3'], index=['row1', 'row2', 'row3'])
-    df.head(3)
+    _df = pd.DataFrame(_ndarray, columns=['col1', 'col2', 'col3'], index=['row1', 'row2', 'row3'])
+    _df.head(3)
     return
 
 @app.cell
@@ -2684,8 +2684,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    nparray=df.values
-    print(nparray)
+    _nparray=df.values
+    print(_nparray)
     return
 
 @app.cell
@@ -2723,9 +2723,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    pom=df['col1']
-    pom.head(3)      #to nie jest wektor
-    print(pom.values)  #to jest wektor
+    _pom=df['col1']
+    _pom.head(3)      #to nie jest wektor
+    print(_pom.values)  #to jest wektor
     return
 
 @app.cell
@@ -2837,15 +2837,15 @@ def _():
     import pandas as pd
     
     # Istniejąca tabela
-    df = pd.DataFrame({'Name': ['John', 'Alice'], 'Age': [25, 30], 'Gender': ['Male', 'Female']})
+    _df = pd.DataFrame({'Name': ['John', 'Alice'], 'Age': [25, 30], 'Gender': ['Male', 'Female']})
     
     # Nowa kolumna do dodania
-    new_col = pd.Series(['Engineer', 'Doctor'], name='Profession')
+    _new_col = pd.Series(['Engineer', 'Doctor'], name='Profession')
     
     # Łączenie tabel wzdłuż osi 1 (kolumn)
-    df = pd.concat([df, new_col], axis=1)   #kierunek dodawania
+    _df = pd.concat([_df, _new_col], axis=1)   #kierunek dodawania
     
-    print(df)
+    print(_df)
     return
 
 @app.cell
@@ -2937,12 +2937,12 @@ def _():
     import pandas as pd
     
     # Tworzenie ramki danych
-    df = pd.DataFrame({'col1': [1, 2, 3, 4, 5], 'col2': [10, 20, 30, 40, 50]})
+    _df = pd.DataFrame({'col1': [1, 2, 3, 4, 5], 'col2': [10, 20, 30, 40, 50]})
     
     # Dodawanie wartości z kolumn "col1" i "col2" i przypisanie wyniku do nowej kolumny "sum"
-    df['sum'] = df['col1'] + df['col2']
+    _df['sum'] = _df['col1'] + _df['col2']
     
-    print(df)
+    print(_df)
     return
 
 @app.cell
@@ -3056,15 +3056,15 @@ def _():
     import numpy as np
     
     # Tworzenie ramki danych
-    df = pd.DataFrame({'col1': [1, 2, 3, 4, 5], 'col2': [10, 20, 30, 40, 50]})
+    _df = pd.DataFrame({'col1': [1, 2, 3, 4, 5], 'col2': [10, 20, 30, 40, 50]})
     
     # Tworzenie wektora numpy
-    arr = np.array([6, 7, 8, 9, 10])
+    _arr = np.array([6, 7, 8, 9, 10])
     
     # Przypisywanie wektora numpy do kolumny "col1"
-    df['col1'] = arr
+    _df['col1'] = _arr
     
-    print(df)
+    print(_df)
     return
 
 @app.cell
@@ -3147,10 +3147,10 @@ def _():
     import pandas as pd
     
     # Tworzenie ramki danych
-    df = pd.DataFrame({'col1': [1, 2, 3, 4, 5], 'col2': [10, 20, 30, 40, 50]})
+    _df = pd.DataFrame({'col1': [1, 2, 3, 4, 5], 'col2': [10, 20, 30, 40, 50]})
     
     # Zapisywanie ramki danych do pliku CSV
-    df.to_csv('nazwa_pliku.csv', index=False)     #to_excel  dla plików excela
+    _df.to_csv('nazwa_pliku.csv', index=False)     #to_excel  dla plików excela
     return
 
 @app.cell
@@ -3242,12 +3242,12 @@ def _():
     import pandas as pd
     
     # Tworzenie ramki danych
-    df = pd.DataFrame({'col1': [3, 1, 4, 2, 5], 'col2': [10, 20, 30, 40, 50]})
+    _df = pd.DataFrame({'col1': [3, 1, 4, 2, 5], 'col2': [10, 20, 30, 40, 50]})
     
     # Sortowanie według wartości w kolumnie "col1"
-    df_sorted = df.sort_values(by='col1', ascending=True)
+    _df_sorted = _df.sort_values(by='col1', ascending=True)
     
-    print(df_sorted)
+    print(_df_sorted)
     return
 
 @app.cell
@@ -3290,9 +3290,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    new_index = [0, 1, 2, 3, 4]
-    dfr = df_sorted.reindex(new_index)
-    print(dfr)
+    _new_index = [0, 1, 2, 3, 4]
+    _dfr = df_sorted.reindex(_new_index)
+    print(_dfr)
     return
 
 @app.cell
@@ -3347,10 +3347,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    new_in = {0: 'A', 1: 'B', 2: 'C', 3: 'D', 4: 'E'}
+    _new_in = {0: 'A', 1: 'B', 2: 'C', 3: 'D', 4: 'E'}
     
-    df = df.rename(index=new_in)
-    print(df)
+    _df = _df.rename(index=_new_in)
+    print(_df)
     return
 
 @app.cell
@@ -3403,10 +3403,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    max_val = df['col1'].max()
-    median_val = df['col2'].median()
+    _max_val = df['col1'].max()
+    _median_val = df['col2'].median()
     
-    print("max=", max_val,"mediana=",median_val)
+    print("max=", _max_val,"mediana=",_median_val)
     return
 
 @app.cell
@@ -3442,8 +3442,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    des = df['col1'].describe()
-    print(des)
+    _des = df['col1'].describe()
+    print(_des)
     return
 
 @app.cell
@@ -3476,8 +3476,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    des = df['col1'].describe()
-    print(des['count'])
+    _des = df['col1'].describe()
+    print(_des['count'])
     return
 
 @app.cell
@@ -3542,8 +3542,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 def _():
     import numpy as np
     # Na podstawie listy liczb
-    arr = np.array([[1, 2, 3], [4, 5, 6]])
-    print(arr)
+    _arr = np.array([[1, 2, 3], [4, 5, 6]])
+    print(_arr)
     return
 
 @app.cell
@@ -3579,8 +3579,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    arr=np.zeros((5,4),dtype=float)
-    print(arr)
+    _arr=np.zeros((5,4),dtype=float)
+    print(_arr)
     return
 
 @app.cell
@@ -3616,8 +3616,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    arr=np.ones((5,4),dtype=complex)
-    print(arr)
+    _arr=np.ones((5,4),dtype=complex)
+    print(_arr)
     return
 
 @app.cell
@@ -3653,8 +3653,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    arr=np.empty((5,4),dtype=int)
-    print(arr)
+    _arr=np.empty((5,4),dtype=int)
+    print(_arr)
     return
 
 @app.cell
@@ -3756,11 +3756,11 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 def _():
     import numpy as np
     # Na podstawie listy liczb
-    arr = np.array([[1, 2, 3], [4, 5, 6]])
+    _arr = np.array([[1, 2, 3], [4, 5, 6]])
     # Liczba wymiarów tablicy
-    print(arr.ndim)
+    print(_arr.ndim)
     # Rozmiar tablicy
-    print(arr.shape)
+    print(_arr.shape)
     return
 
 @app.cell
@@ -3875,11 +3875,11 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    # 1-wymiarowa tablica o N wartościach od A do B
-    A = 4.0
-    B = 7.0
-    N = 13
-    print(np.linspace(A, B, N))
+    # 1-wymiarowa tablica o _N wartościach od _A do _B
+    _A = 4.0
+    _B = 7.0
+    _N = 13
+    print(np.linspace(_A, _B, _N))
     return
 
 @app.cell
@@ -4001,11 +4001,11 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    arr = np.array([[2, 8, 3], [5, 6, 2]])
+    _arr = np.array([[2, 8, 3], [5, 6, 2]])
     # Operacje powyzsze, jak i wiele innych, można wykonywać wzdłuz wybranych osi
-    print(np.max(arr))
-    print(np.max(arr, axis=0))
-    print(np.max(arr, axis=1))
+    print(np.max(_arr))
+    print(np.max(_arr, axis=0))
+    print(np.max(_arr, axis=1))
     return
 
 @app.cell
@@ -4150,15 +4150,15 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    arr = np.array([[2, 8, 3], [5, 6, 2]])
-    print('Średnia:', np.mean(arr))
-    print('Suma:', np.sum(arr))
-    print('Wariancja:', np.var(arr))
-    print('Odchylenie standardowe:', np.std(arr))
-    print('Tablica przekształcona do 1D:', arr.flatten())
-    print('Iloczyn elementów tablicy:', np.prod(arr))
-    print('Macierz transponowana:\n', np.transpose(arr))
-    print('Sortowanie macierzy:\n', np.sort(arr, axis=1))
+    _arr = np.array([[2, 8, 3], [5, 6, 2]])
+    print('Średnia:', np.mean(_arr))
+    print('Suma:', np.sum(_arr))
+    print('Wariancja:', np.var(_arr))
+    print('Odchylenie standardowe:', np.std(_arr))
+    print('Tablica przekształcona do 1D:', _arr.flatten())
+    print('Iloczyn elementów tablicy:', np.prod(_arr))
+    print('Macierz transponowana:\n', np.transpose(_arr))
+    print('Sortowanie macierzy:\n', np.sort(_arr, axis=1))
     return
 
 @app.cell
@@ -4300,15 +4300,15 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 def _():
     import numpy as np
     # Operacje na macierzach - operatory
-    a = np.array([[1, 2], [4, 5]])
-    print('a =\n', a)
-    print('2a =\n', 2*a)
-    print('2a+1 = \n', 2 * a + 1)
-    b = np.array([[3, 2], [1, 1]])
-    print('b =\n', b)
-    print('a*b =\n', a*b)  # Iloczyn elementów, ale nie macierzy
-    print('a/b =\n', a/b)
-    print('a X b', np.dot(a,b))     #Iloczyn macierzy
+    _a = np.array([[1, 2], [4, 5]])
+    print('_a =\n', _a)
+    print('2a =\n', 2*_a)
+    print('2a+1 = \n', 2 * _a + 1)
+    _b = np.array([[3, 2], [1, 1]])
+    print('_b =\n', _b)
+    print('_a*_b =\n', _a*_b)  # Iloczyn elementów, ale nie macierzy
+    print('_a/_b =\n', _a/_b)
+    print('_a X _b', np.dot(_a,_b))     #Iloczyn macierzy
     return
 
 @app.cell
@@ -4394,10 +4394,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     import numpy as np
-    a = np.array([[1, 2], [4, 5]])
-    print('Wyznacznik macierzy:', np.linalg.det(a))
-    print('Wartości własne:', np.linalg.eigvals(a))
-    print('Wektory własne:', np.linalg.eig(a))
+    _a = np.array([[1, 2], [4, 5]])
+    print('Wyznacznik macierzy:', np.linalg.det(_a))
+    print('Wartości własne:', np.linalg.eigvals(_a))
+    print('Wektory własne:', np.linalg.eig(_a))
     return
 
 @app.cell
@@ -4472,10 +4472,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     import numpy as np
-    a = np.array([[1, 2], [3, 5]])
-    b = np.array([1, 2])
-    x = np.linalg.solve(a, b)
-    print(x)
+    _a = np.array([[1, 2], [3, 5]])
+    _b = np.array([1, 2])
+    _x = np.linalg.solve(_a, _b)
+    print(_x)
     return
 
 @app.cell
@@ -4568,10 +4568,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     import numpy as np
-    wspolczynniki = [1, 0, -4]
-    pierwiastki = np.roots(wspolczynniki)
-    print(pierwiastki)
-    print(np.poly(pierwiastki))
+    _wspolczynniki = [1, 0, -4]
+    _pierwiastki = np.roots(_wspolczynniki)
+    print(_pierwiastki)
+    print(np.poly(_pierwiastki))
     print(np.roots([1, 0, 4]))  # Wartosci zespolone
     return
 
@@ -4645,10 +4645,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     import numpy as np
-    xs = [1, 2, 3, 4, 5, 6]
-    ys = [1, 4.1, 8.9, 16, 25.2, 35.8]
-    w_2_stopnia = np.polyfit(xs, ys, 2)
-    print(w_2_stopnia)
+    _xs = [1, 2, 3, 4, 5, 6]
+    _ys = [1, 4.1, 8.9, 16, 25.2, 35.8]
+    _w_2_stopnia = np.polyfit(_xs, _ys, 2)
+    print(_w_2_stopnia)
     return
 
 if __name__ == "__main__":

@@ -108,8 +108,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    words = ["kot", "hipopotam", "pies"]
-    longest = max(words, key=lambda x: len(x))
+    _words = ["kot", "hipopotam", "pies"]
+    _longest = max(_words, key=lambda x: len(x))
     return
 
 @app.cell
@@ -142,7 +142,7 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    max=lambda x,y:x if x>y else y
+    _max=lambda x,y:x if x>y else y
     return
 
 @app.cell
@@ -175,8 +175,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    ujemna=lambda x: x<0
-    ujemna(1)
+    _ujemna=lambda x: x<0
+    _ujemna(1)
     return
 
 @app.cell
@@ -208,7 +208,7 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    wielkosc = lambda x: 'duża' if x > 10 else 'mała'
+    _wielkosc = lambda x: 'duża' if x > 10 else 'mała'
     return
 
 @app.cell
@@ -271,9 +271,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    posort = lambda x: x[-1]
-    lista = ['kot', 'pies', 'kura']
-    print(sorted(lista, key=posort))
+    _posort = lambda x: x[-1]
+    _lista = ['kot', 'pies', 'kura']
+    print(sorted(_lista, key=_posort))
     return
 
 @app.cell
@@ -487,10 +487,10 @@ def _():
     str = "Ala ma kota {}"
     print(str.upper())
     print(str.lower())
-    text1 = "Produkt: {produkt}, cena: {cena} zł"
-    print(text1)
-    text=text1.format(produkt="Chleb", cena=4.5)
-    print(text)
+    _text1 = "Produkt: {produkt}, cena: {cena} zł"
+    print(_text1)
+    _text=_text1.format(produkt="Chleb", cena=4.5)
+    print(_text)
     return
 
 @app.cell
@@ -575,13 +575,13 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    osoba1={'name':'ALA','age':15}
+    _osoba1={'name':'ALA','age':15}
     def getname(osoba):
       return osoba['name']
     def getage(osoba):
       return osoba['age']
-    print(getname(osoba1))
-    print(getage(osoba1))
+    print(getname(_osoba1))
+    print(getage(_osoba1))
     return
 
 @app.cell
@@ -629,9 +629,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    osoba2={'name':'TOMEK','age':85}
-    lista=[osoba1,osoba2]
-    for os in lista: print(getname(os))
+    _osoba2={'name':'TOMEK','age':85}
+    _lista=[osoba1,_osoba2]
+    for os in _lista: print(getname(os))
     return
 
 @app.cell
@@ -736,8 +736,8 @@ def _():
       self.name=name
       self.age=age
     
-    o1=Osoba("Ania",50)
-    print(o1.name,o1.age)
+    _o1=Osoba("Ania",50)
+    print(_o1.name,_o1.age)
     return
 
 @app.cell
@@ -834,8 +834,8 @@ def _():
      def  druk(self):
       print(self.name,self.age)
     
-    o1=Osoba("Ania",50)
-    o1.druk()
+    _o1=Osoba("Ania",50)
+    _o1.druk()
     return
 
 @app.cell
@@ -984,21 +984,21 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     class Osoba:
-     liczba=0              #liczba elementów            #miejsce deklaracji
-     lista=[]              #lista elementów
+     _liczba=0              #_liczba elementów            #miejsce deklaracji
+     _lista=[]              #_lista elementów
      def  __init__(self, name, age):
       self.name=name
       self.age=age
-      Osoba.liczba+=1
-      Osoba.lista.append(self)
+      Osoba._liczba+=1
+      Osoba._lista.append(self)
      def  druk(self):
-      print(self.name,self.age,Osoba.liczba)
+      print(self.name,self.age,Osoba._liczba)
     
-    o1=Osoba("Ania",50)
-    o1.druk()
-    o2=Osoba("Agata",50)
-    o2.druk()
-    o1.druk()
+    _o1=Osoba("Ania",50)
+    _o1.druk()
+    _o2=Osoba("Agata",50)
+    _o2.druk()
+    _o1.druk()
     return
 
 @app.cell
@@ -1212,8 +1212,8 @@ def _():
       self.name=name
       self.age=age
       self.__sex=sex
-    o1=Osoba("Ania",50,"women")
-    print(o1.name,o1.age,o1.__sex)    #próba dostępu do pola prywatnego, błąd
+    _o1=Osoba("Ania",50,"women")
+    print(_o1.name,_o1.age,_o1.__sex)    #próba dostępu do pola prywatnego, błąd
     return
 
 @app.cell
@@ -1309,14 +1309,14 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     class Osoba:
-     l=1
-     def  __init__(self, name, age,sex,l):
+     _l=1
+     def  __init__(self, name, age,sex,_l):
       self.name=name
       self.age=age
-      self.__l=l
-    o1=Osoba("Ania",50,"women",2)
-    o1.__l=8        #powstaje nowe pole
-    print(vars(o1))
+      self.__l=_l
+    _o1=Osoba("Ania",50,"women",2)
+    _o1.__l=8        #powstaje nowe pole
+    print(vars(_o1))
     return
 
 @app.cell
@@ -1418,10 +1418,10 @@ def _():
       self.name=name
       self.age=age
       self.__sex=sex
-    o1=Osoba("Ania",50,"women")
-    o1.__sex="mmm"                             #powstaje nowe pole
-    print(o1.name,o1.age,o1.__sex)
-    print(vars(o1))
+    _o1=Osoba("Ania",50,"women")
+    _o1.__sex="mmm"                             #powstaje nowe pole
+    print(_o1.name,_o1.age,_o1.__sex)
+    print(vars(_o1))
     return
 
 @app.cell
@@ -1526,11 +1526,11 @@ def _():
      def  __init__(self, name, age):
       self.name=name
       self.age=age
-    o1=Osoba("Ania",50)
-    print(vars(o1))
-    o1.sex="Women"                         #powstaje nowe pole
-    print(o1.name,o1.age,o1.sex)
-    print(vars(o1))
+    _o1=Osoba("Ania",50)
+    print(vars(_o1))
+    _o1.sex="Women"                         #powstaje nowe pole
+    print(_o1.name,_o1.age,_o1.sex)
+    print(vars(_o1))
     return
 
 @app.cell
@@ -1623,11 +1623,11 @@ def _():
      def  __init__(self, name, age):
       self.name=name
       self.age=age
-    o1=Osoba("Ania",50)
-    o1.sex="Women"
-    print(vars(o1))
-    del o1.sex
-    print(vars(o1))
+    _o1=Osoba("Ania",50)
+    _o1.sex="Women"
+    print(vars(_o1))
+    del _o1.sex
+    print(vars(_o1))
     return
 
 @app.cell
@@ -1737,12 +1737,12 @@ def _():
      def  __init__(self, name, age):
       self.name=name
       self.age=age
-    o2=Osoba1("Ania",50)
-    # print(o2.name,o2.age,o2.sex)
-    setattr(o2,"sex","woman")    #o2 musi istnieć
-    print(o2.name,o2.age,o2.sex)
-    print(vars(o2))
-    delattr(o2,"sex")             #tu usuwamy atrybut
+    _o2=Osoba1("Ania",50)
+    # print(_o2.name,_o2.age,_o2.sex)
+    setattr(_o2,"sex","woman")    #_o2 musi istnieć
+    print(_o2.name,_o2.age,_o2.sex)
+    print(vars(_o2))
+    delattr(_o2,"sex")             #tu usuwamy atrybut
     return
 
 @app.cell
@@ -1874,11 +1874,11 @@ def _():
      @classmethod             #metoda statyczna
      def nag(cls):
       print("klasa osoba")
-    o1=Osoba("Ania",50)
-    o1.sex="Women"
+    _o1=Osoba("Ania",50)
+    _o1.sex="Women"
     Osoba.nag()
-    print(o1.name,o1.age,o1.sex)
-    print(vars(o1))
+    print(_o1.name,_o1.age,_o1.sex)
+    print(vars(_o1))
     return
 
 @app.cell
@@ -1911,8 +1911,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     # metoda split, będzie potrzebna w kolejnym przykładzie
-    tekst="jan ma"
-    print(*tekst.split(' '))
+    _tekst="jan ma"
+    print(*_tekst.split(' '))
     return
 
 @app.cell
@@ -2066,12 +2066,12 @@ def _():
      def newob(cls,tekst):
       print(tekst)   #tekst, wartości argumentów
       print(*tekst)  #ciąg znaków
-      o2=cls(*tekst.split(' '))
-      return(o2)
-    o1=Osoba("Ania",50)
-    o2=Osoba.newob("Jan 100")
-    print('o2', o2.name,o2.age)
-    print('vars o2', vars(o2))
+      _o2=cls(*tekst.split(' '))
+      return(_o2)
+    _o1=Osoba("Ania",50)
+    _o2=Osoba.newob("Jan 100")
+    print('_o2', _o2.name,_o2.age)
+    print('vars _o2', vars(_o2))
     return
 
 @app.cell
@@ -2204,10 +2204,10 @@ def _():
      @property       #możemy się odwoływać do metody jak do pola klasy
      def prints(self):
        print(self.sex)
-    o1=Osoba("Ania",50,"women")
-    print(o1.name,o1.age)
-    o1.prints              # to jest poprawne
-    print(vars(o1))
+    _o1=Osoba("Ania",50,"women")
+    print(_o1.name,_o1.age)
+    _o1.prints              # to jest poprawne
+    print(vars(_o1))
     print(vars(Osoba))
     return
 
@@ -2403,16 +2403,16 @@ def _():
      @sex.setter                         # umożliwia zmianę wartości pola prywatnego
      def sex(self,newval):
        self.__sex=newval
-    o1=Osoba("Ania",50,"women")
-    print(o1.name,o1.age,o1.sex)             # sex to funkcja, a nie pole klasy
-    o1.sex="man"
-    print(vars(o1))
+    _o1=Osoba("Ania",50,"women")
+    print(_o1.name,_o1.age,_o1.sex)             # sex to funkcja, a nie pole klasy
+    _o1.sex="man"
+    print(vars(_o1))
     
     
-    o2=Osoba("Tom",50,"women")
-    print(o2.name,o1.age)
-    o2.sex="man"
-    print(vars(o2))
+    _o2=Osoba("Tom",50,"women")
+    print(_o2.name,_o1.age)
+    _o2.sex="man"
+    print(vars(_o2))
     return
 
 @app.cell
@@ -2529,8 +2529,8 @@ def _():
       return self.name
      def printname(self):
        print(self.__getname())
-    o1=Osoba("Basia",100,"nn")
-    o1.printname()
+    _o1=Osoba("Basia",100,"nn")
+    _o1.printname()
     return
 
 @app.cell
@@ -2603,8 +2603,8 @@ def _():
     print(callable(len))          # True (funkcja wbudowana)
     print(callable(42))           # False (liczba nie jest callable)
     print(callable(lambda x: x))
-    a1=lambda x:x
-    print(callable(a1))
+    _a1=lambda x:x
+    print(callable(_a1))
     return
 
 @app.cell
@@ -2694,9 +2694,9 @@ def _():
      def  __init__(self, name, lista):
       self.name=name
       self.lista=lista
-    o1=Osoba("Basia",[])
-    o1.lista.append("Basia")
-    print(o1.lista)
+    _o1=Osoba("Basia",[])
+    _o1.lista.append("Basia")
+    print(_o1.lista)
     return
 
 @app.cell
@@ -2825,11 +2825,11 @@ def _():
      def __call__(self, item):
        self.lista.append(item)
        print("dodaję",item)
-    o1=Osoba("Basia",[])
-    o2=o1(" xxxx")
-    o1(" yyy")
-    print(o1.lista)
-    print(callable(o1),callable(o2))
+    _o1=Osoba("Basia",[])
+    _o2=_o1(" xxxx")
+    _o1(" yyy")
+    print(_o1.lista)
+    print(callable(_o1),callable(_o2))
     return
 
 @app.cell
@@ -2903,13 +2903,13 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     class Osoba:
-     lista=[]
+     _lista=[]
      def  __init__(self, func):
       self.func=func
     def test():
       print("test")
-    o1=Osoba(test)
-    o1.func()
+    _o1=Osoba(test)
+    _o1.func()
     return
 
 @app.cell
@@ -3016,9 +3016,9 @@ def _():
       self.lista=lista
      def __add__(self,other):           #zwracamy String
        return self.name+" "+other.name
-    o1=Osoba("Basia",[])
-    o2=Osoba("Adam",[])
-    print(o1+o2)
+    _o1=Osoba("Basia",[])
+    _o2=Osoba("Adam",[])
+    print(_o1+_o2)
     return
 
 @app.cell
@@ -3124,9 +3124,9 @@ def _():
                 return MyClass(self.value * other) # zwracamy obieky klasy
             else:
                 return 0
-    m1 = MyClass(5)
-    m2=m1*3
-    print(m2.value)
+    _m1 = MyClass(5)
+    _m2=_m1*3
+    print(_m2.value)
     return
 
 @app.cell
@@ -3262,9 +3262,9 @@ def _():
       def __init__(self,name,id):
        super().__init__(name)
        self.id=id
-    o1=Osoba("Basia")
-    o2=Student("Adam","sdsdsd")
-    print(o2.id)
+    _o1=Osoba("Basia")
+    _o2=Student("Adam","sdsdsd")
+    print(_o2.id)
     return
 
 @app.cell
@@ -3374,9 +3374,9 @@ def _():
       def __init__(self,name,id):
        Osoba.__init__(self,name)
        self.id=id
-    o1=Osoba("Basia")
-    o2=Student("Adam","sdsdsd")
-    print(o2.id)
+    _o1=Osoba("Basia")
+    _o2=Student("Adam","sdsdsd")
+    print(_o2.id)
     return
 
 @app.cell
@@ -3518,14 +3518,14 @@ def _():
         print(zwierze.dzwiek())
     
     # Tworzenie obiektów
-    kot = Kot()
-    pies = Pies()
+    _kot = Kot()
+    _pies = Pies()
     
     # Wywołanie tej samej metody na różnych obiektach, a właściwie metody statycznej klasy
-    wydaj_dzwiek(kot)  # Miau!
-    wydaj_dzwiek(pies)  # Hau!
-    lista=[kot,pies]   #  Mamy elementy różnych klas
-    for zwierze in lista:
+    wydaj_dzwiek(_kot)  # Miau!
+    wydaj_dzwiek(_pies)  # Hau!
+    _lista=[_kot,_pies]   #  Mamy elementy różnych klas
+    for zwierze in _lista:
       wydaj_dzwiek(zwierze)
     return
 
@@ -3709,10 +3709,10 @@ def _():
        print(self.name,"  ",self.id)
       def druk(self,tekst):
        print(tekst,"  ",self.name,"  ",self.id)
-    o1=Osoba("Basia")
-    o1.druk()
-    o2=Student("Adam","indeks")
-    o2.druk("tekst")
+    _o1=Osoba("Basia")
+    _o1.druk()
+    _o2=Student("Adam","indeks")
+    _o2.druk("tekst")
     return
 
 @app.cell
@@ -3860,8 +3860,8 @@ def _():
       def __init__(self,x,y,color):
         Color.__init__(self,color)
         Punkt.__init__(self,x,y)
-    o1=Cpunkt(1,2,"red")
-    print(vars(o1))
+    _o1=Cpunkt(1,2,"red")
+    print(vars(_o1))
     return
 
 @app.cell
@@ -4063,8 +4063,8 @@ def _():
       def __init__(self,x,y,color):
         Color.__init__(self,color)
         Punkt.__init__(self,x,y)
-    o1=Cpunkt(1,1,"red")
-    o1.printn("test")
+    _o1=Cpunkt(1,1,"red")
+    _o1.printn("test")
     return
 
 @app.cell
@@ -4294,8 +4294,8 @@ def _():
         Punkt.__init__(self,x,y)
       def mprint(self,ttt):
         super().mprint(ttt)
-    o1=Cpunkt(1,1,"red")
-    o1.mprint("test")
+    _o1=Cpunkt(1,1,"red")
+    _o1.mprint("test")
     return
 
 @app.cell
@@ -4554,8 +4554,8 @@ def _():
         Punkt.__init__(self,x,y)
       def mprint(self,ttt):
         super().mprint(ttt)
-    o1=Cpunkt(1,1,"red")
-    o1.mprint("test")
+    _o1=Cpunkt(1,1,"red")
+    _o1.mprint("test")
     return
 
 @app.cell
@@ -4623,9 +4623,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    x=0
-    z=1/x
-    print(z)
+    _x=0
+    _z=1/_x
+    print(_z)
     return
 
 @app.cell
@@ -4673,13 +4673,13 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    x=0
+    _x=0
     try:
-      z=1/x
+      _z=1/_x
     except:
       print("dzielenie przez zero")
     else:
-      print(z)
+      print(_z)
     return
 
 @app.cell
@@ -4737,13 +4737,13 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    x=1
+    _x=1
     try:
-      z=1/x
+      _z=1/_x
     except:
       print("dzielenie przez zero")
     else:
-      print(z)
+      print(_z)
     finally:
       print("koniec")
     return
@@ -4808,13 +4808,13 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    x=0
+    _x=0
     try:
-      z=1/x
+      _z=1/_x
     except Exception as e:
       print("dzielenie przez zero",e)
     else:
-      print(z)
+      print(_z)
     finally:
       print("koniec")
     return
@@ -4940,8 +4940,8 @@ def _():
         self.y=y
      def pole(self):
        return self.x*self.y       #tu musi być self
-    k1=Kwadrat(2,2)
-    print(k1.pole())
+    _k1=Kwadrat(2,2)
+    print(_k1.pole())
     return
 
 @app.cell
@@ -5063,8 +5063,8 @@ def _():
          raise Exception("Złe wymiary")
        else:
         return self.x*self.y       #tu musi być self
-    k1=Kwadrat(2,2)
-    print(k1.pole())
+    _k1=Kwadrat(2,2)
+    print(_k1.pole())
     return
 
 @app.cell
@@ -5213,13 +5213,13 @@ def _():
        else:
         return self.x*self.y       #tu musi być self
     
-    k1=Kwadrat(2,2)
+    _k1=Kwadrat(2,2)
     try:
-     k=k1.pole()
+     _k=_k1.pole()
     except Exception as e:
       print(e)
     else:
-      print(k)
+      print(_k)
     
     return
 
@@ -5459,13 +5459,13 @@ def _():
        else:
         return self.x*self.y       #tu musi być self
     
-    k1=Kwadrat(-2,2)
+    _k1=Kwadrat(-2,2)
     try:
-     k=k1.pole()
+     _k=_k1.pole()
     except Exception as e:
       print(e.args)
     else:
-      print(k)
+      print(_k)
     return
 
 @app.cell
@@ -5531,7 +5531,7 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 def _():
     # kilka wyjątków
     try:
-        x = int("abc")  # Spowoduje ValueError
+        _x = int("abc")  # Spowoduje ValueError
         #y=1/0
     except ValueError:
         print("Błąd: Nie można przekonwertować na liczbę.")
@@ -5842,51 +5842,51 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     class Auto:
-        DOZWOLONE_MARKI = ["Toyota", "BMW", "Audi", "Ford"]
-        DOZWOLONE_TYPY = ["sedan", "suv", "hatchback", "kombi"]
+        _DOZWOLONE_MARKI = ["Toyota", "BMW", "Audi", "Ford"]
+        _DOZWOLONE_TYPY = ["sedan", "suv", "hatchback", "kombi"]
     
-        def __init__(self, marka, rokp, cena, przebieg, typ):
+        def __init__(self, marka, _rokp, _cena, _przebieg, typ):
             self.marka = marka
-            self.rokp = rokp
-            self.cena = cena
-            self.przebieg = przebieg
+            self._rokp = _rokp
+            self._cena = _cena
+            self._przebieg = _przebieg
             self.typ = typ
     
         def __str__(self):
-            return f"{self.marka}, rok: {self.rokp}, cena: {self.cena}, przebieg: {self.przebieg}, typ: {self.typ}"
+            return f"{self.marka}, rok: {self._rokp}, _cena: {self._cena}, _przebieg: {self._przebieg}, typ: {self.typ}"
     
     
     while True:
         try:
-            dane = input("Podaj: marka rok cena przebieg typ: ").split()
+            _dane = input("Podaj: marka rok _cena _przebieg typ: ").split()
     
-            if len(dane) != 5:
+            if len(_dane) != 5:
                 raise ValueError("Musisz podać dokładnie 5 wartości")
     
-            marka, rokp, cena, przebieg, typ = dane
+            marka, _rokp, _cena, _przebieg, typ = _dane
     
             # konwersja liczb
-            rokp = int(rokp)
-            cena = float(cena)
-            przebieg = int(przebieg)
+            _rokp = int(_rokp)
+            _cena = float(_cena)
+            _przebieg = int(_przebieg)
     
             # walidacja marki
-            if marka not in Auto.DOZWOLONE_MARKI:
-                raise ValueError(f"Nieznana marka! Dozwolone: {Auto.DOZWOLONE_MARKI}")
+            if marka not in Auto._DOZWOLONE_MARKI:
+                raise ValueError(f"Nieznana marka! Dozwolone: {Auto._DOZWOLONE_MARKI}")
     
             # walidacja typu
-            if typ not in Auto.DOZWOLONE_TYPY:
-                raise ValueError(f"Nieznany typ! Dozwolone: {Auto.DOZWOLONE_TYPY}")
+            if typ not in Auto._DOZWOLONE_TYPY:
+                raise ValueError(f"Nieznany typ! Dozwolone: {Auto._DOZWOLONE_TYPY}")
     
-            auto = Auto(marka, rokp, cena, przebieg, typ)
-            print("Dodano auto:")
-            print(auto)
+            _auto = Auto(marka, _rokp, _cena, _przebieg, typ)
+            print("Dodano _auto:")
+            print(_auto)
             break
     
         except ValueError as e:
             print("Błąd:", e)
         except Exception:
-            print("Nieprawidłowe dane wejściowe!")
+            print("Nieprawidłowe _dane wejściowe!")
     return
 
 @app.cell
@@ -6054,9 +6054,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     class Auto:
-        DOZWOLONE_MARKI = ["Toyota", "BMW", "Audi", "Ford"]
-        DOZWOLONE_TYPY = ["sedan", "suv", "hatchback", "kombi"]
-        lista_aut = []
+        _DOZWOLONE_MARKI = ["Toyota", "BMW", "Audi", "Ford"]
+        _DOZWOLONE_TYPY = ["sedan", "suv", "hatchback", "kombi"]
+        _lista_aut = []
         def __init__(self, marka, rokp, cena):
             self.marka = marka
             self.rokp = rokp
@@ -6067,11 +6067,11 @@ def _():
             return f"{self.marka}, rok: {self.rokp}, cena: {self.cena}"
     
     # Tu zaczyna się program
-    lista_aut = [Auto("BMW",2022,12000),Auto("Ford",2010,10000),Auto("Audi",1990,8000)]
-    lista_aut.sort(key=lambda x: x.cena)
+    _lista_aut = [Auto("BMW",2022,12000),Auto("Ford",2010,10000),Auto("Audi",1990,8000)]
+    _lista_aut.sort(key=lambda x: x.cena)
     
-    #lista_aut.sort(key=lambda x: [-ord(c) for c in x.marka])
-    for auto in lista_aut:
+    #_lista_aut.sort(key=lambda x: [-ord(c) for c in x.marka])
+    for auto in _lista_aut:
         print(auto)
     return
 

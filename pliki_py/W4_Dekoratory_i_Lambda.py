@@ -167,20 +167,20 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     import time
-    var_x=0
-    source='var_x+=1'
-    # 'interial veriable source' - sygnał korzystania ze zmiennych zewnętrznych
-    csource=compile(source,'interial veriable source','exec')
+    _var_x=0
+    _source='_var_x+=1'
+    # 'interial veriable _source' - sygnał korzystania ze zmiennych zewnętrznych
+    _csource=compile(_source,'interial veriable _source','exec')
     
-    start=time.time()
-    for i in range(100000): result=exec(source)
-    end=time.time()
-    print(var_x)
-    startc=time.time()
-    for i in range(100000): result=exec(csource)
-    endc =time.time()
-    print(var_x)
-    print((end-start)/(endc-startc))
+    _start=time.time()
+    for i in range(100000): result=exec(_source)
+    _end=time.time()
+    print(_var_x)
+    _startc=time.time()
+    for i in range(100000): result=exec(_csource)
+    _endc =time.time()
+    print(_var_x)
+    print((_end-_start)/(_endc-_startc))
     return
 
 @app.cell
@@ -235,10 +235,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    x=int(input())
-    if x>0:
-        pp1=1
-    print(pp1)
+    _x=int(input())
+    if _x>0:
+        _pp1=1
+    print(_pp1)
     return
 
 @app.cell
@@ -333,14 +333,14 @@ def _():
     
     def get_fibonacci(max_val):
       a, b = 0, 1
-      out = [a]
+      _out = [a]
       while b <= max_val:
-        out.append(b)
+        _out.append(b)
         a, b = b, a + b
-      return out
+      return _out
     
-    fib = get_fibonacci(10)
-    print(fib)
+    _fib = get_fibonacci(10)
+    print(_fib)
     return
 
 @app.cell
@@ -429,14 +429,14 @@ def _():
     
     def get_fibonacci(max_val):
       a, b = 0, 1
-      out = [a]
+      _out = [a]
       while b <= max_val:
-        out.append(b)
+        _out.append(b)
         a, b = b, a + b
-      return out
+      return _out
     
-    fib = get_fibonacci(max_val=40)
-    print(fib)
+    _fib = get_fibonacci(max_val=40)
+    print(_fib)
     return
 
 @app.cell
@@ -562,8 +562,8 @@ def _():
     #Tu nie ma wartości zwracanej
     print_fibonacci(40)
     #A ścisle biorąc to jest None:
-    ret = print_fibonacci(10)
-    print('Zwrócono:', ret)
+    _ret = print_fibonacci(10)
+    print('Zwrócono:', _ret)
     return
 
 @app.cell
@@ -1270,13 +1270,13 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     def sum(*args):
-      k=0
+      _k=0
       for i in args:
-        k=k+i
-      return k
+        _k=_k+i
+      return _k
     print(sum(1,2,3))
-    a=[1,2,3]
-    print(sum(*a))
+    _a=[1,2,3]
+    print(sum(*_a))
     return
 
 @app.cell
@@ -1401,19 +1401,19 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    # args - lista  produktów, kargs - słownik zawierający cenę produktów
+    # args - _lista  produktów, kargs - słownik zawierający cenę produktów
     def BuyMe(*args,**kwargs):
       print('args=',args)
       print('args=',kwargs)
-      k=0.0
+      _k=0.0
       for a in args:
             if a in kwargs:  # Sprawdzenie, czy klucz istnieje w kwargs
-                k += float(kwargs[a])  # Dodanie wartości do sumy
+                _k += float(kwargs[a])  # Dodanie wartości do sumy
     
-      print(k)  # Wypisanie sumy
-    lista=['ser','mleko','chleb']
-    ceny={'ser':10.0,'mleko':4.0,'chleb':8.0}
-    BuyMe(*lista, **ceny)
+      print(_k)  # Wypisanie sumy
+    _lista=['ser','mleko','chleb']
+    _ceny={'ser':10.0,'mleko':4.0,'chleb':8.0}
+    BuyMe(*_lista, **_ceny)
     return
 
 @app.cell
@@ -1532,12 +1532,12 @@ def _():
     def fun_a(*args):
       for i in args: print(i)
     
-    lista=[1,2,3]
+    _lista=[1,2,3]
     
     #jaka jest różnica między:
-    fun_a(lista)
+    fun_a(_lista)
     #a
-    fun_a(*lista)
+    fun_a(*_lista)
     return
 
 @app.cell
@@ -1600,8 +1600,8 @@ def _():
       print('args=',args)
       print('args=',kargs)
     
-    Bm=BuyMe
-    print(type(Bm))
+    _Bm=BuyMe
+    print(type(_Bm))
     return
 
 @app.cell
@@ -1667,9 +1667,9 @@ def _():
       print('args=',args)
       print('kargs=',kargs)
     
-    Bm=BuyMe
+    _Bm=BuyMe
     
-    Bm('ser',{'ser':10})
+    _Bm('ser',{'ser':10})
     return
 
 @app.cell
@@ -1752,10 +1752,10 @@ def _():
     def Idzpo(*args):
         print('ide do sklepu po', args)
     
-    lista=['chleb','ser']
-    dzialanie = [Idzpo,Kup]
-    for  d in dzialanie:
-        d(*lista)
+    _lista=['chleb','ser']
+    _dzialanie = [Idzpo,Kup]
+    for  d in _dzialanie:
+        d(*_lista)
     
     return
 
@@ -1870,8 +1870,8 @@ def _():
     def Add(a):
         print("dodaję",a)
      # lista funkcja i argument
-    cookbook=[(Add,'mleko'),(Add,'cukier'),(Mix,'skladniki'),(Bake,'ciasto')]
-    for akcja,obiekt in cookbook:
+    _cookbook=[(Add,'mleko'),(Add,'cukier'),(Mix,'skladniki'),(Bake,'ciasto')]
+    for akcja,obiekt in _cookbook:
             akcja(obiekt)
     return
 
@@ -2018,20 +2018,20 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 def _():
     def Nf(kind='+'):
         def fw(*args,kind=kind):
-         w=0 if kind=='+' else 1
+         _w=0 if kind=='+' else 1
          if kind=='+':
           for a in args:
-            w=w+a
-          return w
+            _w=_w+a
+          return _w
          else:
           for a in args:
-            w=w*a
-          return w
+            _w=_w*a
+          return _w
         return fw
-    sum=Nf('+')
-    mul=Nf('*')
-    print(mul(8,2,3))
-    print(sum(8,2,3))
+    _sum=Nf('+')
+    _mul=Nf('*')
+    print(_mul(8,2,3))
+    print(_sum(8,2,3))
     return
 
 @app.cell
@@ -2046,28 +2046,28 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 #### 👉 **Linia 2**: `def Nf(kind='+'):`
 - Słowo kluczowe **`def`**: Słowo kluczowe 'def' (skrót od define) oznacza 'definiuj'. Informuje komputer: 'Teraz będę tworzyć nową, własną funkcję (czyli zestaw instrukcji, który dostanie swoją nazwę i będzie można go używać wielokrotnie).'
 - Nazwa **`Nf`**: To jest nazwa (identyfikator). Może to być nazwa zmiennej (pojemnika na dane), funkcji (gotowego przepisu na wykonanie zadania) lub metody.
-- Znak **`(`**: Lewy nawias okrągły. Rozpoczyna listę argumentów (parametrów i informacji) podawanych do funkcji, albo po prostu grupuje działania matematyczne (jak w matematyce).
+- Znak **`(`**: Lewy nawias okrągły. Rozpoczyna listę argumentów (parametrów i informacji) podawanych do funkcji, albo po prostu grupuje działania matematyczne (jak _w matematyce).
 - Nazwa **`kind`**: To jest nazwa (identyfikator). Może to być nazwa zmiennej (pojemnika na dane), funkcji (gotowego przepisu na wykonanie zadania) lub metody.
-- Znak **`=`**: Znak równości to w programowaniu 'operator przypisania'. Działa jak wkładanie rzeczy do podpisanego pudełka: bierze wartość po prawej stronie i zapisuje ją pod nazwą po lewej stronie. To NIE JEST równanie matematyczne.
-- Tekst (String) **`'+'`**: To jest ciąg znaków (tekst). Zawsze znajduje się w cudzysłowach lub apostrofach. Komputer traktuje to dosłownie jako napis, a nie jako polecenie do wykonania.
+- Znak **`=`**: Znak równości to _w programowaniu 'operator przypisania'. Działa jak wkładanie rzeczy do podpisanego pudełka: bierze wartość po prawej stronie i zapisuje ją pod nazwą po lewej stronie. To NIE JEST równanie matematyczne.
+- Tekst (String) **`'+'`**: To jest ciąg znaków (tekst). Zawsze znajduje się _w cudzysłowach lub apostrofach. Komputer traktuje to dosłownie jako napis, a nie jako polecenie do wykonania.
 - Znak **`)`**: Prawy nawias okrągły. Kończy argumenty funkcji lub grupowanie.
 - Znak **`:`**: Dwukropek. Jest to znak 'uwaga, teraz nastąpi zagnieżdżony blok kodu!'. Występuje zawsze po instrukcjach warunkowych (if), pętlach (for/while) czy definicjach (def). Wszystko poniżej tego znaku musi mieć wcięcie.
 
 #### 👉 **Linia 3**: `source='''`
 - Nazwa **`source`**: To jest nazwa (identyfikator). Może to być nazwa zmiennej (pojemnika na dane), funkcji (gotowego przepisu na wykonanie zadania) lub metody.
-- Znak **`=`**: Znak równości to w programowaniu 'operator przypisania'. Działa jak wkładanie rzeczy do podpisanego pudełka: bierze wartość po prawej stronie i zapisuje ją pod nazwą po lewej stronie. To NIE JEST równanie matematyczne.
+- Znak **`=`**: Znak równości to _w programowaniu 'operator przypisania'. Działa jak wkładanie rzeczy do podpisanego pudełka: bierze wartość po prawej stronie i zapisuje ją pod nazwą po lewej stronie. To NIE JEST równanie matematyczne.
 - Tekst (String) **`'''
 def fw(*args):
-     w=0
+     _w=0
      for a in args:
-        w=w{}a
-return w
-     '''`**: To jest ciąg znaków (tekst). Zawsze znajduje się w cudzysłowach lub apostrofach. Komputer traktuje to dosłownie jako napis, a nie jako polecenie do wykonania.
+        _w=_w{}a
+return _w
+     '''`**: To jest ciąg znaków (tekst). Zawsze znajduje się _w cudzysłowach lub apostrofach. Komputer traktuje to dosłownie jako napis, a nie jako polecenie do wykonania.
 
 #### 👉 **Linia 9**: `'''.format(kind)`
-- Znak **`.`**: Kropka. To jest tzw. 'operator dostępu'. Działa jak polecenie 'wejdź w ten obiekt przed kropką i użyj jego funkcji lub właściwości znajdującej się po kropce'.
+- Znak **`.`**: Kropka. To jest tzw. 'operator dostępu'. Działa jak polecenie 'wejdź _w ten obiekt przed kropką i użyj jego funkcji lub właściwości znajdującej się po kropce'.
 - Nazwa **`format`**: To jest nazwa (identyfikator). Może to być nazwa zmiennej (pojemnika na dane), funkcji (gotowego przepisu na wykonanie zadania) lub metody.
-- Znak **`(`**: Lewy nawias okrągły. Rozpoczyna listę argumentów (parametrów i informacji) podawanych do funkcji, albo po prostu grupuje działania matematyczne (jak w matematyce).
+- Znak **`(`**: Lewy nawias okrągły. Rozpoczyna listę argumentów (parametrów i informacji) podawanych do funkcji, albo po prostu grupuje działania matematyczne (jak _w matematyce).
 - Nazwa **`kind`**: To jest nazwa (identyfikator). Może to być nazwa zmiennej (pojemnika na dane), funkcji (gotowego przepisu na wykonanie zadania) lub metody.
 - Znak **`)`**: Prawy nawias okrągły. Kończy argumenty funkcji lub grupowanie.
 
@@ -2080,12 +2080,12 @@ return w
 def _():
     ## przekazywanie argumentów do exec
     def Nf(kind='+'):
-        source='''
+        _source='''
     def fw(*args):
-         w=0
+         _w=0
          for a in args:
-            w=w{}a
-    return w
+            _w=_w{}a
+    return _w
          '''.format(kind)
         return f
     return
@@ -2099,28 +2099,28 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 #### 👉 **Linia 1**: `def Nf(kind='+'):`
 - Słowo kluczowe **`def`**: Słowo kluczowe 'def' (skrót od define) oznacza 'definiuj'. Informuje komputer: 'Teraz będę tworzyć nową, własną funkcję (czyli zestaw instrukcji, który dostanie swoją nazwę i będzie można go używać wielokrotnie).'
 - Nazwa **`Nf`**: To jest nazwa (identyfikator). Może to być nazwa zmiennej (pojemnika na dane), funkcji (gotowego przepisu na wykonanie zadania) lub metody.
-- Znak **`(`**: Lewy nawias okrągły. Rozpoczyna listę argumentów (parametrów i informacji) podawanych do funkcji, albo po prostu grupuje działania matematyczne (jak w matematyce).
+- Znak **`(`**: Lewy nawias okrągły. Rozpoczyna listę argumentów (parametrów i informacji) podawanych do funkcji, albo po prostu grupuje działania matematyczne (jak _w matematyce).
 - Nazwa **`kind`**: To jest nazwa (identyfikator). Może to być nazwa zmiennej (pojemnika na dane), funkcji (gotowego przepisu na wykonanie zadania) lub metody.
-- Znak **`=`**: Znak równości to w programowaniu 'operator przypisania'. Działa jak wkładanie rzeczy do podpisanego pudełka: bierze wartość po prawej stronie i zapisuje ją pod nazwą po lewej stronie. To NIE JEST równanie matematyczne.
-- Tekst (String) **`'+'`**: To jest ciąg znaków (tekst). Zawsze znajduje się w cudzysłowach lub apostrofach. Komputer traktuje to dosłownie jako napis, a nie jako polecenie do wykonania.
+- Znak **`=`**: Znak równości to _w programowaniu 'operator przypisania'. Działa jak wkładanie rzeczy do podpisanego pudełka: bierze wartość po prawej stronie i zapisuje ją pod nazwą po lewej stronie. To NIE JEST równanie matematyczne.
+- Tekst (String) **`'+'`**: To jest ciąg znaków (tekst). Zawsze znajduje się _w cudzysłowach lub apostrofach. Komputer traktuje to dosłownie jako napis, a nie jako polecenie do wykonania.
 - Znak **`)`**: Prawy nawias okrągły. Kończy argumenty funkcji lub grupowanie.
 - Znak **`:`**: Dwukropek. Jest to znak 'uwaga, teraz nastąpi zagnieżdżony blok kodu!'. Występuje zawsze po instrukcjach warunkowych (if), pętlach (for/while) czy definicjach (def). Wszystko poniżej tego znaku musi mieć wcięcie.
 
 #### 👉 **Linia 2**: `source = '''`
 - Nazwa **`source`**: To jest nazwa (identyfikator). Może to być nazwa zmiennej (pojemnika na dane), funkcji (gotowego przepisu na wykonanie zadania) lub metody.
-- Znak **`=`**: Znak równości to w programowaniu 'operator przypisania'. Działa jak wkładanie rzeczy do podpisanego pudełka: bierze wartość po prawej stronie i zapisuje ją pod nazwą po lewej stronie. To NIE JEST równanie matematyczne.
+- Znak **`=`**: Znak równości to _w programowaniu 'operator przypisania'. Działa jak wkładanie rzeczy do podpisanego pudełka: bierze wartość po prawej stronie i zapisuje ją pod nazwą po lewej stronie. To NIE JEST równanie matematyczne.
 - Tekst (String) **`'''
 def fw(*args, kind='{}'):
-     w = 0 if kind == '+' else 1
+     _w = 0 if kind == '+' else 1
      for a in args:
-        w = w {} a
-     return w
-     '''`**: To jest ciąg znaków (tekst). Zawsze znajduje się w cudzysłowach lub apostrofach. Komputer traktuje to dosłownie jako napis, a nie jako polecenie do wykonania.
+        _w = _w {} a
+     return _w
+     '''`**: To jest ciąg znaków (tekst). Zawsze znajduje się _w cudzysłowach lub apostrofach. Komputer traktuje to dosłownie jako napis, a nie jako polecenie do wykonania.
 
 #### 👉 **Linia 8**: `'''.format(kind, kind)`
-- Znak **`.`**: Kropka. To jest tzw. 'operator dostępu'. Działa jak polecenie 'wejdź w ten obiekt przed kropką i użyj jego funkcji lub właściwości znajdującej się po kropce'.
+- Znak **`.`**: Kropka. To jest tzw. 'operator dostępu'. Działa jak polecenie 'wejdź _w ten obiekt przed kropką i użyj jego funkcji lub właściwości znajdującej się po kropce'.
 - Nazwa **`format`**: To jest nazwa (identyfikator). Może to być nazwa zmiennej (pojemnika na dane), funkcji (gotowego przepisu na wykonanie zadania) lub metody.
-- Znak **`(`**: Lewy nawias okrągły. Rozpoczyna listę argumentów (parametrów i informacji) podawanych do funkcji, albo po prostu grupuje działania matematyczne (jak w matematyce).
+- Znak **`(`**: Lewy nawias okrągły. Rozpoczyna listę argumentów (parametrów i informacji) podawanych do funkcji, albo po prostu grupuje działania matematyczne (jak _w matematyce).
 - Nazwa **`kind`**: To jest nazwa (identyfikator). Może to być nazwa zmiennej (pojemnika na dane), funkcji (gotowego przepisu na wykonanie zadania) lub metody.
 - Znak **`,`**: Przecinek. Służy do oddzielania od siebie wielu elementów (np. elementów na liście lub argumentów przekazywanych do funkcji).
 - Nazwa **`kind`**: To jest nazwa (identyfikator). Może to być nazwa zmiennej (pojemnika na dane), funkcji (gotowego przepisu na wykonanie zadania) lub metody.
@@ -2128,11 +2128,11 @@ def fw(*args, kind='{}'):
 
 #### 👉 **Linia 9**: `exec(source, globals())`
 - Nazwa **`exec`**: To jest nazwa (identyfikator). Może to być nazwa zmiennej (pojemnika na dane), funkcji (gotowego przepisu na wykonanie zadania) lub metody.
-- Znak **`(`**: Lewy nawias okrągły. Rozpoczyna listę argumentów (parametrów i informacji) podawanych do funkcji, albo po prostu grupuje działania matematyczne (jak w matematyce).
+- Znak **`(`**: Lewy nawias okrągły. Rozpoczyna listę argumentów (parametrów i informacji) podawanych do funkcji, albo po prostu grupuje działania matematyczne (jak _w matematyce).
 - Nazwa **`source`**: To jest nazwa (identyfikator). Może to być nazwa zmiennej (pojemnika na dane), funkcji (gotowego przepisu na wykonanie zadania) lub metody.
 - Znak **`,`**: Przecinek. Służy do oddzielania od siebie wielu elementów (np. elementów na liście lub argumentów przekazywanych do funkcji).
 - Nazwa **`globals`**: To jest nazwa (identyfikator). Może to być nazwa zmiennej (pojemnika na dane), funkcji (gotowego przepisu na wykonanie zadania) lub metody.
-- Znak **`(`**: Lewy nawias okrągły. Rozpoczyna listę argumentów (parametrów i informacji) podawanych do funkcji, albo po prostu grupuje działania matematyczne (jak w matematyce).
+- Znak **`(`**: Lewy nawias okrągły. Rozpoczyna listę argumentów (parametrów i informacji) podawanych do funkcji, albo po prostu grupuje działania matematyczne (jak _w matematyce).
 - Znak **`)`**: Prawy nawias okrągły. Kończy argumenty funkcji lub grupowanie.
 - Znak **`)`**: Prawy nawias okrągły. Kończy argumenty funkcji lub grupowanie.
 
@@ -2142,25 +2142,25 @@ def fw(*args, kind='{}'):
 
 #### 👉 **Linia 12**: `f_add = Nf('+')`
 - Nazwa **`f_add`**: To jest nazwa (identyfikator). Może to być nazwa zmiennej (pojemnika na dane), funkcji (gotowego przepisu na wykonanie zadania) lub metody.
-- Znak **`=`**: Znak równości to w programowaniu 'operator przypisania'. Działa jak wkładanie rzeczy do podpisanego pudełka: bierze wartość po prawej stronie i zapisuje ją pod nazwą po lewej stronie. To NIE JEST równanie matematyczne.
+- Znak **`=`**: Znak równości to _w programowaniu 'operator przypisania'. Działa jak wkładanie rzeczy do podpisanego pudełka: bierze wartość po prawej stronie i zapisuje ją pod nazwą po lewej stronie. To NIE JEST równanie matematyczne.
 - Nazwa **`Nf`**: To jest nazwa (identyfikator). Może to być nazwa zmiennej (pojemnika na dane), funkcji (gotowego przepisu na wykonanie zadania) lub metody.
-- Znak **`(`**: Lewy nawias okrągły. Rozpoczyna listę argumentów (parametrów i informacji) podawanych do funkcji, albo po prostu grupuje działania matematyczne (jak w matematyce).
-- Tekst (String) **`'+'`**: To jest ciąg znaków (tekst). Zawsze znajduje się w cudzysłowach lub apostrofach. Komputer traktuje to dosłownie jako napis, a nie jako polecenie do wykonania.
+- Znak **`(`**: Lewy nawias okrągły. Rozpoczyna listę argumentów (parametrów i informacji) podawanych do funkcji, albo po prostu grupuje działania matematyczne (jak _w matematyce).
+- Tekst (String) **`'+'`**: To jest ciąg znaków (tekst). Zawsze znajduje się _w cudzysłowach lub apostrofach. Komputer traktuje to dosłownie jako napis, a nie jako polecenie do wykonania.
 - Znak **`)`**: Prawy nawias okrągły. Kończy argumenty funkcji lub grupowanie.
 
 #### 👉 **Linia 13**: `f_m = Nf('*')`
 - Nazwa **`f_m`**: To jest nazwa (identyfikator). Może to być nazwa zmiennej (pojemnika na dane), funkcji (gotowego przepisu na wykonanie zadania) lub metody.
-- Znak **`=`**: Znak równości to w programowaniu 'operator przypisania'. Działa jak wkładanie rzeczy do podpisanego pudełka: bierze wartość po prawej stronie i zapisuje ją pod nazwą po lewej stronie. To NIE JEST równanie matematyczne.
+- Znak **`=`**: Znak równości to _w programowaniu 'operator przypisania'. Działa jak wkładanie rzeczy do podpisanego pudełka: bierze wartość po prawej stronie i zapisuje ją pod nazwą po lewej stronie. To NIE JEST równanie matematyczne.
 - Nazwa **`Nf`**: To jest nazwa (identyfikator). Może to być nazwa zmiennej (pojemnika na dane), funkcji (gotowego przepisu na wykonanie zadania) lub metody.
-- Znak **`(`**: Lewy nawias okrągły. Rozpoczyna listę argumentów (parametrów i informacji) podawanych do funkcji, albo po prostu grupuje działania matematyczne (jak w matematyce).
-- Tekst (String) **`'*'`**: To jest ciąg znaków (tekst). Zawsze znajduje się w cudzysłowach lub apostrofach. Komputer traktuje to dosłownie jako napis, a nie jako polecenie do wykonania.
+- Znak **`(`**: Lewy nawias okrągły. Rozpoczyna listę argumentów (parametrów i informacji) podawanych do funkcji, albo po prostu grupuje działania matematyczne (jak _w matematyce).
+- Tekst (String) **`'*'`**: To jest ciąg znaków (tekst). Zawsze znajduje się _w cudzysłowach lub apostrofach. Komputer traktuje to dosłownie jako napis, a nie jako polecenie do wykonania.
 - Znak **`)`**: Prawy nawias okrągły. Kończy argumenty funkcji lub grupowanie.
 
 #### 👉 **Linia 14**: `print(f_add(0, 2, 3))`
 - Słowo kluczowe **`print`**: Wbudowana funkcja 'print' (drukuj). Jej głównym zadaniem jest wyświetlenie tekstu lub wyliczonej wartości zmiennych na ekranie komputera, żeby człowiek mógł to zobaczyć i przeczytać.
-- Znak **`(`**: Lewy nawias okrągły. Rozpoczyna listę argumentów (parametrów i informacji) podawanych do funkcji, albo po prostu grupuje działania matematyczne (jak w matematyce).
+- Znak **`(`**: Lewy nawias okrągły. Rozpoczyna listę argumentów (parametrów i informacji) podawanych do funkcji, albo po prostu grupuje działania matematyczne (jak _w matematyce).
 - Nazwa **`f_add`**: To jest nazwa (identyfikator). Może to być nazwa zmiennej (pojemnika na dane), funkcji (gotowego przepisu na wykonanie zadania) lub metody.
-- Znak **`(`**: Lewy nawias okrągły. Rozpoczyna listę argumentów (parametrów i informacji) podawanych do funkcji, albo po prostu grupuje działania matematyczne (jak w matematyce).
+- Znak **`(`**: Lewy nawias okrągły. Rozpoczyna listę argumentów (parametrów i informacji) podawanych do funkcji, albo po prostu grupuje działania matematyczne (jak _w matematyce).
 - Liczba **`0`**: To jest wartość liczbowa. Komputer potrafi wykonywać na niej operacje matematyczne. Jeśli nie ma kropki, to liczba całkowita. Jeśli ma kropkę, to ułamek dziesiętny.
 - Znak **`,`**: Przecinek. Służy do oddzielania od siebie wielu elementów (np. elementów na liście lub argumentów przekazywanych do funkcji).
 - Liczba **`2`**: To jest wartość liczbowa. Komputer potrafi wykonywać na niej operacje matematyczne. Jeśli nie ma kropki, to liczba całkowita. Jeśli ma kropkę, to ułamek dziesiętny.
@@ -2173,19 +2173,19 @@ def fw(*args, kind='{}'):
 @app.cell
 def _():
     def Nf(kind='+'):
-        source = '''
+        _source = '''
     def fw(*args, kind='{}'):
-         w = 0 if kind == '+' else 1
+         _w = 0 if kind == '+' else 1
          for a in args:
-            w = w {} a
-         return w
+            _w = _w {} a
+         return _w
          '''.format(kind, kind)
-        exec(source, globals())
+        exec(_source, globals())
         return fw
     
-    f_add = Nf('+')
-    f_m = Nf('*')
-    print(f_add(0, 2, 3))
+    _f_add = Nf('+')
+    _f_m = Nf('*')
+    print(_f_add(0, 2, 3))
     return
 
 @app.cell
@@ -2243,11 +2243,11 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    a = 3
+    _a = 3
     for _ in range(2):
-      print(a)
-      a = 4
-    print(a)
+      print(_a)
+      _a = 4
+    print(_a)
     return
 
 @app.cell
@@ -2311,16 +2311,16 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     
-    b = 3
+    _b = 3
     
     def f(x):
-      a1=5
-      b=10
-      return a1 * x + b
+      _a1=5
+      _b=10
+      return _a1 * x + _b
     
     
     print(f(2))
-    print(b)
+    print(_b)
     return
 
 @app.cell
@@ -2378,14 +2378,14 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    x = "global"
+    _x = "global"
     def foo():
-        x=" "
-        x = x+"sdsdsd"
-        print(x)
+        _x=" "
+        _x = _x+"sdsdsd"
+        print(_x)
     
     foo()
-    print(x)
+    print(_x)
     return
 
 @app.cell
@@ -2454,16 +2454,16 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    a = 2
-    b = 3
+    _a = 2
+    _b = 3
     
     def f(x):
-      a = 1
-      b = 0
-      return a * x + b
+      _a = 1
+      _b = 0
+      return _a * x + _b
     
     print(f(2))
-    print('a=',a, 'b=',b)
+    print('_a=',_a, '_b=',_b)
     return
 
 @app.cell
@@ -2541,17 +2541,17 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    a = 4
-    b = 3
+    _a = 4
+    _b = 3
     
     def f(x):
-      global a, b
-      a = 1
-      b = 0
-      return a * x + b
+      global _a, _b
+      _a = 1
+      _b = 0
+      return _a * x + _b
     
     print(f(2))
-    print(a, b)
+    print(_a, _b)
     return
 
 @app.cell
@@ -2648,18 +2648,18 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     def f1(x):
-    #  global a
-      a=2
+    #  global _a
+      _a=2
       def f(x):
-        nonlocal a
-        a = 1
-        return a * x
-      y=f(x)
-      print("wartość a  w f1",a,"wynik f1",y )
-      return(y)
-    a=10
+        nonlocal _a
+        _a = 1
+        return _a * x
+      _y=f(x)
+      print("wartość _a  w f1",_a,"wynik f1",_y )
+      return(_y)
+    _a=10
     f1(2)
-    print("wartość a na końcu", a)
+    print("wartość _a na końcu", _a)
     return
 
 @app.cell
@@ -2771,20 +2771,20 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     def f1(x):
-      a=2
-      b=3
+      _a=2
+      _b=3
       def f(x):
-        global a,b
-        a = 1
-        b = 0
-        return a * x + b
-      y=f(2)
-      print(a,b)
-      return(y)
-    a=1
-    b=2
+        global _a,_b
+        _a = 1
+        _b = 0
+        return _a * x + _b
+      _y=f(2)
+      print(_a,_b)
+      return(_y)
+    _a=1
+    _b=2
     print(f1(2))
-    print(a, b)
+    print(_a, _b)
     return
 
 @app.cell
@@ -2856,8 +2856,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 def _():
     import os
     import numpy as np
-    files = os.listdir('.')
-    print(files)
+    _files = os.listdir('.')
+    print(_files)
     return
 
 @app.cell
@@ -2902,8 +2902,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 def _():
     # Wywołanie funkcji array z modułu numpy, tworzącej tablicę
     import numpy as np
-    x = np.array([1, 2, 3])
-    print(x)
+    _x = np.array([1, 2, 3])
+    print(_x)
     return
 
 @app.cell
@@ -2947,7 +2947,7 @@ def _():
     # Nie możemy odwoływać sie do biblioteki pod nazwą globalną,
     # jeśli ustawilismy lokalną
     import numpy as np
-    x = numpy.array([1, 2, 3])  #błąd bo np
+    _x = numpy.array([1, 2, 3])  #błąd bo np
     return
 
 @app.cell
@@ -3105,11 +3105,11 @@ def _():
       return 2*x + 1
     
     # Lambda
-    f2 = lambda x: 2*x + 1
+    _f2 = lambda x: 2*x + 1
     
     # Identyczna składnia i wynik
     print(f1(3))
-    print(f2(3))
+    print(_f2(3))
     # Przypisanie lambdy do nazwanej zmiennej nie daje nowych możliwosci
     # i obniza czytelność
     return
@@ -3235,21 +3235,21 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    lista_zwierze_waga = [('pies', 10.), ('kot', 5.), ('koń', 200.), ('wróbel', 0.1)]
+    _lista_zwierze_waga = [('pies', 10.), ('kot', 5.), ('koń', 200.), ('wróbel', 0.1)]
     
     # Sortowanie z wykorzystaniem funkcji
     def odczyt_wagi(zwierze_waga):
       return zwierze_waga[1]
     
-    posortowana_1 = sorted(lista_zwierze_waga, key=odczyt_wagi)
+    _posortowana_1 = sorted(_lista_zwierze_waga, key=odczyt_wagi)
     
     # Sortowanie z lambdą - jedna linijka
-    posortowana_2 = sorted(lista_zwierze_waga, key=lambda x: x[1])
+    _posortowana_2 = sorted(_lista_zwierze_waga, key=lambda x: x[1])
     
-    for item in posortowana_1:
+    for item in _posortowana_1:
       print(item)
     print('-----------')
-    for item in posortowana_2:
+    for item in _posortowana_2:
       print(item)
     return
 
@@ -3289,9 +3289,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     # Lambda moze mieć wiele arguemntów, np. dwa:
-    f = lambda x, y: x * y
+    _f = lambda x, y: x * y
     
-    print(f(2, 3))
+    print(_f(2, 3))
     return
 
 @app.cell
@@ -3354,9 +3354,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    weights = [10, 40, 320, 450, 70, 115, 3]
-    filter_heavy = filter(lambda x: x > 100, weights)
-    print(filter_heavy)  #referencja do listy
+    _weights = [10, 40, 320, 450, 70, 115, 3]
+    _filter_heavy = filter(lambda x: x > 100, _weights)
+    print(_filter_heavy)  #referencja do listy
     return
 
 @app.cell
@@ -3415,9 +3415,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     # Uzyskanie listy na podstawie iteratora
-    weights = [10, 40, 320, 450, 70, 115, 3]
-    filter_heavy = filter(lambda x: x > 100, weights)
-    print(list(filter_heavy))
+    _weights = [10, 40, 320, 450, 70, 115, 3]
+    _filter_heavy = filter(lambda x: x > 100, _weights)
+    print(list(_filter_heavy))
     return
 
 @app.cell
@@ -3485,10 +3485,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     # Ponowne wywołanie - iterator dotarł do końca, jest pusty
-    weights = [10, 40, 320, 450, 70, 115, 3]
-    filter_heavy = filter(lambda x: x < 100, weights)
-    print(list(filter_heavy))
-    print(list(filter_heavy))
+    _weights = [10, 40, 320, 450, 70, 115, 3]
+    _filter_heavy = filter(lambda x: x < 100, _weights)
+    print(list(_filter_heavy))
+    print(list(_filter_heavy))
     return
 
 @app.cell
@@ -3574,11 +3574,11 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 def _():
     def square(n):
         return n*n
-    my_list = [2,3,4,5,6,7,8,9]
-    updated_list = map(square, my_list)
-    #updated_list = map(lambda x: x*x, my_list)
-    print('wskaznik',updated_list)
-    print(list(updated_list))
+    _my_list = [2,3,4,5,6,7,8,9]
+    _updated_list = map(square, _my_list)
+    #_updated_list = map(lambda x: x*x, _my_list)
+    print('wskaznik',_updated_list)
+    print(list(_updated_list))
     return
 
 @app.cell
@@ -3649,11 +3649,11 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     from functools import reduce
-    numbers = [ 1 , 2 , 3 , 4 , 5 ]
+    _numbers = [ 1 , 2 , 3 , 4 , 5 ]
     def il(a,b):
        return a*b
-    result = reduce(il,numbers)
-    print(result)
+    _result = reduce(il,_numbers)
+    print(_result)
     return
 
 @app.cell
@@ -3719,10 +3719,10 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     from functools import reduce
-    numbers = [ 1 , 2 , 3 , 4 , 5 ]
-    sum_of_numbers = reduce(lambda x, y: x + y, numbers)
-    print(sum_of_numbers)
-    print(sum(numbers))
+    _numbers = [ 1 , 2 , 3 , 4 , 5 ]
+    _sum_of_numbers = reduce(lambda x, y: x + y, _numbers)
+    print(_sum_of_numbers)
+    print(sum(_numbers))
     return
 
 @app.cell
@@ -3793,11 +3793,11 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     from functools import reduce
-    numbers = [ 1 , 2 , 3 , 4 , 5 ]
-    sum_of_numbers = reduce(lambda x, y: x + y, numbers,10)
+    _numbers = [ 1 , 2 , 3 , 4 , 5 ]
+    _sum_of_numbers = reduce(lambda x, y: x + y, _numbers,10)
     #10 inicjalizacja
-    print(sum_of_numbers)
-    print(sum(numbers))
+    print(_sum_of_numbers)
+    print(sum(_numbers))
     return
 
 @app.cell
@@ -3864,9 +3864,9 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     from functools import reduce
-    numbers = [ 1 , 2 , 3 , 4 , 5 ]
-    sum_of_numbers = reduce(lambda x, y: x+y if y%2==0 else x, numbers,0)
-    print(sum_of_numbers)
+    _numbers = [ 1 , 2 , 3 , 4 , 5 ]
+    _sum_of_numbers = reduce(lambda x, y: x+y if y%2==0 else x, _numbers,0)
+    print(_sum_of_numbers)
     return
 
 @app.cell
@@ -3949,8 +3949,8 @@ def _():
     def power(x, y):
       return x**y
     
-    square = partial(power, y=2)
-    print(square(4))
+    _square = partial(power, y=2)
+    print(_square(4))
     return
 
 @app.cell
@@ -4048,16 +4048,16 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     def generuj_parzyste(stop):
-      x = 0
-      while x < stop:
-        yield x
-        x += 2
+      _x = 0
+      while _x < stop:
+        yield _x
+        _x += 2
     
-    generator = generuj_parzyste(6)
-    print(next(generator))
-    print(next(generator))
-    print(next(generator))
-    if generator==None:
+    _generator = generuj_parzyste(6)
+    print(next(_generator))
+    print(next(_generator))
+    print(next(_generator))
+    if _generator==None:
       print('null')
     return
 
@@ -4095,8 +4095,8 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 @app.cell
 def _():
     # Użycie generatora z pętlą for
-    generator = generuj_parzyste(12)
-    for x in generator:
+    _generator = generuj_parzyste(12)
+    for x in _generator:
       print(x)
     return
 
@@ -4139,14 +4139,14 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
 def _():
     def func():
         print('tekst')
-    f1=func
-    f1()
+    _f1=func
+    _f1()
     return
 
 @app.cell
 def _(mo):
     mo.md(r"""Jeśli f to funkcja, to jaka jest różnica między:
-f2=f, a f2=f()?""")
+_f2=f, a _f2=f()?""")
     return
 
 @app.cell
@@ -4229,8 +4229,8 @@ def _():
         print("Alu")
     
     
-    obj = hello(name)
-    obj()
+    _obj = hello(name)
+    _obj()
     return
 
 @app.cell
@@ -4578,16 +4578,16 @@ Poniżej znajduje się absolutnie szczegółowe, łopatologiczne wyjaśnienie ka
     return
 @app.cell
 def _():
-    osoba={}
-    x=int(input('Proszę podać liczbę osób: '))
-    for i in range(0,x):
-        nazwisko=input('Proszę podać nazwisko: ')
-        osoba[nazwisko]=int(input('Proszę podać wiek: '))
-    y=int(input('Wypisanie nazwisk powyżej wieku: '))
-    for key in osoba:
-        if osoba[key] > y:
+    _osoba={}
+    _x=int(input('Proszę podać liczbę osób: '))
+    for i in range(0,_x):
+        _nazwisko=input('Proszę podać _nazwisko: ')
+        _osoba[_nazwisko]=int(input('Proszę podać wiek: '))
+    _y=int(input('Wypisanie nazwisk powyżej wieku: '))
+    for key in _osoba:
+        if _osoba[key] > _y:
             print(key)
-    print(osoba)
+    print(_osoba)
     return
 
 if __name__ == "__main__":
