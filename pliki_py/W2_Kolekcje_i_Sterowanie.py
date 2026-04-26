@@ -3,7 +3,7 @@ import marimo
 __generated_with = "0.17.6"
 app = marimo.App()
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -21,12 +21,12 @@ def _():
     import marimo as mo
     return mo,
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Wykład 2: Kolekcje i Logika""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -58,7 +58,7 @@ def _():
     print(_a+_b)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Operacje w klasie str
 
@@ -71,7 +71,7 @@ def _(mo):
 """)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -112,7 +112,7 @@ def _():
     print("drugi znak ",_a[3])
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -152,7 +152,7 @@ def _():
     print(_b)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -188,13 +188,13 @@ def _():
     print(_b)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Rzutowanie typów sczególnie ze string na liczby jest łatwiejsze niż np. w Javie.
 """)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -241,12 +241,12 @@ def _():
     print(int(_a)+int(_b))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Sprawdzenie typu""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -289,7 +289,7 @@ def _():
     print(type(_b))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -330,7 +330,7 @@ def _():
     else: print("not int")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Kolekcje
 
@@ -339,7 +339,7 @@ def _(mo):
 Przypominają tablice z innych języków lub wektory z C++. Mogą skłądać się z elementów różnego typu.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -371,7 +371,7 @@ def _():
     print(_lista)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -447,12 +447,12 @@ def _():
     print(len(_lista_1))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Dodanie elementu do listy""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -493,12 +493,12 @@ def _():
     print(_lista_1)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Połączenie list""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -553,7 +553,7 @@ def _():
     print(_lista_1)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -605,12 +605,12 @@ def _():
     print(_lista_1)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Sortowanie""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -648,12 +648,12 @@ def _():
     print(_lista)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Zmiana kolejności""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -693,7 +693,7 @@ def _():
     print(_lista)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -734,7 +734,7 @@ def _():
     print(_lista)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### Przypisanie wartości
 
@@ -742,7 +742,7 @@ Jeśli a i b są listami, to instrukcja a = b powoduje przypisanie referencji, z
 _Instrukcja == porównuje zawartość, instrukcja is sprawdza referencję.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -796,7 +796,7 @@ def _():
     print(_a is _b)  # porównanie referencji
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -835,7 +835,7 @@ def _():
     print(a is _b)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -885,7 +885,7 @@ def _():
     print(a[-3:-1])
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -913,14 +913,14 @@ def _():
     print(list(range(1,5,2)))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Krotki (ang. tuple)
 
 Przypominają listy, ale są niezmienne (nie mozna zmieniać ich elementów, nie są jednak odpwiednikiem stałych z C, bo jako całość mogą ulec zmianie).""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -948,7 +948,7 @@ def _():
     print(_ip_address)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -979,7 +979,7 @@ def _():
     print(_ip_address[0])
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1013,7 +1013,7 @@ def _():
     _ip_address[0] = '10.20.30.250'
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1055,14 +1055,14 @@ def _():
     print(_ip_address1)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Zbiory
 
 Zawieraja elementy unikalne i nie są uporządkowane.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1109,13 +1109,13 @@ def _():
     _stolice_europy = {'Paryż', 'Berlin', 'Warszawa'}
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Iloczyn zbiorów
 """)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1180,12 +1180,12 @@ def _():
     print(_duze_miasta_mazowsza)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Różnica zbiorów""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1250,12 +1250,12 @@ def _():
     print(_male_miasta_mazowsza)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Sprawdzenie podzbiorów i rozłączności""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1337,12 +1337,12 @@ def _():
     print(_male_miasta_mazowsza.isdisjoint(_stolice_europy))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Sprawdzanie przynależności elementu do zbioru (uwaga - ta sama składnia działa też dla innych kolekcji)""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1374,12 +1374,12 @@ def _():
     print('Berlin' in _stolice_europy)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Sprawdzenia nieobecności elementu w zbiorze najlepiej dokonać przez operator not in:""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1424,12 +1424,12 @@ def _():
     print(not 'Radom' in _stolice_europy)  # Niezalecane, ale też działa
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Rozmiar zbioru (ponownie - ta sama składnia dla innych kolekcji)""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1462,14 +1462,14 @@ def _():
     print(len(_miasta_mazowsza))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Słowniki
 
 Słownik to zbiór par klucz-wartość.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1536,12 +1536,12 @@ def _():
     print(_ludnosc['Warszawa'])
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""**Zmiana zmiennych powoduje zarezerwowanie nowego miejsca w pamięci**""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1598,12 +1598,12 @@ def _():
     print(type(_a),"  ",id(_a))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Quiz""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1647,7 +1647,7 @@ def _():
     print(type(_aTuple[2:3]))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1690,7 +1690,7 @@ def _():
     print(bool(0.0), bool(3.14159), bool(-3), bool(1.0+1j))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1711,7 +1711,7 @@ def _():
     print(type(10))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1746,7 +1746,7 @@ def _():
     print(type({}))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1786,7 +1786,7 @@ def _():
     print(type(_aTuple[2:3]))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1842,7 +1842,7 @@ def _():
     pass
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Instrukcje
 
@@ -1853,7 +1853,7 @@ Instrukcje języka Python są elastyczne. Można wyróznić instrukcje związane
 Może dotyczyc jednego argumentu lub kilku, dzięki czemu np. operacja zamiany zmiennych jest łatwiejsza niż w C.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1912,12 +1912,12 @@ def _():
     print(_a, b, c)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Instrukcja if""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1967,7 +1967,7 @@ def _():
       print('Positive or zero')
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2032,12 +2032,12 @@ def _():
       print('Positive')
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""W Pythonie istnieje również odpowiednik operatora trójarguemntowego C o bardziej czytelnym zapisie:""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2073,12 +2073,12 @@ def _():
     print( 'Negative' if _x < 0 else 'Positive or zero' )
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Warunki logiczne łączymy operatorami and i or. Negacje wykonuje operator not.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2128,14 +2128,14 @@ def _():
       print('Wystarczy ciasto dla najbliższych, masz kredyt hipoteczny')
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Instrukcja for
 
 Pozwala na iterację po dowolnym obiekcie iterowalnym (np. liście, krotce, słowniku, ale i Stringu)""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2169,7 +2169,7 @@ def _():
       print(i)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2195,13 +2195,13 @@ def _():
       print(letter)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Instrukcja for jest często łaczona z range(), tworzącą w Python iterowalny obiekt (nie mylić z iteratorem).
 range ma w ogólności postać: range(start, stop, krok)""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2247,7 +2247,7 @@ def _():
       print(i)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2280,12 +2280,12 @@ def _():
       print(i)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Jeśli oprócz wartosci elementu listy chcemy znać jego pozycję na tej lisćie, wykorzystujemy enumerate().""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2330,12 +2330,12 @@ def _():
       print(idx, item)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Do sterowania przebiegiem pętli można wykorzystywać instrukcje break i continue.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2389,7 +2389,7 @@ def _():
         break
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2448,12 +2448,12 @@ def _():
       _x = 10 / (num % 2)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Z instrukcją for możemy wiązać instrukcję else, chociaż nie działa ona zgodnie z intuicją, bo instrukcje po else wykonywane są zawsze bez wzgledu na działanie for""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2496,12 +2496,12 @@ def _():
       print("koniec")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""W języku Python istnieje instrukcja pusta pass, wykorzystywana głównie jako tymczasowa zaślepka lub przy tworzeniu funkcji wirtualnych - składnia Pythona nie pozwala powiem na tworzenie pustych bloków, analogicznych jak {} w C/C++""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2542,12 +2542,12 @@ def _():
         print(_x)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Bardzo interesującą własnoscią języka Python jest inicjalizacja całych list w jednej instrukcji (podobna składnia również dla innych kolekcji)""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2583,12 +2583,12 @@ def _():
     print(_kwadraty)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Analogiczne operacje można wykonać dla słowników.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2641,12 +2641,12 @@ def _():
       print(liczba, kwadrat)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Do nowo tworzonej kolekcji można wybrać wszystkie (jak wyżej) lub tylko część spośród elementów:""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2705,12 +2705,12 @@ def _():
       print(liczba, kwadrat)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Możliwe jest również stosowanie pętli podwójnych:""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2781,12 +2781,12 @@ def _():
       print(item)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Podstawienie wielu wartości (ścisle - krotki) moze być wykorzystane w dowolnym miejscu, np:""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2842,7 +2842,7 @@ def _():
       print(item)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2876,12 +2876,12 @@ def _():
       print(i1, i2, i3)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Instrukcja while""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2923,7 +2923,7 @@ def _():
       print(_i)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2967,14 +2967,14 @@ def _():
       print(_i)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Zakres zmiennych
 
 Zmienne w języku Python są widoczne poza blokiem w którym zostały zdefiniowane. Nie są widoczne poza funkcją w której zostały zdefiniowane, ale to zostanie omówione po wprowadzeniu funkcji. Pozwala to na pisanie bardziej zwięzłego kodu, trzeba jednak pamietać o ryzyku odwołania  do niezainicjalizowanej zmiennej.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3012,22 +3012,22 @@ def _():
     print(_y)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""##Quiz""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3074,7 +3074,7 @@ def _():
     else: print("koniec")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Jak napisać instrukcję:
 
@@ -3084,7 +3084,7 @@ else print("nieparzyste")
 w sposób bardziej "pythonowy" """)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3101,12 +3101,12 @@ def _():
     _x=2
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Praca domowa (termin oddania 12.03.2023)""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Napisać program, który wczytuje kilka par nazwisko, wiek (instrukcja input), tworzy słownik i wypisuje komórki słownika, dla których wiek przekracza zadaną wartość, proszę napisać jak najbardziej związły kod. (minimum linii)
 """)

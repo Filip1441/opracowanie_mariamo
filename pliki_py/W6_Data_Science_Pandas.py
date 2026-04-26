@@ -3,7 +3,7 @@ import marimo
 __generated_with = "0.17.6"
 app = marimo.App()
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -21,17 +21,17 @@ def _():
     import marimo as mo
     return mo,
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Wykład 6: Analiza Danych""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Wykład 6""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## PLAN
 Na wykładzie zostaną przedstawione:
@@ -49,27 +49,27 @@ Na końcu praktyczne zastosowanie - system rekomendacyjny
 """)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Instrukcje wejścia-wyjścia""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Instrukcje we/wy w Pythonie są używane do komunikacji programu z użytkownikiem, umożliwiając wprowadzanie danych przez użytkownika (wejście) oraz wyświetlanie wyników lub informacji (wyjście).""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Input - umożliwia wprowadzenie danych z klawiatury.  Trzeba pamiętać o rzutowaniu danych, input zwraca string.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Aby wyświetlić dane użytkownikowi, używamy funkcji print(). Funkcja ta przyjmuje jeden lub więcej argumentów i wypisuje je na standardowe wyjście (zwykle ekran).""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -103,7 +103,7 @@ def _():
     print(f"Imię: {_imie}, Wiek: {_wiek}")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -136,7 +136,7 @@ def _():
     print("w Pythonie!")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -187,7 +187,7 @@ def _():
     _image_path = list(_uploaded.keys())[0]
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Python oferuje wiele metod do pracy z danymi wejściowymi i wyjściowymi. Oprócz podstawowych funkcji input() i print(), mamy:
 
@@ -197,12 +197,12 @@ def _(mo):
 Na wykładzie omówione będzie we/wy dla plików.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Wejście/Wyjście - pliki""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -288,7 +288,7 @@ def _():
     print(_dane)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -339,7 +339,7 @@ def _():
     print(_zawartosc)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -398,7 +398,7 @@ def _():
     plik.close()
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -509,12 +509,12 @@ def _():
     print(type(_intf))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""operator sep - określamy separator napisów""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -570,7 +570,7 @@ def _():
     print('09', '03', '2024', sep=' ')
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Wyjście formatowane, analogicznie jak w C
 * %d –integer
@@ -580,7 +580,7 @@ def _(mo):
 * %o – ósemkowy""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -610,7 +610,7 @@ def _():
     print("_x=%o _x=%_x" %(_x,_x))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -647,12 +647,12 @@ def _():
     print("liczba {:5.2f} {:2}".format(_amount, _x))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""użycie string""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -676,7 +676,7 @@ def _():
     print(f"liczba {_amount}")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
 Pickle jest biblioteką w Pythonie służącą do serializacji i deserializacji obiektów Pythona. Pozwala to na zapisywanie obiektów Pythona do plików i późniejsze ich odczytywanie, zachowując ich stan.
@@ -684,7 +684,7 @@ Pickle jest biblioteką w Pythonie służącą do serializacji i deserializacji 
 Oto prosty przykład zastosowania pickle, gdzie zapisujemy listę obiektów Pythona do pliku za pomocą pickle.dump() i później odczytujemy tę listę z pliku za pomocą pickle.load()""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -801,17 +801,17 @@ def _():
     print(_loaded_data)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""W wielu praktycznych zastosowaniach wygodniej jest zapisywać i odczytywać dane z plików excela""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Biblioteka Pandas - zastosowanie""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""* Wczytywanie różnych formatów danych (CSV, Excel, SQL, pliki płaskie itd.)
 * Filtrowanie, sortowanie i inne operacje z danymi
@@ -821,7 +821,7 @@ def _(mo):
 * Wizualizacja danych za pomocą wykresów""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Obiekt **Series** i **DataFrame** to dwa podstawowe obiekty w bibliotece Pandas. **Series** to jednowymiarowa tablica etykietowanych danych, podobna do kolumny w tabeli, natomiast **DataFrame** to dwuwymiarowa tablica etykietowanych danych, podobna do tabeli z danymi.
 
@@ -830,7 +830,7 @@ Różnica między nimi polega na tym, że Series zawiera tylko jedną kolumnę, 
 Aby przekształcić Series na DataFrame, można użyć metody to_frame(), która tworzy nowy DataFrame z jedną kolumną zawierającą wartości z oryginalnej Series.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Podstawowe struktury danych:
 
@@ -838,7 +838,7 @@ def _(mo):
 * DataFrame""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -913,7 +913,7 @@ def _():
     print(_s)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -980,12 +980,12 @@ def _():
     print(_vals_sr["A"])
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Zadanie:  Mam słownik, jak zapisać dane w postaci Series?""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1040,12 +1040,12 @@ def _():
     print(_s)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Mamy obiekt klasy Auto, jak zapisać go w postaci słownika i pd.Series?""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1149,7 +1149,7 @@ def _():
     print(_s)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1236,12 +1236,12 @@ def _():
     print(_df['numbers'])
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Metody klasy DataFrame:""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Pełna dokumentacja: https://pandas.pydata.org
 
@@ -1255,7 +1255,7 @@ Odczyt zapis danych:
 * pd.read_json('plik.json')	- Odczyt JSON""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1417,12 +1417,12 @@ def _():
     print(type(_tablica))     #to nie jest DataFrame
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Dane przechowywane w tabeli DataFrame, jeśli chcemy wyświelić określoną liczbę wierszy to piszemy  head() z parametrem""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1442,7 +1442,7 @@ def _():
     df.head(8)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1463,12 +1463,12 @@ def _():
     df.tail(2)                     #elementy na końcu
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""NaN - oznacza brak danych z taką sytuacją musimy sobie radzić, w Pandas są odpowiednie narzędzia które zostaną przedstawione !!!!!!!""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1486,7 +1486,7 @@ def _():
     df.shape          # określenie wymiaru DataFrame
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Jak wyświetlić oddzielnie wiersze i kolumny?""")
     return
@@ -1496,7 +1496,7 @@ def _():
     pass
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1514,7 +1514,7 @@ def _():
     df.size                                #iloczyn liczby wierszy i kolumn
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1533,7 +1533,7 @@ def _():
     len(df)                                  #liczba wierszy
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1565,12 +1565,12 @@ def _():
     for k in _a: print(k)                                  # Nazwy kolumn
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Pobranie kolumny (w wersji enumerate)""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1588,12 +1588,12 @@ def _():
     df['Mff']
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Pobranie zakresu lub konkretnej wartości""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1616,7 +1616,7 @@ def _():
     df['Mff'][3:5]
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1639,12 +1639,12 @@ def _():
     df[['Mff', 'Fis1']]                                                               #możemy wybierać kilka kolumn
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1671,12 +1671,12 @@ def _():
     df[['Mff', 'Fis1']][2:5]
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Możemy też wczytywać dane z plików csv i tworzyć tabelę, określamy nazwy kolumn, separator użyty w pliku, liczbę kolumn oraz rodzaj kodowania.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1812,12 +1812,12 @@ def _():
     print(_df)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Budujemy "pusty" DataFrame""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1885,12 +1885,12 @@ def _():
     print(_df)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Dodane wiersza""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1928,7 +1928,7 @@ def _():
     print(df)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1967,7 +1967,7 @@ def _():
     print(df)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2013,7 +2013,7 @@ def _():
     print(_df1)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2066,7 +2066,7 @@ def _():
     print(_df)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2138,7 +2138,7 @@ def _():
     _rt.head(5)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2204,18 +2204,18 @@ def _():
     _movies.head(5)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Zadanie: mając dane o oglądanych filmach i ocenie tych filmów. Należy zbudować system, który znając wysoko oceniany przez na film rekomenduje kolejny. Poniżej przedstawione zostaną kolejne kroki algorytmu.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Naszym zadaniem będzie rekomendowanie filmów, na podstawie poprzednio oglądanego wysoko przez nas ocenianego filmu. Interesują więc nas nazwy filmów, a nie ich ID. Ze względów praktycznych warto operować jedną tablicą nie dwoma.
 Wykorzystujemy inteligentne łączenie tabel (wspólne movies_id)""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2248,12 +2248,12 @@ def _():
     _rt.head(8)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Teraz chcemy, aby nazwy kolumn były tytułami filmów, w tym celu stosujemy metodę pivot_table""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2310,7 +2310,7 @@ def _():
     for k in _a: print(k)                                  # Nazwy kolumn
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2330,12 +2330,12 @@ def _():
     movieRatings.head(10)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Załóżmy, że podobał się nam film: Young Frankenstein (1974), jaki film będzie nam rekomendowany? Poszukujemy więc filmów, które były wysoko oceniane łącznie z filmem Young Frankenstein (1974). Jakie mamy narzędzia?""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2368,12 +2368,12 @@ def _():
     _YF.head(10)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Poszukujemy kolumny najsilniej skorelowanej (tz, takiej która ma podobne oceny). Problem brak danych w pewnych miejscach. funkcja **dropna** usuwa takie dane. Korelację między kolumnami obliczmay funkcją **corrwith**""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2424,7 +2424,7 @@ def _():
     print(_sm)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2477,7 +2477,7 @@ def _():
     _s.sort_values(ascending=True)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2508,12 +2508,12 @@ def _():
     print(_df.columns)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Teraz warto dane posortować i wybrać wartości największe""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2545,22 +2545,22 @@ def _():
     #print(sm)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""I tą część możemy rozwijać dalej, biorąc pod uwagę różne kryteria podobieństwa i wyboru.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Biblioteka numpy""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Zamiana numpy.array na DataFrame i odwrotnie""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2662,7 +2662,7 @@ def _():
     _df.head(3)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2688,7 +2688,7 @@ def _():
     print(_nparray)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2728,12 +2728,12 @@ def _():
     print(_pom.values)  #to jest wektor
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Dodanie kolumny""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2848,12 +2848,12 @@ def _():
     print(_df)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Tworzenie nowej kolumny na podstawie wartości  innych kolumn""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2945,12 +2945,12 @@ def _():
     print(_df)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Wstawianie wiersza tablicy numpy do DataFrame""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3067,12 +3067,12 @@ def _():
     print(_df)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""zapis do pliku xlsx lub csv""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3153,12 +3153,12 @@ def _():
     _df.to_csv('nazwa_pliku.csv', index=False)     #to_excel  dla plików excela
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Sortowanie Tabeli na podstawie zawartości kolumny""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3250,7 +3250,7 @@ def _():
     print(_df_sorted)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3295,7 +3295,7 @@ def _():
     print(_dfr)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3353,12 +3353,12 @@ def _():
     print(_df)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Obliczanie funkcji dla danej kolumny""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3409,13 +3409,13 @@ def _():
     print("max=", _max_val,"mediana=",_median_val)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Funkcji mamy bardzo dużo, np.
 describe(): wyświetla podsumowanie statystyczne dla każdej kolumny, w tym wartość średnią, odchylenie standardowe, wartości minimalne i maksymalne oraz kwantyle.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3446,7 +3446,7 @@ def _():
     print(_des)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3480,17 +3480,17 @@ def _():
     print(_des['count'])
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Biblioteka numpy""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Tworzenie tablic""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3546,7 +3546,7 @@ def _():
     print(_arr)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3583,7 +3583,7 @@ def _():
     print(_arr)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3620,7 +3620,7 @@ def _():
     print(_arr)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3657,7 +3657,7 @@ def _():
     print(_arr)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Przykładowe typy danych
 numpy.int8 - Byte (-128 to 127)
@@ -3683,12 +3683,12 @@ numpy.complex64
 numpy.complex128 / numpy.complex_""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Informacje o tablicy""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3763,7 +3763,7 @@ def _():
     print(_arr.shape)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3790,7 +3790,7 @@ def _():
     print(np.eye(3))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3833,7 +3833,7 @@ def _():
     print(np.arange(3.0, 5.0, 0.5))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3882,7 +3882,7 @@ def _():
     print(np.linspace(_A, _B, _N))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3916,13 +3916,13 @@ def _():
     print(np.diag(np.arange(1, 5)))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Podstawowe operacje na tablicach
 Pakiet numpy pozwala na wygodne i efektywne wykonywanie wielu operacji matematycznych.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4008,7 +4008,7 @@ def _():
     print(np.max(_arr, axis=1))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4161,7 +4161,7 @@ def _():
     print('Sortowanie macierzy:\n', np.sort(_arr, axis=1))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4311,7 +4311,7 @@ def _():
     print('_a X _b', np.dot(_a,_b))     #Iloczyn macierzy
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4400,7 +4400,7 @@ def _():
     print('Wektory własne:', np.linalg.eig(_a))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4478,7 +4478,7 @@ def _():
     print(_x)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Pakiet numpy umożliwia również:
 
@@ -4495,7 +4495,7 @@ operacje na tekstach
 szczegóły: https://numpy.org/doc""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4575,7 +4575,7 @@ def _():
     print(np.roots([1, 0, 4]))  # Wartosci zespolone
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 

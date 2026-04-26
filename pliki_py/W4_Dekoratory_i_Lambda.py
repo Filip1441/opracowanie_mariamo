@@ -3,7 +3,7 @@ import marimo
 __generated_with = "0.17.6"
 app = marimo.App()
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -21,18 +21,18 @@ def _():
     import marimo as mo
     return mo,
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Wykład 4: Meta-programowanie""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### LOGIKA: Dekoratory i Lambdy
 `lambda x: x*2` to funkcja anonimowa. `@dekorator` to funkcja wyższego rzędu.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -183,7 +183,7 @@ def _():
     print((_end-_start)/(_endc-_startc))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Pytania:
 
@@ -191,14 +191,14 @@ def _(mo):
 * Jakie są zalety compile?""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Zakres zmiennych
 
 Zmienne w języku Python są widoczne poza blokiem w którym zostały zdefiniowane. Nie są widoczne poza funkcją w której zostały zdefiniowane, ale to zostanie omówione po wprowadzeniu funkcji. Pozwala to na pisanie bardziej zwiezłego kodu, trzeba jednak pamietać o ryzyku odwoływania się do niezainicjalizowanej zmiennej.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -241,7 +241,7 @@ def _():
     print(_pp1)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Funkcje
 
@@ -249,7 +249,7 @@ Funkcje w Pythonie mogą przyjmować dowolną liczbę argumentów oraz zwracać 
 """)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -343,7 +343,7 @@ def _():
     print(_fib)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -439,7 +439,7 @@ def _():
     print(_fib)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -566,12 +566,12 @@ def _():
     print('Zwrócono:', _ret)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Wartości domyślne parametrów podaje się bezposrednio w ich definicji. Argumenty z wartościami domyślnymi muszą występować na końcu (po wszytstkich argumentach bez wartości domyślnych).""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -586,7 +586,7 @@ def _():
     # Wartości domyślne muszę być na końcu
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -707,7 +707,7 @@ def _():
     print_fibonacci(60, start=5)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -834,7 +834,7 @@ def _():
     pass
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -858,7 +858,7 @@ def _():
     pass
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -887,12 +887,12 @@ def _():
     pass
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Funkcje mogą być wywoływane z listą argumentów nieznanej długości (symbol gwiazadki) lub ze słownikiem argumentów, w drugim przypadku wartości argumentów zwykle są poprzedzone ich nazwą (symbol podwójnej gwiazdki). Jest to stosowane raczej przy bardziej złożonych funkcjach, mających bardzo wiele opcji.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -948,7 +948,7 @@ def _():
     function_with_args(4, 'a', {0: False, 1: True})
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -966,7 +966,7 @@ def _():
     function_with_args(2)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1028,7 +1028,7 @@ def _():
     function_with_keyword_args(a=8, repeat=0, f=True)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1134,7 +1134,7 @@ def _():
     both_args_and_kwargs(3, ['abc', 'xyz'],x=6, a=4, c='text')
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1189,12 +1189,12 @@ def _():
     bad_function(1, 2, 3, 4, 5)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Zadanie: napisać funkcję, która zwraca sumę jej argumentów, liczba argumentów może być dowolna.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1279,12 +1279,12 @@ def _():
     print(sum(*_a))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Zadanie: napisać funkcję, która wypisuje sumę cen artykułów zawartych w liście zakupów. Cennik artykułów jest argumentem funkcji.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1416,7 +1416,7 @@ def _():
     BuyMe(*_lista, **_ceny)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Pytania
 Mam funkcję:
@@ -1428,7 +1428,7 @@ readdata('plik')?
 Dodatkowe pytanie.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1470,7 +1470,7 @@ def _():
     readdata('name')
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1540,12 +1540,12 @@ def _():
     fun_a(*_lista)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Funkcja jako obiekt""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1604,12 +1604,12 @@ def _():
     print(type(_Bm))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Dkaczego nie widzi kargs, jak to zmienić?""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1672,7 +1672,7 @@ def _():
     _Bm('ser',{'ser':10})
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1759,7 +1759,7 @@ def _():
     
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1875,12 +1875,12 @@ def _():
             akcja(obiekt)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Tworzenie funkcji na podstawie funkcji istniejącej""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2034,7 +2034,7 @@ def _():
     print(_sum(8,2,3))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2090,7 +2090,7 @@ def _():
         return f
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2188,21 +2188,21 @@ def _():
     print(_f_add(0, 2, 3))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Pytania
 
 Po co tworzymy funkcje dedykowane, jakie są zalety takiego rozwiązania?""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Zmienne globalne
 
 W języku Python bloki nie ograniczaja widoczności zmiennych ani możliwości ich zapisu:""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2250,12 +2250,12 @@ def _():
     print(_a)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Inaczej jest w wypadku funkcji, w których możliwy jest odczyt, ale nie modyfikacja zmiennych:""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2323,12 +2323,12 @@ def _():
     print(_b)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""W wypadku modyfikacji zmiennych spoza funkcji w jej wnętrzu zmianie ulegają ich lokalne kopie:""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2388,7 +2388,7 @@ def _():
     print(_x)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2466,14 +2466,14 @@ def _():
     print('_a=',_a, '_b=',_b)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Aby zmienić wartość zmiennej globalnej, należy użyć słowa kluczowego global.
 Nie zaleca się jednak takiego sposobu programowania.
  Podobne znaczenie ma słowo kluczowe nonlocal, ale dotyczy to funkcji wewnętrznych.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2554,7 +2554,7 @@ def _():
     print(_a, _b)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2662,7 +2662,7 @@ def _():
     print("wartość _a na końcu", _a)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2787,14 +2787,14 @@ def _():
     print(_a, _b)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Import funkcji z innych plików
 
 Popularność Pythona wynika w znacznej mierze z dużej liczby bibliotek ułatwiajacych wykonywanie różnorakich zadań oraz łatwości ich wykorzystania. Aby zaimportować biblioteke do programu korzystamy z polecenia import. Należy pamietać, ze każdy moduł zostanie zaimportowany tylko raz podczas wywołania programu, nawet jeśli wystąpi kilka wywołań. Biblioteki zwyczajowo importujemy na początku pliku .py""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2819,7 +2819,7 @@ def _():
     import numpy as np  # import modułu numpy i nadanie mu lokalnie nazwy np
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2860,7 +2860,7 @@ def _():
     print(_files)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2906,7 +2906,7 @@ def _():
     print(_x)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2950,7 +2950,7 @@ def _():
     _x = numpy.array([1, 2, 3])  #błąd bo np
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2998,12 +2998,12 @@ def _():
     # Uwaga: poprawny ponowny import biblioteki time wymaga resetu notebooka
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Funkcje w poprawnie przygotowanych modułach zawieraja dokumentację w formie docstringa. Warto równiez o tym pamietać przy tworzeniu własnych modułów (co jest poza zakresem tego wykładu).""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3023,14 +3023,14 @@ def _():
     help(np.array)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Lambda
 
 Lambda jest sposobem definiowania funkcji anonimowej pozwalającym często na bardziej zwięzły zapis kodu.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3114,7 +3114,7 @@ def _():
     # i obniza czytelność
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3253,7 +3253,7 @@ def _():
       print(item)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3294,17 +3294,17 @@ def _():
     print(_f(2, 3))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Funkcje wbudowane""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""filter - zwraca iterator elementów kolekcji (a nie listę), które spełniaja określone kryterium""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3359,7 +3359,7 @@ def _():
     print(_filter_heavy)  #referencja do listy
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3420,7 +3420,7 @@ def _():
     print(list(_filter_heavy))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3491,14 +3491,14 @@ def _():
     print(list(_filter_heavy))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""map - umożliwia zastosowanie danej operacji na każdym elemencie kolekcji i uzyskanie nowej kolekcji.
 
 Szczególnie przydatne przy przetwarzaniu równoległym, gdy dla każdego z elementów należy wykonać skomplikowane obliczenia (przetwarzanie równoległe będzie omawiane później, poniższy przykład jest szeregowy)""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3581,12 +3581,12 @@ def _():
     print(list(_updated_list))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""reduce - na podstawie kolekcji tworzy pojedynczą wartość, np. sumę:""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3656,7 +3656,7 @@ def _():
     print(_result)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3725,7 +3725,7 @@ def _():
     print(sum(_numbers))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3800,7 +3800,7 @@ def _():
     print(sum(_numbers))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3869,7 +3869,7 @@ def _():
     print(_sum_of_numbers)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Pytania
 
@@ -3885,14 +3885,14 @@ def _():
     pass
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Dekoratory, generatory, funkcje częściowe
 
 Funkcje cząstkowe - przydatne, gdy nie chcemy wielokrotnie podawać tych samych wartości niektórych argumentów.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3953,7 +3953,7 @@ def _():
     print(_square(4))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Generatory - funkcje umożliwiajace tworzenie iteratorów. Od zwykłych funkcji różnią się tym, że:
 *   zwracają kolejną wartosć za pomocą słowa kluczowego yield
@@ -3961,7 +3961,7 @@ def _(mo):
 *   zwracaja kolejną wartość po zastosowaniu do nich polecenia next()""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4061,7 +4061,7 @@ def _():
       print('null')
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4100,12 +4100,12 @@ def _():
       print(x)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""W Pythonie funkcja jest obiektem""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4143,18 +4143,18 @@ def _():
     _f1()
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Jeśli f to funkcja, to jaka jest różnica między:
 _f2=f, a _f2=f()?""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Dekorator - funkcja lub obiekt, który można wywołać przekazując mu jako argument dekorowaną funkcję lub klasę, w wyniku czego uzyska sie funkcję lub klasę o rozszerzonej funkcjonalności (udekorowaną)""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4233,12 +4233,12 @@ def _():
     _obj()
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""W tym przypadku hello jest dekoratorem""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4316,7 +4316,7 @@ def _():
     name()
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4440,7 +4440,7 @@ def _():
     pass
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Praca  domowa
 
@@ -4473,12 +4473,12 @@ przejdzie przez wszystkie pozycje listy transform
 za każdym razem wywoła odpowiednią funkcję, przekazując do niej aktualną wartość argumentu value i wyświetli aktualną wartość value""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Proszę napisać kod w sposób "pythonowy", wykorzystując wyrażenie lambda""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 

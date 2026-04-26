@@ -3,7 +3,7 @@ import marimo
 __generated_with = "0.17.6"
 app = marimo.App()
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -21,7 +21,7 @@ def _():
     import marimo as mo
     return mo,
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Wykład 7: Systemy Współbieżne i CV""")
     return
@@ -31,12 +31,12 @@ def _():
     pass
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Tworzenie Wątków""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Definicja wątku:
 
@@ -51,7 +51,7 @@ Ta cecha ma dwie ważne konsekwencje:
 Dzięki współdzieleniu przestrzeni adresowej (pamięci) wątki jednego zadania mogą się między sobą komunikować w bardzo łatwy sposób. Przekazanie dowolnie dużej ilości danych wymaga przesłania jedynie wskaźnika, zaś odczyt (a niekiedy zapis) danych o rozmiarze nie większym od słowa maszynowego nie wymaga synchronizacji (procesor gwarantuje atomowość takiej operacji).""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""W Pythonie mamy następujące metody tworzenia wątków:
 
@@ -60,7 +60,7 @@ def _(mo):
 """)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -151,7 +151,7 @@ def _():
     
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -266,7 +266,7 @@ def _():
     _t2.join()
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Wątek nadrzędny czeka na zakończenie działania wątków""")
     return
@@ -276,12 +276,12 @@ def _():
     pass
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Dodanie argumentów""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -398,7 +398,7 @@ def _():
     _t2.join()
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -571,7 +571,7 @@ def _():
     print("Saldo końcowe:", _saldo)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -759,12 +759,12 @@ def _():
     print("Saldo końcowe:", _saldo)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Dziedziczenie po klasie Thread""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -925,17 +925,17 @@ def _():
     _t2.join()
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Synchronizacja wątków,  zwiększamy wartość wspólnej zmiennej o 1, wynik jest niedeterministyczny""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Nowe zalecenia - określenie typów,  niestety nie mamy kontroli edydtora""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -976,7 +976,7 @@ def _():
     print(func(2.0))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Oczekiwania od aplikacji przetwarzania obrazów
 
@@ -993,7 +993,7 @@ def _(mo):
 9. Wykrywanie cech""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Pakiety umożliwiające analizę obrazów
 
@@ -1014,7 +1014,7 @@ def _(mo):
 """)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1137,17 +1137,17 @@ def _():
     #path2 = '/content/drive/MyDrive/l2.png'
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Jeśli korzystamy z google collab to musimy zamontować dysk googla, aby mieć dostęp do plików i dodatkowo zaimportować odpowiednie pakiety""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Obraz jako tablica liczb""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1216,7 +1216,7 @@ def _():
     print(_img)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1234,7 +1234,7 @@ def _():
     cv2_imshow(img)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
 ## Pakiet numpy
@@ -1242,12 +1242,12 @@ def _(mo):
 biblioteka obliczeń numerycznych, ale ponieważ obraz jest tablicą więc w wielu przypadkach może być przydatna""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Przykładowe operacje""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1323,7 +1323,7 @@ def _():
     print(all(_a==1))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## OpenCV
 
@@ -1338,7 +1338,7 @@ pip install opencv-contrib-python
 """)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1378,7 +1378,7 @@ def _():
     from google.colab.patches import cv2_imshow  #potrzebne w google colab
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1419,7 +1419,7 @@ def _():
     cv2_imshow(_img)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1461,7 +1461,7 @@ def _():
     cv2_imshow(_img)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1533,12 +1533,12 @@ def _():
       print("blad")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Korzystając z OpenCV możemy umieszczać rysunki w nazwanych oknach i przesuwać te okna, ale jest to trudne w środowisku google collab, zostanie pokazane później""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Parametry dodatkowe imread
 
@@ -1547,7 +1547,7 @@ def _(mo):
 * cv2.IMREAD_UNCHANGED = -1""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Formaty które możemy czytać:
 
@@ -1565,7 +1565,7 @@ def _(mo):
 """)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1693,7 +1693,7 @@ def _():
      time.sleep(5)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1804,17 +1804,17 @@ def _():
     print('_w=',_w,' _h=',_h, ' _fps=',int(_fps),' _fc=',int(_fc))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Operacje na obrazach""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## zmiana wymiarów""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1910,7 +1910,7 @@ def _():
     cv2_imshow(_half)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1978,7 +1978,7 @@ def _():
     cv2_imshow(_img500)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2056,12 +2056,12 @@ def _():
     
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Generowanie losowych obrazów""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2108,7 +2108,7 @@ def _():
     cv2_imshow(_array)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2165,7 +2165,7 @@ def _():
     
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2194,12 +2194,12 @@ def _():
     cv2.imread(_p2,-1)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Proste operacje rysowania""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2322,14 +2322,14 @@ def _():
     cv2_imshow(_img)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Dodawanie i odejmowanie obrazów
 
 Aby dodać lub odjąć obrazy muszą mieć takie same wymiary""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2468,17 +2468,17 @@ def _():
     cv2_imshow(_combined)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Przekształcenia geometryczne""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Obrót""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2604,17 +2604,17 @@ def _():
     cv2_imshow(_combined)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Przesunięcie""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2693,12 +2693,12 @@ def _():
     cv2_imshow(_combined)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Wycinanie fragmentów obrazu""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2781,7 +2781,7 @@ def _():
     cv2_imshow(_img)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2865,7 +2865,7 @@ def _():
     cv2_imshow(_img)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2948,7 +2948,7 @@ def _():
     cv2_imshow(_img)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3031,12 +3031,12 @@ def _():
     cv2_imshow(_img)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## jak wyciąć środkowy fragment obrazka?""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3072,7 +3072,7 @@ def _():
     print(x,y)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3170,7 +3170,7 @@ def _():
     
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3214,7 +3214,7 @@ def _():
     cv2_imshow(image)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3308,7 +3308,7 @@ def _():
     cv2_imshow(_oko)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3451,7 +3451,7 @@ def _():
     cv2_imshow(image)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3524,7 +3524,7 @@ def _():
     cv2_imshow(_ramka)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3590,7 +3590,7 @@ def _():
     cv2_imshow(_ramka)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3656,7 +3656,7 @@ def _():
     cv2_imshow(_ramka)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Poprawa jakości
 
@@ -3666,7 +3666,7 @@ def _(mo):
 * wyostrzanie obrazu""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3729,7 +3729,7 @@ def _():
     cv2_imshow(_combined)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3829,7 +3829,7 @@ def _():
     cv2_imshow(_combined)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3923,7 +3923,7 @@ def _():
     cv2_imshow(_edge)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4030,7 +4030,7 @@ def _():
     cv2_imshow(_combined)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Operacje progowania
 
@@ -4044,7 +4044,7 @@ W bibliotece OpenCV, funkcja cv2.threshold() służy do progowania obrazu, opcje
 5. cv2.THRESH_TOZERO_INV""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4106,12 +4106,12 @@ def _():
     cv2_imshow(_combined)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Zmiana barw""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4209,12 +4209,12 @@ def _():
     cv2_imshow(_img)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Zmiana przestrzeni barw""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4339,7 +4339,7 @@ def _():
     # jasność - v
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4427,7 +4427,7 @@ def _():
     cv2_imshow(_mask0)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4564,12 +4564,12 @@ def _():
     
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Wykrywanie krawędzi""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4644,12 +4644,12 @@ def _():
     cv2_imshow(_edge)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Określanie krawędzi""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4835,7 +4835,7 @@ def _():
         print("Na obrazie nie znaleziono kwadratu.")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4927,7 +4927,7 @@ def _():
     print(_contours)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -5001,12 +5001,12 @@ def _():
     pass
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Przepływ optyczny""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -5482,7 +5482,7 @@ def _():
     print(f"The identified _shape is: {_shape}")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Przykładowe cmap
 
@@ -5499,7 +5499,7 @@ cividis – Kolorowa mapa dla osób z problemami z widzeniem kolorów.
 Greys – Skala szarości.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -5687,7 +5687,7 @@ def _():
     pass
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Zaawansowane przetwarzanie obrazów wykorzystując skimage https://scikit-image.org/docs/stable/api/skimage.data.html
 
@@ -5707,7 +5707,7 @@ def _():
     pass
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""https://pillow.readthedocs.io/en/stable/""")
     return

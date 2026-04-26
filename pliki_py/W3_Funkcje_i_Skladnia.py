@@ -3,7 +3,7 @@ import marimo
 __generated_with = "0.17.6"
 app = marimo.App()
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -21,18 +21,18 @@ def _():
     import marimo as mo
     return mo,
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Wykład 3: Funkcje i Pattern Matching""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### SKŁADNIA: Match-Case
 Składnia `match x: case y:` pozwala na dopasowanie wartości. Znak `_` (podkreślenie) w `case _:` to 'wildcard' - wyłapuje wszystko inne.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Wykład 2
 
@@ -44,17 +44,17 @@ def _(mo):
 *   Dekoratory i generatory""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Uzupełnienie wykładu 1""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Rozwiązanie zadania z wykładu 1""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -134,12 +134,12 @@ def _():
     print({name: age for name, age in _data.items() if age > _limitAge})
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""W pythonie nie ma swich, ale od wersji 3.10 mamy match, który jest odpowiednikiem swich""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -217,12 +217,12 @@ def _():
                 print("Nieznany dzień")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""else po for""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -274,12 +274,12 @@ def _():
     else: print('koniec')
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Przykłady""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -328,7 +328,7 @@ def _():
     print(_kw)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -362,7 +362,7 @@ def _():
     print(list([x for x in range(10)]))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -390,7 +390,7 @@ def _():
     print(list(range(10)))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -439,7 +439,7 @@ def _():
     print(_b)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -473,7 +473,7 @@ def _():
     print(b := 1 if _a else 2)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -539,7 +539,7 @@ def _():
         if i > _n: print(_lista[i])
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -595,17 +595,17 @@ def _():
     pass
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Napisać kod w którym  wprowadzam z klawiatury nazwę funkcji,która jest następnie wykonywana""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Metoda eval - umieszczenie fragmentu kodu z zewnątrz""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -631,7 +631,7 @@ def _():
     _result=eval(_source)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -674,7 +674,7 @@ def _():
     _result=eval(_source)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -718,7 +718,7 @@ def _():
     print(_result)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -767,7 +767,7 @@ def _():
     print(_result)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -819,12 +819,12 @@ def _():
     print(_result)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Funkcja exec wykonuje blok kodu, ale nie zwraca żadnej wartości""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -872,7 +872,7 @@ def _():
     print(_var_x)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -916,7 +916,7 @@ def _():
     print(_var_x)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -987,7 +987,7 @@ def _():
     print(_result)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""compile - tworzy kod wykonywalny (bytowy) z fragmentu kodu, ma to istotne znaczenie, jeśli dany fragment wykonujemy wiele razy.
 

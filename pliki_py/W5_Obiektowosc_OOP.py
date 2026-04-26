@@ -3,7 +3,7 @@ import marimo
 __generated_with = "0.17.6"
 app = marimo.App()
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -21,28 +21,28 @@ def _():
     import marimo as mo
     return mo,
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Wykład 5: Programowanie Obiektowe""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### TEORIA: OOP
 `class Nazwa:` definiuje wzorzec. `self` to odwołanie do konkretnego egzemplarza obiektu.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Pytania po wykładzie 4""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Jeśli f to funkcja, to jaka jest różnica między: f2=f, a f2=f()?""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Co oznacza @log_input, umieszczone przed deklaracją funkcji?
 
@@ -50,27 +50,27 @@ def _(mo):
 """)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Co to są wartości domyślne argumentów i jak się je ustawia?""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Co oznacza słowo global wewnątrz funkcji""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Co to jest wyrażenie lambda?""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Napisz wyrażenie lambda, umożliwia znalezienie najdłuższego słowa z listy""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -112,12 +112,12 @@ def _():
     _longest = max(_words, key=lambda x: len(x))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Napisz wyrażenie lambda, które zwraca większą z dwóch liczb""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -145,12 +145,12 @@ def _():
     _max=lambda x,y:x if x>y else y
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Napisz lambda, króra sprawdz czy liczba jest ujemna""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -179,13 +179,13 @@ def _():
     _ujemna(1)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Napisz lambdę, która:
 # zwraca „duża” jeśli liczba > 10, inaczej „mała”""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -211,7 +211,7 @@ def _():
     _wielkosc = lambda x: 'duża' if x > 10 else 'mała'
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -226,7 +226,7 @@ def _():
     # Posortować listę słów w kolejności alfabetycznej ostatniej litery
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -276,12 +276,12 @@ def _():
     print(sorted(_lista, key=_posort))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Programowanie obiektowe""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Programowanie obiektowe (ang. Object-Oriented Programming, OOP) to jeden z najpopularniejszych i najbardziej efektywnych paradygmatów programowania.
 
@@ -295,7 +295,7 @@ Programowanie obiektowe bazuje na czterech fundamentalnych zasadach:
 * Abstrakcja – upraszczanie skomplikowanych systemów poprzez ukrywanie zbędnych szczegółów i eksponowanie istotnych funkcji.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
 # Zalety programowania obiektowego (OOP)
@@ -327,7 +327,7 @@ def _(mo):
 * Tworzenie dobrze zaprojektowanych systemów OOP wymaga większego doświadczenia i przemyślanego projektowania.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Klasy wbudowane
 1. Typy liczbowe
@@ -357,12 +357,12 @@ Klasy wspomagające różne operacje, takie jak range do generowania sekwencji l
 """)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Klasa str""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Podstawowe operacje na ciągach znaków:
 * str.upper() - zamienia wszystkie litery na wielkie.
@@ -417,7 +417,7 @@ Formatowanie tekstu:
 * str.join(iterable) – łączy elementy iterowalnej kolekcji w jeden ciąg, używając ciągu jako separatora.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -493,19 +493,19 @@ def _():
     print(_text)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Świat bez klas""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Chcemy zbudować zbiór danych o osobach.
 * Co powinniśmy zrobić?
 * Jakie struktury danych należu użyć?""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -584,7 +584,7 @@ def _():
     print(getage(_osoba1))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -634,17 +634,17 @@ def _():
     for os in _lista: print(getname(os))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Z tekstu nie wynika jednoznacznie, że dwa obiekty należą do tej samej klasy, lista obiektów nie jest związana w sposób widoczny z klasami, liczba elementów przechowywana w oddzielnej zmiennej""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Programowanie obiektowe""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""W klasycznych językach programowania klasa składa się
 
@@ -664,7 +664,7 @@ Dodatkowe pojęcia:
 """)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -740,12 +740,12 @@ def _():
     print(_o1.name,_o1.age)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Nie definiujemy pól w nagłówku, są one definiowane w konstruktorze""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -838,17 +838,17 @@ def _():
     _o1.druk()
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Pola statyczne""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""pola statyczne są powiązane z klasą, a nie z obiektem, nie mamy słów kluczowych, decyduje miejsce deklaracji""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1001,12 +1001,12 @@ def _():
     _o1.druk()
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Pobieranie informacji o instancji lub klasie""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1051,7 +1051,7 @@ def _():
     print(o1.__class__)  # __cos__  - specjalne metody lub pola
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1066,7 +1066,7 @@ def _():
     # dokładniejsze informacje o obiekcie
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1087,7 +1087,7 @@ def _():
     print(vars(o1))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1108,7 +1108,7 @@ def _():
     print(vars(Osoba))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1129,7 +1129,7 @@ def _():
     dir(vars(Osoba))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1216,12 +1216,12 @@ def _():
     print(_o1.name,_o1.age,_o1.__sex)    #próba dostępu do pola prywatnego, błąd
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Pola prywatne - brak dostępu poza klasą""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1319,7 +1319,7 @@ def _():
     print(vars(_o1))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1424,7 +1424,7 @@ def _():
     print(vars(_o1))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1533,7 +1533,7 @@ def _():
     print(vars(_o1))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1630,12 +1630,12 @@ def _():
     print(vars(_o1))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Funkcja setattr       umożliwia zmianę wartości pól, kolejność jak w konstruktorze""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1745,12 +1745,12 @@ def _():
     delattr(_o2,"sex")             #tu usuwamy atrybut
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Metody statyczne, to metody związane z klasą, a nie z pojedynczym obiektem""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1881,7 +1881,7 @@ def _():
     print(vars(_o1))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -1915,7 +1915,7 @@ def _():
     print(*_tekst.split(' '))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2074,7 +2074,7 @@ def _():
     print('vars _o2', vars(_o2))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2211,7 +2211,7 @@ def _():
     print(vars(Osoba))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2415,12 +2415,12 @@ def _():
     print(vars(_o2))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Metody prywatne, podobnie jak pola zaczynają się od __""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2533,12 +2533,12 @@ def _():
     _o1.printname()
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Klasy collable, obiekty tych klas możemy wyoływać jak funkcje""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2617,7 +2617,7 @@ def _():
     pass
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2699,7 +2699,7 @@ def _():
     print(_o1.lista)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2832,12 +2832,12 @@ def _():
     print(callable(_o1),callable(_o2))
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Do konstruktora możemy przekazać funkcję, tak jak pole klasy""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -2912,12 +2912,12 @@ def _():
     _o1.func()
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Operatory, operacje na obiektach""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3021,7 +3021,7 @@ def _():
     print(_o1+_o2)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3129,7 +3129,7 @@ def _():
     print(_m2.value)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Przykładowe nazwy:
 
@@ -3151,12 +3151,12 @@ def _(mo):
 * __str__ - Przeciąża funkcję str().""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Dziedziczenie""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3267,7 +3267,7 @@ def _():
     print(_o2.id)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3379,12 +3379,12 @@ def _():
     print(_o2.id)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Polimorfizm  - różne zachowanie metody, zależnie od kontekstu""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3529,7 +3529,7 @@ def _():
       wydaj_dzwiek(zwierze)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3715,12 +3715,12 @@ def _():
     _o2.druk("tekst")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Dziedziczenie po wielu klasach""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -3869,12 +3869,12 @@ def _():
     pass
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""W przypadku wielodziedziczenia mamy problem funkcja z jakiej klasy będzie wywoływana, jeśli nazwy i argumenty są takie same, tu decyduje kolejność klas podana w konstruktorze""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4077,12 +4077,12 @@ def _():
     pass
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Jeśli funkcja występuje tylko w jednej klasie nadrzędnej to problemu nie mamy""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4298,14 +4298,14 @@ def _():
     _o1.mprint("test")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Warto jest dokumentować kod, a w szczególności klasę którą się zbudowało. Dokumentowanie klasy polega na opisaniu, czym jest klasa, jakie ma atrybuty i metody, jakich typów są argumenty i zwracane wartości, jakie są założenia i wymagania co do poprawności danych wejściowych oraz ogólnie jak korzystać z klasy.
 
 Zwykle dokumentacja klas jest pisana w tzw. Docstrings, czyli w specjalnym komentarzu umieszczonym na początku definicji klasy, metody lub funkcji. Docstrings są specjalnymi ciągami znaków umieszczonymi w trzech cudzysłowach.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4323,7 +4323,7 @@ def _():
     help(Punkt)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4558,7 +4558,7 @@ def _():
     _o1.mprint("test")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4576,7 +4576,7 @@ def _():
     help(Color)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4591,12 +4591,12 @@ def _():
     ## przykład wykorzystania na wykładzie
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Obsługa wyjątków (błędów)""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4628,7 +4628,7 @@ def _():
     print(_z)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4682,7 +4682,7 @@ def _():
       print(_z)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4748,7 +4748,7 @@ def _():
       print("koniec")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4819,7 +4819,7 @@ def _():
       print("koniec")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""W bloku try możemy wykryć różne rodzaje błędów, które mogą wystąpić podczas wykonywania kodu.
 
@@ -4834,7 +4834,7 @@ operacji nieobsługiwanej przez dany typ danych, przekroczenie zakresu itp.
 Istnieją też inne wyjątki, takie jak ZeroDivisionError, IndexError, KeyError, ImportError, AssertionError, oraz wiele innych.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""* Exception: Bazowa klasa dla wszystkich wyjątków.
 * AttributeError: Występuje, gdy atrybut obiektu nie istnieje.
@@ -4850,12 +4850,12 @@ def _(mo):
 * RuntimeError: Występuje, gdy błąd nie pasuje do żadnej innej kategorii wyjątków.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Własne wyjątki""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -4944,7 +4944,7 @@ def _():
     print(_k1.pole())
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -5067,7 +5067,7 @@ def _():
     print(_k1.pole())
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -5223,12 +5223,12 @@ def _():
     
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Bardziej elegancko będzie wyglądać kod w którym mamy własną klasę np. BadDimensionError . Klasa BadDimensionError powinna dziedziczyć po wbudowanej klasie wyjątków ValueError, ponieważ ten wyjątek jest przeznaczony do sygnalizowania błędów związanych z nieprawidłowymi wartościami argumentów.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -5274,12 +5274,12 @@ def _():
             super().__init__(message)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""A pełny kod będzie wyglądał następująco:""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -5468,7 +5468,7 @@ def _():
       print(_k)
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -5541,7 +5541,7 @@ def _():
         print("Błąd: Plik nie istnieje.")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""Obiekt wyjątku zawiera wiele informacji, które mogą pomóc w diagnozowaniu i rozwiązywaniu problemu, w tym:
 
@@ -5554,14 +5554,14 @@ Można wykorzystać te informacje do znalezienia źródła problemu i naprawieni
 Aby wyświetlić więcej informacji o obiekcie wyjątku, można użyć funkcji traceback.print_exception() z modułu traceback. Ta funkcja wyświetla szczegółowe informacje o wyjątku, w tym stos wywołań, na standardowym strumieniu błędów.""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Zadanie:
 
 # Zbudować klasę Auto, wczytać dane: marka, rokp, cena, przebieg, typ (jedna linia, metoda input), zrobić obsługę wyjatków: rokp, cena, przebieg [liczby], marka, typ [dane z listy].""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
@@ -5889,12 +5889,12 @@ def _():
             print("Nieprawidłowe _dane wejściowe!")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""# Zbować listę samochodów, posortować listę według wybranego kryterium np. rokp, cena, typ""")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""### 🧠 SZCZEGÓŁOWA ANALIZA KODU KROK PO KROKU (Dla całkowicie początkujących)
 
