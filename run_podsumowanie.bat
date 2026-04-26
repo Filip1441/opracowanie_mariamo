@@ -9,7 +9,7 @@ if not exist .venv (
 )
 
 echo ======================================================
-echo URUCHAMIANIE WYKLADU 2
+echo URUCHAMIANIE: MASTER CHEAT SHEET (PODSUMOWANIE)
 echo ======================================================
 
 :: Pobieranie adresu IP laptopa
@@ -25,5 +25,5 @@ echo http://!IP!:2718
 echo.
 echo ======================================================
 
-.venv\Scripts\python.exe -m marimo edit pliki_py\W2_Kolekcje_i_Sterowanie.py --host 0.0.0.0 --no-token
+.venv\Scripts\python.exe -m marimo edit pliki_py\W8_Podsumowanie_Wszystkiego.py --host 0.0.0.0 --no-token
 pause

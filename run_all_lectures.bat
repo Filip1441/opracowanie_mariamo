@@ -20,12 +20,10 @@ for /f "tokens=2 delims=:" %%a in ('ipconfig ^| findstr "IPv4"') do (
 )
 
 echo.
-echo Twoj laptop udostepnia teraz caly folder z wykladami.
-echo Aby otworzyc na iPadzie, wpisz w przegladarce:
+echo Adres dla iPada (bez hasla):
 echo http://!IP!:2718
 echo.
-echo Po wejsciu zobaczysz liste wszystkich 7 wykladow.
 echo ======================================================
 
-.venv\Scripts\python.exe -m marimo edit pliki_py\ --host 0.0.0.0
+.venv\Scripts\python.exe -m marimo edit pliki_py\ --host 0.0.0.0 --no-token
 pause

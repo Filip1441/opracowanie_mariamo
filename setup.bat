@@ -30,7 +30,7 @@ if not exist .venv (
     %PY_CMD% -m venv .venv
 )
 
-.venv\Scripts\python.exe -m pip install marimo pandas numpy matplotlib opencv-python
+.venv\Scripts\python.exe -m pip install marimo pandas numpy matplotlib opencv-python protobuf
 
 echo.
 echo Done.
