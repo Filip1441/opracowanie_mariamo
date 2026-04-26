@@ -22,8 +22,11 @@ for /f "tokens=2 delims=:" %%a in ('ipconfig ^| findstr "IPv4"') do (
 echo.
 echo Adres dla iPada (bez hasla):
 echo http://!IP!:2718
+echo Adres dla Laptopa:
+echo http://localhost:2718
 echo.
 echo ======================================================
 
+start http://localhost:2718
 .venv\Scripts\python.exe -m marimo edit pliki_py\W8_Podsumowanie_Wszystkiego.py --host 0.0.0.0 --no-token
 pause
