@@ -9,7 +9,7 @@ if not exist .venv (
 )
 
 echo ======================================================
-echo URUCHAMIANIE WYKLADU W SIECI LOKALNEJ
+echo URUCHAMIANIE BIBLIOTEKI WYKLADOW (WSZYSTKIE PLIKI)
 echo ======================================================
 
 :: Pobieranie adresu IP laptopa
@@ -20,10 +20,12 @@ for /f "tokens=2 delims=:" %%a in ('ipconfig ^| findstr "IPv4"') do (
 )
 
 echo.
-echo Aby otworzyc na iPadzie/innym urzadzeniu, wpisz w przegladarce:
+echo Twoj laptop udostepnia teraz caly folder z wykladami.
+echo Aby otworzyc na iPadzie, wpisz w przegladarce:
 echo http://!IP!:2718
 echo.
+echo Po wejsciu zobaczysz liste wszystkich 7 wykladow.
 echo ======================================================
 
-.venv\Scripts\python.exe -m marimo edit pliki_py\W3_Funkcje_i_Skladnia.py --host 0.0.0.0
+.venv\Scripts\python.exe -m marimo edit pliki_py\ --host 0.0.0.0
 pause
