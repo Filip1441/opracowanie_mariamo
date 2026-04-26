@@ -1,0 +1,21 @@
+# Python virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDEs
+.vscode/
+.idea/
+
+# Marimo temporary files
+.marimo/
+
+# Installer files (if any left)
+python_installer.exe
+python_312_installer.exe
+
+# OS files
+**/desktop.ini
+**/Thumbs.db
